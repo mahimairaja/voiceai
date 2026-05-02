@@ -1,4 +1,4 @@
-<h1> <center> Voice AI For Everyone </center></h1> 
+![Banner Image](banner.png)
 
 > A curated, developer friendly learning path for building real-time voice AI agents from your first STT call to scaling production telephony.
 
