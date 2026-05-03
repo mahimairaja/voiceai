@@ -1,5 +1,7 @@
 ![Banner Image](banner.png)
 
+> [English version](./README.md) [中文版本](./README_zh.md)
+
 > A curated, developer friendly learning path for building real-time voice AI agents from your first STT call to scaling production telephony.
 
 Voice AI has moved from research demos into shipping product in under three years. **The modern stack is converging around a clear pattern**: a real-time transport layer (WebRTC or telephony), a streaming pipeline of speech-to-text → LLM → text-to-speech, and a turn-taking model that decides when the agent should speak. This list is structured to mirror that learning order  start with the foundations, pick a framework, then drill into individual components and production concerns.
