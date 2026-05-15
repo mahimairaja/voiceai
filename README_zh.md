@@ -162,13 +162,13 @@
 - [pipecat-ai/smart-turn](https://github.com/pipecat-ai/smart-turn) — 模型代码、训练脚本与集成示例。**🟡 进阶**
 - [The Complete Guide to AI Turn-Taking（Tavus）](https://www.tavus.io/post/ai-turn-taking) — 易读总览：纯 VAD 为何在真实对话里失效。**🟢 入门**
 - [Tackling Turn Detection in Voice AI（Notch）](https://www.notch.cx/post/turn-detection-in-voice-ai) — 面向工程师的分步导读：VAD 概率、音量与 TTS 标记的组合。**🟡 进阶**
-- [ai-coustics VAD](https://developers.ai-coustics.com/) — 与实时语音增强、降噪与人声分离打包在同一个音频预处理 SDK 中的 VAD；当你需要同一个组件同时给出清洁后的音频与话轮信号时尤其合适。**🟢 入门**
+- [ai-coustics VAD](https://developers.ai-coustics.com/)：与实时语音增强、降噪与人声分离打包在同一个音频预处理 SDK 中的 VAD；当你需要同一个组件同时给出清洁后的音频与话轮信号时尤其合适。**🟢 入门**
 
 ## 7. 音频增强与降噪
 
 进入 VAD 与 STT 的音频常常带有噪声、混响或多人声混叠。**在流水线的其他环节之前先把信号清干净**，往往是真实环境（车内、咖啡厅、呼叫中心）下「能上线的语音智能体」与「让用户失望的语音智能体」之间的分水岭。
 
-- [ai-coustics](https://ai-coustics.com/) — 实时语音增强 SDK：降噪、人声分离与 VAD；支持端侧与云端部署。参见[文档](https://docs.ai-coustics.com/)与[开发者平台](https://developers.ai-coustics.com/)。**🟢 入门**
+- [ai-coustics](https://ai-coustics.com/)：实时语音增强 SDK，提供降噪、人声分离与 VAD；支持端侧与云端部署。参见[文档](https://docs.ai-coustics.com/)与[开发者平台](https://developers.ai-coustics.com/)。**🟢 入门**
 
 ## 8. WebRTC 基础
 
@@ -352,7 +352,7 @@
 1. **第 1 周——基础：** 阅读 LiveKit 流水线文章与《语音智能体图解入门》（第 1、8 节）。  
 2. **第 2 周——首个语音智能体：** 完整跑通 LiveKit *或* Pipecat 快速入门（第 2、10 节）。  
 3. **第 3 周——组件：** 替换 STT、TTS、LLM 供应商；对延迟做基准测试（第 3、4、5 节）。  
-4. **第 4 周——话轮、音频清洗与电话：** 接入 Silero VAD、话轮检测以及一道语音增强；配置并接通 SIP 中继（第 6、7、9 节）。  
+4. **第 4 周，话轮、音频清洗与电话：** 接入 Silero VAD、话轮检测以及一道语音增强；配置并接通 SIP 中继（第 6、7、9 节）。  
 5. **第 5 周——生产：** 加入评测与可观测性；阅读 FCC/欧盟 AI 法材料（第 14、15、16 节）。  
 6. **持续：** 订阅两封通讯，并加入语音智能体相关社区，例如 [LinkedIn 群组](https://www.linkedin.com/groups/14269127/)（第 17、18、19 节）。
 
