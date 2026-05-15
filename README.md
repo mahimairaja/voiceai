@@ -30,20 +30,21 @@ Read top-to-bottom if you're brand new. The recommended path:
 4. [Text-to-speech (TTS)](#4-text-to-speech-tts)
 5. [LLMs for voice and real-time AI](#5-llms-for-voice-and-real-time-ai)
 6. [Voice activity detection and turn-taking](#6-voice-activity-detection-and-turn-taking)
-7. [WebRTC fundamentals](#7-webrtc-fundamentals)
-8. [Telephony and SIP](#8-telephony-and-sip)
-9. [Tutorials and hands-on projects](#9-tutorials-and-hands-on-projects)
-10. [GitHub starter repos and awesome lists](#10-github-starter-repos-and-awesome-lists)
-11. [Datasets and benchmarks](#11-datasets-and-benchmarks)
-12. [Beginner-accessible research papers](#12-beginner-accessible-research-papers)
-13. [Evaluation and testing](#13-evaluation-and-testing)
-14. [Production, deployment, and scaling](#14-production-deployment-and-scaling)
-15. [Ethics, safety, and regulation](#15-ethics-safety-and-regulation)
-16. [Blogs and newsletters](#16-blogs-and-newsletters)
-17. [Podcasts](#17-podcasts)
-18. [Communities](#18-communities)
-19. [Conferences and events](#19-conferences-and-events)
-20. [Hackathons and competitions](#20-hackathons-and-competitions)
+7. [Audio enhancement and noise suppression](#7-audio-enhancement-and-noise-suppression)
+8. [WebRTC fundamentals](#8-webrtc-fundamentals)
+9. [Telephony and SIP](#9-telephony-and-sip)
+10. [Tutorials and hands-on projects](#10-tutorials-and-hands-on-projects)
+11. [GitHub starter repos and awesome lists](#11-github-starter-repos-and-awesome-lists)
+12. [Datasets and benchmarks](#12-datasets-and-benchmarks)
+13. [Beginner-accessible research papers](#13-beginner-accessible-research-papers)
+14. [Evaluation and testing](#14-evaluation-and-testing)
+15. [Production, deployment, and scaling](#15-production-deployment-and-scaling)
+16. [Ethics, safety, and regulation](#16-ethics-safety-and-regulation)
+17. [Blogs and newsletters](#17-blogs-and-newsletters)
+18. [Podcasts](#18-podcasts)
+19. [Communities](#19-communities)
+20. [Conferences and events](#20-conferences-and-events)
+21. [Hackathons and competitions](#21-hackathons-and-competitions)
 
 ---
 
@@ -161,8 +162,15 @@ Pure VAD is no longer enough  modern agents combine **acoustic VAD with a small 
 - [pipecat-ai/smart-turn](https://github.com/pipecat-ai/smart-turn)  Repo with model code, training scripts, and integration examples. **🟡 Intermediate**
 - [The Complete Guide to AI Turn-Taking (Tavus)](https://www.tavus.io/post/ai-turn-taking)  Reader-friendly overview of why pure VAD fails in real conversations. **🟢 Beginner**
 - [Tackling Turn Detection in Voice AI (Notch)](https://www.notch.cx/post/turn-detection-in-voice-ai)  Engineer-first walkthrough combining VAD probability, volume, and TTS markers. **🟡 Intermediate**
+- [ai-coustics VAD](https://developers.ai-coustics.com/)  VAD bundled with real-time speech enhancement, noise suppression, and voice isolation in a single audio preprocessing SDK; useful when you want cleanup and turn-taking signals from the same component. **🟢 Beginner**
 
-## 7. WebRTC fundamentals
+## 7. Audio enhancement and noise suppression
+
+The audio reaching your VAD and STT is often noisy, reverberant, or mixed with background voices. **Cleaning the signal before the rest of the pipeline** is frequently the difference between an agent that ships and one that frustrates users in real-world conditions (cars, cafés, call centres).
+
+- [ai-coustics](https://ai-coustics.com/)  Real-time speech enhancement SDK covering noise cancellation, voice isolation, and VAD; on-device and cloud deployment. See the [docs](https://docs.ai-coustics.com/) and [developer platform](https://developers.ai-coustics.com/). **🟢 Beginner**
+
+## 8. WebRTC fundamentals
 
 WebRTC is the **default transport for voice agents** that don't run over the phone network. Understanding ICE, STUN, TURN, and SFU architecture is non-negotiable for production work.
 
@@ -174,7 +182,7 @@ WebRTC is the **default transport for voice agents** that don't run over the pho
 - [Daily Docs  Intro to Video Architecture (P2P vs SFU)](https://docs.daily.co/guides/architecture-and-monitoring/intro-to-video-arch)  One of the clearest beginner write-ups of P2P vs SFU. **🟢 Beginner**
 - [Agora  How WebRTC Works](https://www.agora.io/en/blog/how-does-webrtc-work/)  Side-by-side WebRTC vs WebSockets walkthrough with signaling diagrams. **🟢 Beginner**
 
-## 8. Telephony and SIP
+## 9. Telephony and SIP
 
 The phone network has its own physics. Once you know which **SIP trunk provider** to point at LiveKit or Pipecat, you can ship.
 
@@ -189,7 +197,7 @@ The phone network has its own physics. Once you know which **SIP trunk provider*
 - [LiveKit SIP Trunk Setup](https://docs.livekit.io/telephony/start/sip-trunk-setup/)  Practical guide for wiring Twilio/Telnyx/Plivo trunks into LiveKit. **🟡 Intermediate**
 - [Pipecat Telephony Overview](https://docs.pipecat.ai/guides/telephony/overview)  Differences between WebSocket-based telephony and SIP-based call control. **🟡 Intermediate**
 
-## 9. Tutorials and hands-on projects
+## 10. Tutorials and hands-on projects
 
 Pick **one tutorial and finish it before starting another**. Voice AI is unforgiving of half-built pipelines.
 
@@ -202,7 +210,7 @@ Pick **one tutorial and finish it before starting another**. Voice AI is unforgi
 - [freeCodeCamp  Build Advanced AI Agents (LiveKit, Exa, LangChain)](https://www.youtube.com/watch?v=B0TJC4lmzEM)  Free 3-part video course covering interactive voice agents end-to-end. **🟢 Beginner**
 - [freeCodeCamp  Private On-Device Voice Assistant](https://www.freecodecamp.org/news/private-voice-assistant-using-open-source-tools/)  Hands-on local stack with Whisper, a local LLM, and system TTS. **🟡 Intermediate**
 
-## 10. GitHub starter repos and awesome lists
+## 11. GitHub starter repos and awesome lists
 
 Clone these instead of writing boilerplate from scratch.
 
@@ -218,7 +226,7 @@ Clone these instead of writing boilerplate from scratch.
 - [wildminder/awesome-ai-voice](https://github.com/wildminder/awesome-ai-voice)  Up-to-date 2025–2026 list of open-source TTS and voice-cloning models.
 - [CorentinJ/Real-Time-Voice-Cloning](https://github.com/CorentinJ/Real-Time-Voice-Cloning)  Classic 5-second voice cloning project for understanding TTS fundamentals. **🟡 Intermediate**
 
-## 11. Datasets and benchmarks
+## 12. Datasets and benchmarks
 
 You'll rarely train from scratch, but knowing **which dataset a model was trained on** explains its accents, languages, and failure modes.
 
@@ -231,7 +239,7 @@ You'll rarely train from scratch, but knowing **which dataset a model was traine
 - [VCTK Corpus](https://datashare.ed.ac.uk/handle/10283/3443)  ~110 English speakers with diverse accents; widely used for multi-speaker TTS. **🟡 Intermediate**
 - [VoxCeleb (Oxford VGG)](https://www.robots.ox.ac.uk/~vgg/data/voxceleb/)  Million-utterance "in the wild" dataset for speaker identification and verification. **🟡 Intermediate**
 
-## 12. Beginner-accessible research papers
+## 13. Beginner-accessible research papers
 
 These are the **landmark papers behind the models you'll actually use**. Read the Whisper and Common Voice papers first  they're unusually approachable.
 
@@ -244,7 +252,7 @@ These are the **landmark papers behind the models you'll actually use**. Read th
 - [Common Voice  A Massively-Multilingual Speech Corpus (2020)](https://arxiv.org/abs/1912.06670)  Short, accessible paper describing how Common Voice is built and validated. **🟢 Beginner**
 - [Open ASR Leaderboard preprint (2025)](https://arxiv.org/abs/2510.06961)  Reproducible benchmark of 60+ ASR models across 11 datasets; the modern landscape map. **🟡 Intermediate**
 
-## 13. Evaluation and testing
+## 14. Evaluation and testing
 
 You can't ship what you can't measure. **Voice-agent evaluation is fundamentally probabilistic**  a single transcript can pass and fail across runs, so simulation and statistics matter more than fixed test cases.
 
@@ -257,7 +265,7 @@ You can't ship what you can't measure. **Voice-agent evaluation is fundamentally
 - [LiveKit  Understand and Improve Agent Latency](https://livekit.com/blog/understand-and-improve-agent-latency)  Per-turn latency metrics (e2e, LLM TTFT, TTS TTFB) and where to optimize. **🟡 Intermediate**
 - [Twilio  How Do You Know if Your Voice AI Agents Are Working?](https://www.twilio.com/en-us/blog/developers/evaluating-voice-ai-agents)  Vendor-neutral 2025 guide arguing for business-outcome metrics over raw WER/latency. **🟢 Beginner**
 
-## 14. Production, deployment, and scaling
+## 15. Production, deployment, and scaling
 
 Real production voice infrastructure is **the hardest unsolved problem in this space**. Read these before quoting anyone a per-minute price.
 
@@ -271,7 +279,7 @@ Real production voice infrastructure is **the hardest unsolved problem in this s
 - [Sierra  Constellation of Models](https://sierra.ai/blog/constellation-of-models)  How a leading CX company composes 15+ models per agent. **🟡 Intermediate**
 - [LiveKit Agent Observability](https://livekit.com/products/agent-observability)  Built-in tracing, transcripts, and per-stage latency for LiveKit Cloud. **🟢 Beginner**
 
-## 15. Ethics, safety, and regulation
+## 16. Ethics, safety, and regulation
 
 If you're shipping a voice agent in 2026, **disclosure and consent are no longer optional**. The FCC and EU AI Act both have teeth.
 
@@ -284,7 +292,7 @@ If you're shipping a voice agent in 2026, **disclosure and consent are no longer
 - [Voice Cloning Ethics (CAMB.AI)](https://www.camb.ai/blog-post/voice-cloning-ethics-consent-deepfakes-responsible-ai-voice-use)  Practical overview of consent frameworks, ELVIS Act, and EU AI Act. **🟢 Beginner**
 - [NCLC  Top Six TCPA/Robocall Developments 2024/2025](https://library.nclc.org/article/top-six-tcparobocall-developments-20242025)  Consumer-protection lens on what's actually being enforced. **🟡 Intermediate**
 
-## 16. Blogs and newsletters
+## 17. Blogs and newsletters
 
 Subscribe to two or three to stay current  the field moves quickly.
 
@@ -299,7 +307,7 @@ Subscribe to two or three to stay current  the field moves quickly.
 - [Voice AI Weekly (Vapi)](https://vapivoice.substack.com/)  Weekly Substack rounding up news, products, and tools.
 - [Voicebot.ai (Synthedia)](https://voicebot.ai/)  Long-running daily news and paid newsletter on industry trends.
 
-## 17. Podcasts
+## 18. Podcasts
 
 - [The Voicebot Podcast (Bret Kinsella)](https://voicebot.ai/voicebot-podcasts/)  Longest-running serious voice-tech podcast; weekly founder interviews.
 - [Latent Space  The AI Engineer Podcast](https://www.latent.space/podcast)  Top US tech podcast; regularly covers Realtime API, Pipecat, Voxtral, Gemini Live.
@@ -307,7 +315,7 @@ Subscribe to two or three to stay current  the field moves quickly.
 - [TWIML AI Podcast  voice episodes](https://podcasts.apple.com/us/podcast/building-voice-ai-agents-that-dont-suck-with-kwindla-kramer/id1116303051?i=1000717421464)  Strong technical interviews; the Kwin Kramer episode is a great starting point.
 - [This Week In Voice (Project Voice)](https://thisweekinvoice.substack.com/)  News-roundtable format covering conversational AI.
 
-## 18. Communities
+## 19. Communities
 
 - [LiveKit Community Slack](https://livekit.io/join-slack)  Direct access to maintainers and other agent builders.
 - [Pipecat Discord](https://www.pipecat.ai/)  Active community with weekly office hours; invite link from the homepage.
@@ -319,7 +327,7 @@ Subscribe to two or three to stay current  the field moves quickly.
 - [Reddit  r/LocalLLaMA](https://www.reddit.com/r/LocalLLaMA/)  Active threads on local Whisper/Parakeet, on-device TTS, and end-to-end voice stacks.
 - [Reddit  r/AI_Agents](https://www.reddit.com/r/AI_Agents/)  General AI-agent community where voice topics surface frequently.
 
-## 19. Conferences and events
+## 20. Conferences and events
 
 - [AI Engineer World's Fair](https://www.ai.engineer/worldsfair)  Biggest AI-engineering conference; the Voice track has hosted major launches from ElevenLabs, Vapi, LiveKit, Pipecat, and Cartesia. **🟢 Beginner**
 - [AI Engineer YouTube channel](https://www.youtube.com/@aiDotEngineer)  All World's Fair and Summit talks are posted free; the best library of recent voice-AI talks. **🟢 Beginner**
@@ -329,7 +337,7 @@ Subscribe to two or three to stay current  the field moves quickly.
 - [Project Voice](https://www.projectvoice.ai/annual-conference)  Main U.S. event for conversational AI across voice, text, and chat. **🟢 Beginner**
 - [Interspeech](https://www.interspeech2025.org/)  Top academic speech-science conference; intimidating but worth knowing  most landmark papers debut here. **🔴 Advanced**
 
-## 20. Hackathons and competitions
+## 21. Hackathons and competitions
 
 - [ElevenLabs Worldwide Hackathon](https://hackathon.elevenlabs.io/)  Flagship global hackathon for conversational agents; 30+ cities and a $200K+ prize pool. **🟢 Beginner**
 - [ElevenHacks (weekly sprints)](https://hacks.elevenlabs.io/)  Weekly themed challenges with credits and prizes; low-pressure way to ship one project per week. **🟢 Beginner**
@@ -341,12 +349,12 @@ Subscribe to two or three to stay current  the field moves quickly.
 
 ## Suggested learning path
 
-1. **Week 1  Foundations:** Read the LiveKit pipeline post and Voice AI Illustrated Primer (sections 1, 7).
-2. **Week 2  First agent:** Finish the LiveKit *or* Pipecat quickstart end-to-end (sections 2, 9).
+1. **Week 1  Foundations:** Read the LiveKit pipeline post and Voice AI Illustrated Primer (sections 1, 8).
+2. **Week 2  First agent:** Finish the LiveKit *or* Pipecat quickstart end-to-end (sections 2, 10).
 3. **Week 3  Components:** Swap STT, TTS, and LLM providers; benchmark latency (sections 3, 4, 5).
-4. **Week 4  Turn-taking & telephony:** Add Silero VAD and a turn detector; connect a SIP trunk (sections 6, 8).
-5. **Week 5  Production:** Add evaluation, observability, and read the FCC/EU AI Act material (sections 13, 14, 15).
-6. **Ongoing:** Subscribe to two newsletters and join voice ai community in [linkedin](https://www.linkedin.com/groups/14269127/) (sections 16, 17, 18).
+4. **Week 4  Turn-taking, audio cleanup & telephony:** Add Silero VAD, a turn detector, and a speech-enhancement pass; connect a SIP trunk (sections 6, 7, 9).
+5. **Week 5  Production:** Add evaluation, observability, and read the FCC/EU AI Act material (sections 14, 15, 16).
+6. **Ongoing:** Subscribe to two newsletters and join voice ai community in [linkedin](https://www.linkedin.com/groups/14269127/) (sections 17, 18, 19).
 
 ## Contributing
 
