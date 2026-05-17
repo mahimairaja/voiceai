@@ -256,6 +256,7 @@ You can't ship what you can't measure. **Voice-agent evaluation is fundamentally
 - [Hamming  Voice Agent Evaluation Metrics Guide](https://hamming.ai/resources/voice-agent-evaluation-metrics-guide)  Reference of latency percentiles, WER, MOS-style quality, and task completion with formulas. **🟡 Intermediate**
 - [LiveKit  Understand and Improve Agent Latency](https://livekit.com/blog/understand-and-improve-agent-latency)  Per-turn latency metrics (e2e, LLM TTFT, TTS TTFB) and where to optimize. **🟡 Intermediate**
 - [Twilio  How Do You Know if Your Voice AI Agents Are Working?](https://www.twilio.com/en-us/blog/developers/evaluating-voice-ai-agents)  Vendor-neutral 2025 guide arguing for business-outcome metrics over raw WER/latency. **🟢 Beginner**
+- [Future AGI simulate-sdk](https://github.com/future-agi/simulate-sdk)  Open-source voice AI simulation SDK for testing AI agents; generates synthetic conversations for evaluation. **🟡 Intermediate**
 
 ## 14. Production, deployment, and scaling
 
