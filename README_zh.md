@@ -30,20 +30,21 @@
 4. [文字转语音（TTS）](#4-文字转语音tts)
 5. [面向语音智能体与实时场景的 LLM](#5-面向语音智能体与实时场景的-llm)
 6. [语音活动检测与话轮转换](#6-语音活动检测与话轮转换)
-7. [WebRTC 基础](#7-webrtc-基础)
-8. [电话与 SIP](#8-电话与-sip)
-9. [教程与动手项目](#9-教程与动手项目)
-10. [GitHub 入门仓库与 Awesome 列表](#10-github-入门仓库与-awesome-列表)
-11. [数据集与基准](#11-数据集与基准)
-12. [对初学者友好的研究论文](#12-对初学者友好的研究论文)
-13. [评测与测试](#13-评测与测试)
-14. [生产、部署与扩展](#14-生产部署与扩展)
-15. [伦理、安全与监管](#15-伦理安全与监管)
-16. [博客与通讯](#16-博客与通讯)
-17. [播客](#17-播客)
-18. [社区](#18-社区)
-19. [会议与活动](#19-会议与活动)
-20. [黑客松与竞赛](#20-黑客松与竞赛)
+7. [音频增强与降噪](#7-音频增强与降噪)
+8. [WebRTC 基础](#8-webrtc-基础)
+9. [电话与 SIP](#9-电话与-sip)
+10. [教程与动手项目](#10-教程与动手项目)
+11. [GitHub 入门仓库与 Awesome 列表](#11-github-入门仓库与-awesome-列表)
+12. [数据集与基准](#12-数据集与基准)
+13. [对初学者友好的研究论文](#13-对初学者友好的研究论文)
+14. [评测与测试](#14-评测与测试)
+15. [生产、部署与扩展](#15-生产部署与扩展)
+16. [伦理、安全与监管](#16-伦理安全与监管)
+17. [博客与通讯](#17-博客与通讯)
+18. [播客](#18-播客)
+19. [社区](#19-社区)
+20. [会议与活动](#20-会议与活动)
+21. [黑客松与竞赛](#21-黑客松与竞赛)
 
 ---
 
@@ -161,8 +162,15 @@
 - [pipecat-ai/smart-turn](https://github.com/pipecat-ai/smart-turn) — 模型代码、训练脚本与集成示例。**🟡 进阶**
 - [The Complete Guide to AI Turn-Taking（Tavus）](https://www.tavus.io/post/ai-turn-taking) — 易读总览：纯 VAD 为何在真实对话里失效。**🟢 入门**
 - [Tackling Turn Detection in Voice AI（Notch）](https://www.notch.cx/post/turn-detection-in-voice-ai) — 面向工程师的分步导读：VAD 概率、音量与 TTS 标记的组合。**🟡 进阶**
+- [ai-coustics VAD](https://developers.ai-coustics.com/)：与实时语音增强、降噪与人声分离打包在同一个音频预处理 SDK 中的 VAD；当你需要同一个组件同时给出清洁后的音频与话轮信号时尤其合适。**🟢 入门**
 
-## 7. WebRTC 基础
+## 7. 音频增强与降噪
+
+进入 VAD 与 STT 的音频常常带有噪声、混响或多人声混叠。**在流水线的其他环节之前先把信号清干净**，往往是真实环境（车内、咖啡厅、呼叫中心）下「能上线的语音智能体」与「让用户失望的语音智能体」之间的分水岭。
+
+- [ai-coustics](https://ai-coustics.com/)：实时语音增强 SDK，提供降噪、人声分离与 VAD；支持端侧与云端部署。参见[文档](https://docs.ai-coustics.com/)与[开发者平台](https://developers.ai-coustics.com/)。**🟢 入门**
+
+## 8. WebRTC 基础
 
 对不走电话网的语音智能体，**WebRTC 是默认传输**。要做生产，**ICE、STUN、TURN 与 SFU 架构**不可不晓。
 
@@ -174,7 +182,7 @@
 - [Daily 文档：视频架构入门（P2P vs SFU）](https://docs.daily.co/guides/architecture-and-monitoring/intro-to-video-arch) — P2P 与 SFU 最清晰的新手文之一。**🟢 入门**
 - [Agora：How WebRTC Works](https://www.agora.io/en/blog/how-does-webrtc-work/) — WebRTC 与 WebSocket 对照，附信令示意图。**🟢 入门**
 
-## 8. 电话与 SIP
+## 9. 电话与 SIP
 
 电话网与互联网链路上的语音**环境、协议与约束各不相同**。理清 **SIP 中继**如何接入你所用的语音栈（例如基于 LiveKit 或 Pipecat 的部署），才能稳定连接 PSTN。
 
@@ -189,7 +197,7 @@
 - [LiveKit SIP Trunk Setup](https://docs.livekit.io/telephony/start/sip-trunk-setup/) — 将 Twilio/Telnyx/Plivo 中继接入 LiveKit 的实操。**🟡 进阶**
 - [Pipecat Telephony Overview](https://docs.pipecat.ai/guides/telephony/overview) — 基于 WebSocket 的电话与基于 SIP 的呼叫控制之差异。**🟡 进阶**
 
-## 9. 教程与动手项目
+## 10. 教程与动手项目
 
 **选定一篇教程并做完再开下一篇**。语音智能体对「半成品流水线」极不宽容。
 
@@ -202,7 +210,7 @@
 - [freeCodeCamp：Build Advanced AI Agents（LiveKit, Exa, LangChain）](https://www.youtube.com/watch?v=B0TJC4lmzEM) — 免费三部分视频，端到端交互式语音智能体。**🟢 入门**
 - [freeCodeCamp：Private On-Device Voice Assistant](https://www.freecodecamp.org/news/private-voice-assistant-using-open-source-tools/) — 本地栈：Whisper、本地 LLM 与系统 TTS。**🟡 进阶**
 
-## 10. GitHub 入门仓库与 Awesome 列表
+## 11. GitHub 入门仓库与 Awesome 列表
 
 与其从零写样板，不如直接 clone。
 
@@ -218,7 +226,7 @@
 - [wildminder/awesome-ai-voice](https://github.com/wildminder/awesome-ai-voice) — 2025–2026 年持续更新的开源 TTS 与声音克隆模型列表。
 - [CorentinJ/Real-Time-Voice-Cloning](https://github.com/CorentinJ/Real-Time-Voice-Cloning) — 经典 5 秒声音克隆项目，适合理解 TTS 基础。**🟡 进阶**
 
-## 11. 数据集与基准
+## 12. 数据集与基准
 
 你很少从零训练，但**模型在哪些数据上训练**决定了口音、语言与典型失效模式。
 
@@ -231,7 +239,7 @@
 - [VCTK Corpus](https://datashare.ed.ac.uk/handle/10283/3443) — 约 110 位英语说话人，口音多样；多说话人 TTS 常用。**🟡 进阶**
 - [VoxCeleb（Oxford VGG）](https://www.robots.ox.ac.uk/~vgg/data/voxceleb/) — 百万级「野外」语句，用于说话人识别与验证。**🟡 进阶**
 
-## 12. 对初学者友好的研究论文
+## 13. 对初学者友好的研究论文
 
 这些是**你实际会用到的模型背后的里程碑论文**。建议先看 Whisper 与 Common Voice 两篇——文笔在机器学习论文里算格外友好。
 
@@ -244,7 +252,7 @@
 - [Common Voice：A Massively-Multilingual Speech Corpus（2020）](https://arxiv.org/abs/1912.06670) — 短文，易读，说明 Common Voice 如何构建与校验。**🟢 入门**
 - [Open ASR Leaderboard preprint（2025）](https://arxiv.org/abs/2510.06961) — 60+ 模型、11 个数据集的可复现基准；可作为当前开源 ASR 格局的全景参考。**🟡 进阶**
 
-## 13. 评测与测试
+## 14. 评测与测试
 
 不能度量就无法交付。**语音智能体评测本质上带有随机性**——同一转写在不同次运行中可能过也可能不过，因此**仿真与统计**比固定用例更重要。
 
@@ -257,7 +265,7 @@
 - [LiveKit：Understand and Improve Agent Latency](https://livekit.com/blog/understand-and-improve-agent-latency) — 每轮延迟（端到端、LLM TTFT、TTS TTFB）与优化切入点。**🟡 进阶**
 - [Twilio：How Do You Know if Your Voice AI Agents Are Working?](https://www.twilio.com/en-us/blog/developers/evaluating-voice-ai-agents) — 2025 厂商中立文：主张业务结果指标优于单纯 WER/延迟。**🟢 入门**
 
-## 14. 生产、部署与扩展
+## 15. 生产、部署与扩展
 
 语音智能体的生产级基础设施**仍是本领域最难且未完全标准化的问题**。在给人报「每分钟多少钱」之前，建议先读这些。
 
@@ -271,7 +279,7 @@
 - [Sierra：Constellation of Models](https://sierra.ai/blog/constellation-of-models) — 领先客户体验（CX）公司如何在单个语音智能体里组合 15+ 模型。**🟡 进阶**
 - [LiveKit Agent Observability](https://livekit.com/products/agent-observability) — LiveKit Cloud 内置追踪、转写与各阶段延迟。**🟢 入门**
 
-## 15. 伦理、安全与监管
+## 16. 伦理、安全与监管
 
 若在 2026 年对外发布语音智能体，**披露与同意已不再是可选项**。FCC 与欧盟《人工智能法》均有实质约束力。
 
@@ -284,7 +292,7 @@
 - [Voice Cloning Ethics（CAMB.AI）](https://www.camb.ai/blog-post/voice-cloning-ethics-consent-deepfakes-responsible-ai-voice-use) — 同意框架、ELVIS 法案与欧盟 AI 法的实践概览。**🟢 入门**
 - [NCLC：Top Six TCPA/Robocall Developments 2024/2025](https://library.nclc.org/article/top-six-tcparobocall-developments-20242025) — 消费者保护视角看实际执法重点。**🟡 进阶**
 
-## 16. 博客与通讯
+## 17. 博客与通讯
 
 订阅两三份即可跟上节奏——领域变化很快。
 
@@ -299,7 +307,7 @@
 - [Voice AI Weekly（Vapi）](https://vapivoice.substack.com/) — 周报：新闻、产品与工具汇总。
 - [Voicebot.ai（Synthedia）](https://voicebot.ai/) — 长期运行的每日新闻与付费行业通讯。
 
-## 17. 播客
+## 18. 播客
 
 - [The Voicebot Podcast（Bret Kinsella）](https://voicebot.ai/voicebot-podcasts/) — 运行最久、偏严肃的语音智能体技术播客；每周创始人访谈。
 - [Latent Space：The AI Engineer Podcast](https://www.latent.space/podcast) — 美国头部技术播客之一；常涉语音智能体相关技术，如 Realtime API、Pipecat、Voxtral、Gemini Live。
@@ -307,7 +315,7 @@
 - [TWIML AI Podcast：语音相关单集](https://podcasts.apple.com/us/podcast/building-voice-ai-agents-that-dont-suck-with-kwindla-kramer/id1116303051?i=1000717421464) — 技术访谈质量高；Kwindla Kramer 集适合入门。
 - [This Week In Voice（Project Voice）](https://thisweekinvoice.substack.com/) — 新闻圆桌，覆盖对话式 AI 与语音智能体。
 
-## 18. 社区
+## 19. 社区
 
 - [LiveKit Community Slack](https://livekit.io/join-slack) — 直接联系维护者与其他语音智能体开发者。
 - [Pipecat Discord](https://www.pipecat.ai/) — 活跃社区与每周线上答疑；邀请链接在主页。
@@ -319,7 +327,7 @@
 - [Reddit：r/LocalLLaMA](https://www.reddit.com/r/LocalLLaMA/) — 本地 Whisper/Parakeet、端侧 TTS 与端到端语音栈讨论活跃。
 - [Reddit：r/AI_Agents](https://www.reddit.com/r/AI_Agents/) — 通用 AI 智能体社区，语音智能体相关话题常见。
 
-## 19. 会议与活动
+## 20. 会议与活动
 
 - [AI Engineer World's Fair](https://www.ai.engineer/worldsfair) — 规模最大的 AI 工程会议；语音智能体分论坛曾有 ElevenLabs、Vapi、LiveKit、Pipecat、Cartesia 等重大发布。**🟢 入门**
 - [AI Engineer YouTube 频道](https://www.youtube.com/@aiDotEngineer) — World's Fair 与 Summit 演讲免费上线，语音智能体相关演讲的优质资源库。**🟢 入门**
@@ -329,7 +337,7 @@
 - [Project Voice](https://www.projectvoice.ai/annual-conference) — 美国对话式 AI 主会之一，内容覆盖语音智能体、文本与聊天等形态。**🟢 入门**
 - [Interspeech](https://www.interspeech2025.org/) — 语音科学顶会；门槛高但值得关注——大量里程碑论文首发于此。**🔴 高阶**
 
-## 20. 黑客松与竞赛
+## 21. 黑客松与竞赛
 
 - [ElevenLabs Worldwide Hackathon](https://hackathon.elevenlabs.io/) — 全球语音智能体旗舰黑客松；30+ 城市，奖金池 $200K+。**🟢 入门**
 - [ElevenHacks（每周冲刺）](https://hacks.elevenlabs.io/) — 每周主题挑战，含额度与奖品；低压力「一周一项目」。**🟢 入门**
@@ -341,12 +349,12 @@
 
 ## 建议学习路径
 
-1. **第 1 周——基础：** 阅读 LiveKit 流水线文章与《语音智能体图解入门》（第 1、7 节）。  
-2. **第 2 周——首个语音智能体：** 完整跑通 LiveKit *或* Pipecat 快速入门（第 2、9 节）。  
+1. **第 1 周——基础：** 阅读 LiveKit 流水线文章与《语音智能体图解入门》（第 1、8 节）。  
+2. **第 2 周——首个语音智能体：** 完整跑通 LiveKit *或* Pipecat 快速入门（第 2、10 节）。  
 3. **第 3 周——组件：** 替换 STT、TTS、LLM 供应商；对延迟做基准测试（第 3、4、5 节）。  
-4. **第 4 周——话轮与电话：** 接入 Silero VAD 与话轮检测；配置并接通 SIP 中继（第 6、8 节）。  
-5. **第 5 周——生产：** 加入评测与可观测性；阅读 FCC/欧盟 AI 法材料（第 13、14、15 节）。  
-6. **持续：** 订阅两封通讯，并加入语音智能体相关社区，例如 [LinkedIn 群组](https://www.linkedin.com/groups/14269127/)（第 16、17、18 节）。
+4. **第 4 周，话轮、音频清洗与电话：** 接入 Silero VAD、话轮检测以及一道语音增强；配置并接通 SIP 中继（第 6、7、9 节）。  
+5. **第 5 周——生产：** 加入评测与可观测性；阅读 FCC/欧盟 AI 法材料（第 14、15、16 节）。  
+6. **持续：** 订阅两封通讯，并加入语音智能体相关社区，例如 [LinkedIn 群组](https://www.linkedin.com/groups/14269127/)（第 17、18、19 节）。
 
 ## 贡献
 
