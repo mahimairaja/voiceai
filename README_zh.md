@@ -256,6 +256,7 @@
 - [Hamming：Voice Agent Evaluation Metrics Guide](https://hamming.ai/resources/voice-agent-evaluation-metrics-guide) — 延迟百分位数、WER、类 MOS 质量与任务完成率及计算公式。**🟡 进阶**
 - [LiveKit：Understand and Improve Agent Latency](https://livekit.com/blog/understand-and-improve-agent-latency) — 每轮延迟（端到端、LLM TTFT、TTS TTFB）与优化切入点。**🟡 进阶**
 - [Twilio：How Do You Know if Your Voice AI Agents Are Working?](https://www.twilio.com/en-us/blog/developers/evaluating-voice-ai-agents) — 2025 厂商中立文：主张业务结果指标优于单纯 WER/延迟。**🟢 入门**
+- [Future AGI simulate-sdk](https://github.com/future-agi/simulate-sdk) — 开源语音 AI 仿真 SDK，用于测试 AI 智能体；可生成合成对话用于评测。**🟡 进阶**
 
 ## 14. 生产、部署与扩展
 
