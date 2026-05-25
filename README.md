@@ -24,7 +24,7 @@ Read top-to-bottom if you're brand new. The recommended path:
 
 ---
 
-## 📘 Companion book — Voice Agents Handbook
+## 📘 Companion book: Voice Agents Handbook
 
 If you want this material in a tighter, opinionated, production-grade form, I wrote the **[Voice Agents Handbook](https://handbook.mahimai.ca)**: building production voice AI with LiveKit, plus appendices on choosing your stack and the LiveKit ecosystem beyond agents. Ships June 1, 2026 on Kindle.
 
