@@ -22,6 +22,18 @@ Read top-to-bottom if you're brand new. The recommended path:
 
 ---
 
+---
+
+## 📘 Companion book: Voice Agents Handbook
+
+If you want this material in a tighter, opinionated, production-grade form, I wrote the **[Voice Agents Handbook](https://handbook.mahimai.ca)**: building production voice AI with LiveKit, plus appendices on choosing your stack and the LiveKit ecosystem beyond agents. Ships June 1, 2026 on Kindle.
+
+The README you're reading collects the field's best free resources. The book is the curated path through them, with the patterns I've used shipping voice agents for trade people, lawyers, and immigration consultants.
+
+> _Disclosure: I maintain this repo and authored the handbook. Free sample (Introduction + Chapter 1) at [handbook.mahimai.ca](https://handbook.mahimai.ca)._
+
+---
+
 ## Table of contents
 
 1. [Foundational concepts and learning paths](#1-foundational-concepts-and-learning-paths)
@@ -361,3 +373,14 @@ Subscribe to two or three to stay current  the field moves quickly.
 
 Pull requests welcome. Resources must be **active in the last 12 months**, **accessible to developers**, and **vendor-neutral or clearly labeled** when authored by a commercial party. Open an issue to suggest additions or removals.
 
+## ⭐ Stargazers and contributors
+
+[![Star History Chart](https://api.star-history.com/svg?repos=mahimairaja/voiceai&type=Date)](https://star-history.com/#mahimairaja/voiceai&Date)
+
+<a href="https://github.com/mahimairaja/voiceai/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=mahimairaja/voiceai&max=40&columns=10&anon=0" alt="Contributors" />
+</a>
+
+## 📜 License
+
+[MIT](LICENSE). Fork it, ship it.

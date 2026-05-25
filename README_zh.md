@@ -22,6 +22,16 @@
 
 ---
 
+## 📘 配套图书：《Voice Agents Handbook》
+
+如果你想以更紧凑、有立场、面向生产的形式获得这些内容，可以阅读我撰写的 **[Voice Agents Handbook](https://handbook.mahimai.ca)**：基于 LiveKit 构建生产级语音 AI，附录涵盖技术栈选型与 LiveKit 生态中智能体之外的内容。2026 年 6 月 1 日在 Kindle 上架。
+
+你正在读的 README 收录了本领域最好的免费资源，本书则是穿越这些资源的一条精选路径，融入了我在为技工、律师与移民顾问交付语音智能体过程中沉淀的模式。
+
+> _披露：本仓库由我维护，《Voice Agents Handbook》也由我撰写。免费样章（前言 + 第 1 章）见 [handbook.mahimai.ca](https://handbook.mahimai.ca)。_
+
+---
+
 ## 目录
 
 1. [基础概念与学习路径](#1-基础概念与学习路径)
@@ -361,3 +371,14 @@
 
 欢迎 Pull Request。资源须**在近 12 个月内仍活跃**、**对开发者可访问**，且为**厂商中立或由商业方撰写时已明确标注**。若要增删条目，也可开 issue 建议。
 
+## ⭐ Stargazers 与贡献者
+
+[![Star History Chart](https://api.star-history.com/svg?repos=mahimairaja/voiceai&type=Date)](https://star-history.com/#mahimairaja/voiceai&Date)
+
+<a href="https://github.com/mahimairaja/voiceai/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=mahimairaja/voiceai&max=40&columns=10&anon=0" alt="Contributors" />
+</a>
+
+## 📜 许可证
+
+[MIT](LICENSE)。自由 fork，自由发布。
