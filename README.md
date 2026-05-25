@@ -372,3 +372,15 @@ Subscribe to two or three to stay current  the field moves quickly.
 ## Contributing
 
 Pull requests welcome. Resources must be **active in the last 12 months**, **accessible to developers**, and **vendor-neutral or clearly labeled** when authored by a commercial party. Open an issue to suggest additions or removals.
+
+## ⭐ Stargazers and contributors
+
+[![Star History Chart](https://api.star-history.com/svg?repos=mahimairaja/voiceai&type=Date)](https://star-history.com/#mahimairaja/voiceai&Date)
+
+<a href="https://github.com/mahimairaja/voiceai/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=mahimairaja/voiceai&max=40&columns=10&anon=0" alt="Contributors" />
+</a>
+
+## 📜 License
+
+[MIT](LICENSE). Fork it, ship it.
