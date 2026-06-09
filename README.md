@@ -236,6 +236,7 @@ Clone these instead of writing boilerplate from scratch.
 - [kwindla/macos-local-voice-agents](https://github.com/kwindla/macos-local-voice-agents)  Pipecat example hitting sub-800 ms voice-to-voice latency entirely on M-series Macs. **🟡 Intermediate**
 - [zzw922cn/awesome-speech-recognition-speech-synthesis-papers](https://github.com/zzw922cn/awesome-speech-recognition-speech-synthesis-papers)  Comprehensive curated index of ASR, TTS, voice conversion, and speech-LLM papers. **🟡 Intermediate**
 - [wildminder/awesome-ai-voice](https://github.com/wildminder/awesome-ai-voice)  Up-to-date 2025–2026 list of open-source TTS and voice-cloning models.
+- [CODEANDTRUST/clawcall](https://github.com/CODEANDTRUST/clawcall)  Self-hostable Twilio↔OpenClaw bridge that routes every inbound caller utterance through a full agent turn — STT (Deepgram) → `chat.send` → TTS (ElevenLabs) — with native tool access mid-call. MIT, TypeScript. **🟡 Intermediate**
 - [CorentinJ/Real-Time-Voice-Cloning](https://github.com/CorentinJ/Real-Time-Voice-Cloning)  Classic 5-second voice cloning project for understanding TTS fundamentals. **🟡 Intermediate**
 
 ## 12. Datasets and benchmarks
