@@ -275,6 +275,7 @@
 - [LiveKit：Understand and Improve Agent Latency](https://livekit.com/blog/understand-and-improve-agent-latency)：每轮延迟（端到端、LLM TTFT、TTS TTFB）与优化切入点。**🟡 进阶**
 - [Twilio：How Do You Know if Your Voice AI Agents Are Working?](https://www.twilio.com/en-us/blog/developers/evaluating-voice-ai-agents)：2025 厂商中立文：主张业务结果指标优于单纯 WER/延迟。**🟢 入门**
 - [Future AGI simulate-sdk](https://github.com/future-agi/simulate-sdk)：开源语音 AI 仿真 SDK，用于测试 AI 智能体；可生成合成对话用于评测。**🟡 进阶**
+- [Future AGI](https://github.com/future-agi/future-agi)：开源平台，在同一反馈闭环中对语音与 AI 智能体应用进行仿真、评测、追踪、护栏与优化；支持基于人物画像的仿真与 50+ 评测指标。**🟡 进阶**
 
 ## 15. 生产、部署与扩展
 
