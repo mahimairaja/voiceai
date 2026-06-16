@@ -6,8 +6,6 @@
 <img src="docs/assets/banner-light.webp" alt="Voice AI：构建实时语音智能体的精选学习路径" width="100%" />
 </picture>
 
-# 🎙️ Voice AI
-
 **一条精心整理的、面向开发者的学习路径：从第一次调用 STT，到把生产级电话语音智能体规模化上线。**
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
@@ -31,11 +29,11 @@
 
 若你是全新入门，建议自上而下阅读。推荐路径：
 
-1. **基础** → 理解流水线与延迟预算  
-2. **框架** → 选定一个（开源最稳妥的选择是 LiveKit Agents 或 Pipecat），先跑通 hello-world  
-3. **组件**（STT、TTS、LLM、VAD、话轮检测）→ 替换各层以理解其作用  
-4. **传输与电话** → 对接真实电话号码  
-5. **评测、生产、伦理** → 把它做得足够安全、可以对外发布  
+1. **基础** → 理解流水线与延迟预算
+2. **框架** → 选定一个（开源最稳妥的选择是 LiveKit Agents 或 Pipecat），先跑通 hello-world
+3. **组件**（STT、TTS、LLM、VAD、话轮检测）→ 替换各层以理解其作用
+4. **传输与电话** → 对接真实电话号码
+5. **评测、生产、伦理** → 把它做得足够安全、可以对外发布
 
 ---
 
@@ -97,22 +95,26 @@
 下列框架都能把 STT、LLM 与 TTS 串起来。**若走开源生产路线，LiveKit Agents 与 Pipecat 通常是最稳妥的两款框架**；若偏好托管控制台，Vapi、Retell、Bland 在「从 0 到第一次通话」上非常省时。
 
 ### 开源框架
+
 - [LiveKit Agents：语音智能体快速入门](https://docs.livekit.io/agents/start/voice-ai/)：约 10 分钟内用 Python 或 TypeScript 跑通一个语音智能体示例，底层为 WebRTC。**🟢 入门**
 - [Pipecat：Quickstart](https://docs.pipecat.ai/getting-started/quickstart)：脚手架搭好 Deepgram + OpenAI + Cartesia 流水线，5 分钟内可在浏览器里对话。**🟢 入门**
 - [Ultravox（fixie-ai/ultravox）](https://github.com/fixie-ai/ultravox)：开放权重的多模态语音 LLM（Llama/Gemma/Qwen 等变体），省去独立 ASR 环节，首 token 时延（TTFT）约 150 ms。**🔴 高阶**
 
 ### 托管平台
+
 - [Vapi：Quickstart](https://docs.vapi.ai/quickstart/introduction)：以控制台为先；约 5 分钟内可在免费美国号码上发布语音智能体。**🟢 入门**
 - [Retell AI：Introduction & Quickstart](https://docs.retellai.com/general/introduction)：电话语音智能体平台，注册送 $10 额度。**🟢 入门**
 - [Bland AI：Send Your First Phone Call](https://docs.bland.ai/tutorials/send-first-call)：极简 API 教程，打出第一通 AI 电话。**🟢 入门**
 - [ElevenLabs Conversational AI：Quickstart](https://elevenlabs.io/docs/eleven-agents/quickstart)：约 5 分钟内在任意网站嵌入语音智能体组件。**🟢 入门**
 
 ### 实时 / 语音到语音 API
+
 - [OpenAI Realtime API：指南](https://platform.openai.com/docs/guides/realtime)：`gpt-realtime` 通过 WebRTC、WebSocket 或 SIP 接入的官方说明。**🟡 进阶**
 - [Google Gemini Live API：概览](https://ai.google.dev/gemini-api/docs/live-api)：低延迟双向语音 + 视觉，支持插话（barge-in）与工具调用。**🟡 进阶**
 - [Twilio ConversationRelay](https://www.twilio.com/docs/voice/conversationrelay)：WebSocket 桥接，托管 STT/TTS，你专注 LLM 逻辑；可与任意 LLM 配合。**🟡 进阶**
 
 ### 厂商中立对比
+
 - [Vapi vs Pipecat vs LiveKit（AssemblyAI）](https://www.assemblyai.com/blog/vapi-vs-pipecat-vs-livekit)：从架构视角对比流水线控制与传输选型。**🟡 进阶**
 - [11 Voice Agent Platforms Compared（Softcery）](https://softcery.com/lab/choosing-the-right-voice-agent-platform-in-2025)：覆盖面广的市场地图与场景建议。**🟢 入门**
 - [Best Voice Agent Stack（Hamming AI）](https://hamming.ai/resources/best-voice-agent-stack)：自研 vs 采购框架，含具体成本、延迟与上线周期数字。**🟡 进阶**
@@ -122,6 +124,7 @@
 **先选定一种流式 STT 并学深**，再四处比价。Deepgram、AssemblyAI 与 Whisper 衍生方案已覆盖多数场景。
 
 ### 商业 API
+
 - [Deepgram Nova-3：STT 基准](https://deepgram.com/learn/speech-to-text-benchmarks)：在 WER、延迟与成本语境下介绍 Deepgram 产品。**🟢 入门**
 - [AssemblyAI Universal-Streaming](https://www.assemblyai.com/blog/build-voice-agent-function-calling)：流式 STT 教程，同时可作为 function calling 示例。**🟡 进阶**
 - [OpenAI Whisper / gpt-4o-transcribe API 文档](https://platform.openai.com/docs/guides/speech-to-text)：若已用 OpenAI，这是最容易上手的云端 STT。**🟢 入门**
@@ -129,12 +132,14 @@
 - [Cartesia Ink](https://docs.cartesia.ai/)：流式 STT 搭配 Sonic TTS，单供应商低延迟栈。**🟢 入门**
 
 ### 开源
+
 - [openai/whisper](https://github.com/openai/whisper)：原仓库与 DIY ASR 的事实起点。**🟢 入门**
 - [SYSTRAN/faster-whisper](https://github.com/SYSTRAN/faster-whisper)：基于 CTranslate2 的实现，INT8 下可达约 4× 提速；自托管 Whisper 常用。**🟡 进阶**
 - [NVIDIA NeMo（Parakeet / Canary）](https://github.com/NVIDIA-NeMo/NeMo)：榜单前列的开源 ASR 与流式推理方案。**🔴 高阶**
 - [Moonshine](https://github.com/moonshine-ai/moonshine)：轻量端侧 ASR（tiny 27M / base 61M 参数），针对边缘设备实时流优化。**🟡 进阶**
 
 ### 基准与讲解
+
 - [Open ASR Leaderboard（HuggingFace）](https://huggingface.co/spaces/hf-audio/open_asr_leaderboard)：社区榜单，11 个数据集；开源选型参考。**🟢 入门**
 - [Artificial Analysis：Speech-to-Text](https://artificialanalysis.ai/speech-to-text)：独立榜单，按 WER、速度与成本排名 48+ 家 STT。**🟢 入门**
 - [Streaming vs Batch ASR（Arun Baby）](https://www.arunbaby.com/speech-tech/0001-streaming-asr/)：面向工程师的 RNN-T 与 Conformer 流式架构说明。**🟡 进阶**
@@ -144,6 +149,7 @@
 **拖垮语音智能体的往往是延迟，而非单纯音质**——应优先选择真正的流式输出、首字节在 200 ms 以内的供应商。
 
 ### 商业 API
+
 - [ElevenLabs 文档](https://elevenlabs.io/docs)：业界领先音质、声音克隆与 Conversational AI 同属一套 SDK。**🟢 入门**
 - [Cartesia Sonic Quickstart](https://docs.cartesia.ai/get-started/realtime-text-to-speech-quickstart)：首字节低于 100 ms，面向语音智能体设计。**🟢 入门**
 - [Deepgram Aura](https://developers.deepgram.com/docs/tts-models)：低延迟流式 TTS，与 Deepgram STT 衔接顺畅。**🟢 入门**
@@ -151,6 +157,7 @@
 - [Artificial Analysis：TTS 榜单](https://artificialanalysis.ai/text-to-speech/models)：ELO、价格与速度对比，含 Rime、PlayHT、Hume、Inworld 等。**🟢 入门**
 
 ### 开源
+
 - [Coqui TTS（idiap fork）](https://github.com/idiap/coqui-ai-TTS)：Coqui-TTS / XTTS v2 的持续维护分支；实战最多的开源 TTS 工具包。**🟡 进阶**
 - [Piper（OHF-Voice/piper1-gpl）](https://github.com/OHF-Voice/piper1-gpl)：面向树莓派等设备的快速本地神经 TTS，适合离线项目。**🟢 入门**
 - [Kokoro 82M](https://github.com/hexgrad/kokoro)：体积小、Apache 许可，在社区 ELO 对战中表现突出；可跑 CPU。**🟢 入门**
@@ -159,6 +166,7 @@
 - [Sesame CSM](https://github.com/SesameAILabs/csm)：对话向、上下文感知的多说话人 TTS，Llama 骨干 + Mimi 编解码。**🔴 高阶**
 
 ### 流式与伦理
+
 - [Streaming TTS for Low-Latency Agents（Picovoice）](https://picovoice.ai/blog/streaming-text-to-speech-for-ai-agents/)：清晰区分单流、输出流式与双流 TTS。**🟡 进阶**
 - [Ethics of Voice Cloning & Deepfakes（Deepgram）](https://deepgram.com/learn/ethics-of-voice-cloning-and-deepfakes)：厂商中立讨论滥用、监管与开发者责任。**🟢 入门**
 
@@ -167,16 +175,19 @@
 用户感知的「是否聪明」很大程度上取决于 **LLM 能多快开始输出第一个 token**。首 token 时延（TTFT）低于约 300 ms 会显著改变对话体感。
 
 ### 低延迟推理
+
 - [Groq](https://groq.com/)：LPU 推理云，Llama 吞吐相对常规 GPU 可达约 10×。**🟢 入门**
 - [Cerebras Inference](https://www.cerebras.ai/inference)：晶圆级芯片推理，Llama 类模型吞吐很高。**🟢 入门**
 - [SambaNova Cloud](https://cloud.sambanova.ai/)：可重构数据流架构上的推理服务；低延迟下吞吐稳定。**🟢 入门**
 
 ### 语音到语音模型
+
 - [OpenAI Realtime API 指南](https://platform.openai.com/docs/guides/realtime)：旗舰级 S2S，传输为 WebRTC/WebSocket。**🟡 进阶**
 - [Google Gemini Live](https://ai.google.dev/gemini-api/docs/live-api)：实时多模态语音/视频，支持插话与约 70 种语言。**🟡 进阶**
 - [Moshi（kyutai-labs）](https://github.com/kyutai-labs/moshi)：开源全双工语音–文本基础模型，延迟约 200 ms；最值得优先钻研的开源 S2S 模型之一。**🔴 高阶**
 
 ### 面向语音智能体的提示与工具
+
 - [OpenAI Voice Agents 指南](https://platform.openai.com/docs/guides/voice-agents)：对比链式 vs S2S 架构，含提示与工具最佳实践。**🟢 入门**
 - [ElevenLabs Voice Agent Prompting 指南](https://elevenlabs.io/docs/agents-platform/best-practices/prompting-guide)：面向语音智能体的生产级提示结构，经验可泛化。**🟡 进阶**
 - [Voice AI Prompt Engineering Guide（VoiceInfra）](https://voiceinfra.ai/blog/voice-ai-prompt-engineering-complete-guide)：解释为何面向语音智能体的提示通常要比聊天场景短约 60–70%，附模板。**🟢 入门**
@@ -252,7 +263,7 @@
 - [livekit-examples（组织）](https://github.com/livekit-examples)：LiveKit 官方 Python/React/Swift/Android 示例集合。**🟢 入门**
 - [pipecat-ai/pipecat-examples](https://github.com/pipecat-ai/pipecat-examples)：按键说话、WebSocket、电话与多模态等示例。**🟢 → 🟡**
 - [elevenlabs/elevenlabs-examples](https://github.com/elevenlabs/elevenlabs-examples)：可运行的 Next.js 与 Python 示例：TTS、STT 与实时语音智能体。**🟢 入门**
-- [vocodedev/vocode-core](https://github.com/vocodedev/vocode-core)：开源模块化框架：支持电话、Zoom 或系统音频等场景的语音智能体。**🟡 进阶** *（维护活跃度低于 LiveKit/Pipecat）*
+- [vocodedev/vocode-core](https://github.com/vocodedev/vocode-core)：开源模块化框架：支持电话、Zoom 或系统音频等场景的语音智能体。**🟡 进阶** _（维护活跃度低于 LiveKit/Pipecat）_
 - [kwindla/macos-local-voice-agents](https://github.com/kwindla/macos-local-voice-agents)：Pipecat 示例：在 M 系列 Mac 上全本地实现端到端语音延迟低于 800 ms。**🟡 进阶**
 - [zzw922cn/awesome-speech-recognition-speech-synthesis-papers](https://github.com/zzw922cn/awesome-speech-recognition-speech-synthesis-papers)：ASR、TTS、声音转换与语音–LLM 论文索引。**🟡 进阶**
 - [wildminder/awesome-ai-voice](https://github.com/wildminder/awesome-ai-voice)：2025–2026 年持续更新的开源 TTS 与声音克隆模型列表。**🟢 入门**
@@ -383,11 +394,11 @@
 
 ## 建议学习路径
 
-1. **第 1 周——基础：** 阅读 LiveKit 流水线文章与《语音智能体图解入门》（第 1、8 节）。  
-2. **第 2 周——首个语音智能体：** 完整跑通 LiveKit *或* Pipecat 快速入门（第 2、10 节）。  
-3. **第 3 周——组件：** 替换 STT、TTS、LLM 供应商；对延迟做基准测试（第 3、4、5 节）。  
-4. **第 4 周，话轮、音频清洗与电话：** 接入 Silero VAD、话轮检测以及一道语音增强；配置并接通 SIP 中继（第 6、7、9 节）。  
-5. **第 5 周——生产：** 加入评测与可观测性；阅读 FCC/欧盟 AI 法材料（第 14、15、16 节）。  
+1. **第 1 周——基础：** 阅读 LiveKit 流水线文章与《语音智能体图解入门》（第 1、8 节）。
+2. **第 2 周——首个语音智能体：** 完整跑通 LiveKit _或_ Pipecat 快速入门（第 2、10 节）。
+3. **第 3 周——组件：** 替换 STT、TTS、LLM 供应商；对延迟做基准测试（第 3、4、5 节）。
+4. **第 4 周，话轮、音频清洗与电话：** 接入 Silero VAD、话轮检测以及一道语音增强；配置并接通 SIP 中继（第 6、7、9 节）。
+5. **第 5 周——生产：** 加入评测与可观测性；阅读 FCC/欧盟 AI 法材料（第 14、15、16 节）。
 6. **持续：** 订阅两封通讯，并加入语音智能体相关社区，例如 [LinkedIn 群组](https://www.linkedin.com/groups/14269127/)（第 17、18、19 节）。
 
 ## 贡献
