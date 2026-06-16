@@ -1,0 +1,13 @@
+# Hosts that block automated checkers (login or bot walls) or break HTTP/2
+# from CI runners, but work fine for humans.
+https://www.linkedin.com/
+https://x.com/
+https://twitter.com/
+https://www.fcc.gov/
+https://deepgram.com/
+
+# Dynamic badge and stat services (not documentation links).
+https://img.shields.io/
+https://awesome.re/
+https://api.star-history.com/
+https://contrib.rocks/

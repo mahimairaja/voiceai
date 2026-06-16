@@ -1,8 +1,23 @@
-![Banner Image](banner.png)
+<div align="center">
 
-> English | [中文版本](./README_zh.md)
+<picture>
+<source media="(prefers-color-scheme: dark)" srcset="docs/assets/banner-dark.webp">
+<source media="(prefers-color-scheme: light)" srcset="docs/assets/banner-light.webp">
+<img src="docs/assets/banner-light.webp" alt="Voice AI: a curated learning path for building real-time voice agents" width="100%" />
+</picture>
 
-> A curated, developer friendly learning path for building real-time voice AI agents from your first STT call to scaling production telephony.
+**A curated, developer-friendly learning path for building real-time voice AI agents, from your first STT call to scaling production telephony.**
+
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+[![License: MIT](https://img.shields.io/github/license/mahimairaja/voiceai?style=flat-square&color=blue)](LICENSE)
+[![Stars](https://img.shields.io/github/stars/mahimairaja/voiceai?style=flat-square&logo=github&color=yellow)](https://github.com/mahimairaja/voiceai/stargazers)
+[![Last commit](https://img.shields.io/github/last-commit/mahimairaja/voiceai?style=flat-square&color=informational)](https://github.com/mahimairaja/voiceai/commits/main)
+[![Resources](https://img.shields.io/badge/resources-180%2B-5b21b6?style=flat-square)](#table-of-contents)
+[![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square)](#contributing)
+
+**English** · [中文版本](./README_zh.md)
+
+</div>
 
 Voice AI has moved from research demos into shipping product in under three years. **The modern stack is converging around a clear pattern**: a real-time transport layer (WebRTC or telephony), a streaming pipeline of speech-to-text → LLM → text-to-speech, and a turn-taking model that decides when the agent should speak. This list is structured to mirror that learning order: start with the foundations, pick a framework, then drill into individual components and production concerns.
 
@@ -34,6 +49,9 @@ The README you're reading collects the field's best free resources. The book is 
 
 ## Table of contents
 
+<details>
+<summary><b>📖 Expand the 21 sections</b></summary>
+
 1. [Foundational concepts and learning paths](#1-foundational-concepts-and-learning-paths)
 2. [Frameworks and orchestration platforms](#2-frameworks-and-orchestration-platforms)
 3. [Speech-to-text (STT / ASR)](#3-speech-to-text-stt--asr)
@@ -56,6 +74,8 @@ The README you're reading collects the field's best free resources. The book is 
 20. [Conferences and events](#20-conferences-and-events)
 21. [Hackathons and competitions](#21-hackathons-and-competitions)
 
+</details>
+
 ---
 
 ## 1. Foundational concepts and learning paths
@@ -75,22 +95,26 @@ Start here. These resources establish the **mental model of the voice agent pipe
 The frameworks below all let you wire STT, an LLM, and TTS together. **For open-source production work, LiveKit Agents and Pipecat are the two safest bets**; for managed dashboards, Vapi, Retell, and Bland win on time-to-first-call.
 
 ### Open-source frameworks
+
 - [LiveKit Agents: Voice AI Quickstart](https://docs.livekit.io/agents/start/voice-ai/): Working assistant in <10 min via Python or TypeScript, runs on top of WebRTC. **🟢 Beginner**
 - [Pipecat: Quickstart](https://docs.pipecat.ai/getting-started/quickstart): Scaffolds a Deepgram + OpenAI + Cartesia pipeline you can talk to in the browser in 5 minutes. **🟢 Beginner**
 - [Ultravox (fixie-ai/ultravox)](https://github.com/fixie-ai/ultravox): Open-weight multimodal speech LLM (Llama/Gemma/Qwen variants) that skips the separate ASR stage for ~150 ms TTFT. **🔴 Advanced**
 
 ### Managed platforms
+
 - [Vapi: Quickstart](https://docs.vapi.ai/quickstart/introduction): Dashboard-first; ship an agent on a free US phone number in under 5 minutes. **🟢 Beginner**
 - [Retell AI: Introduction & Quickstart](https://docs.retellai.com/general/introduction): Phone-agent platform with $10 free credit on signup. **🟢 Beginner**
 - [Bland AI: Send Your First Phone Call](https://docs.bland.ai/tutorials/send-first-call): Minimal API tutorial for placing your first AI phone call. **🟢 Beginner**
 - [ElevenLabs Conversational AI: Quickstart](https://elevenlabs.io/docs/eleven-agents/quickstart): Build and embed a voice agent widget on any website in 5 minutes. **🟢 Beginner**
 
 ### Realtime / speech-to-speech APIs
+
 - [OpenAI Realtime API: Guide](https://platform.openai.com/docs/guides/realtime): Official guide to `gpt-realtime` over WebRTC, WebSockets, or SIP. **🟡 Intermediate**
 - [Google Gemini Live API: Overview](https://ai.google.dev/gemini-api/docs/live-api): Low-latency, bidirectional voice + vision agents with barge-in and tool use. **🟡 Intermediate**
 - [Twilio ConversationRelay](https://www.twilio.com/docs/voice/conversationrelay): WebSocket bridge that handles STT/TTS so you focus on LLM logic; works with any LLM. **🟡 Intermediate**
 
 ### Vendor-neutral comparisons
+
 - [Vapi vs Pipecat vs LiveKit (AssemblyAI)](https://www.assemblyai.com/blog/vapi-vs-pipecat-vs-livekit): Architecture-focused comparison of pipeline control and transport choices. **🟡 Intermediate**
 - [11 Voice Agent Platforms Compared (Softcery)](https://softcery.com/lab/choosing-the-right-voice-agent-platform-in-2025): Broad market map with use-case recommendations. **🟢 Beginner**
 - [Best Voice Agent Stack (Hamming AI)](https://hamming.ai/resources/best-voice-agent-stack): Buy-vs-build framework with concrete cost, latency, and time-to-launch numbers. **🟡 Intermediate**
@@ -100,6 +124,7 @@ The frameworks below all let you wire STT, an LLM, and TTS together. **For open-
 Pick **one streaming STT** and learn it deeply before shopping around. Deepgram, AssemblyAI, and Whisper-derivatives cover most use cases.
 
 ### Commercial APIs
+
 - [Deepgram Nova-3: STT benchmarks](https://deepgram.com/learn/speech-to-text-benchmarks): Primer on WER, latency, and cost alongside Deepgram's product reference. **🟢 Beginner**
 - [AssemblyAI Universal-Streaming](https://www.assemblyai.com/blog/build-voice-agent-function-calling): Streaming STT walkthrough that doubles as a function-calling tutorial. **🟡 Intermediate**
 - [OpenAI Whisper / gpt-4o-transcribe API docs](https://platform.openai.com/docs/guides/speech-to-text): Easiest cloud STT if you already use OpenAI. **🟢 Beginner**
@@ -107,12 +132,14 @@ Pick **one streaming STT** and learn it deeply before shopping around. Deepgram,
 - [Cartesia Ink](https://docs.cartesia.ai/): Streaming STT paired with Sonic TTS for a single-vendor low-latency stack. **🟢 Beginner**
 
 ### Open source
+
 - [openai/whisper](https://github.com/openai/whisper): The original repo and the de facto starting point for any DIY ASR project. **🟢 Beginner**
 - [SYSTRAN/faster-whisper](https://github.com/SYSTRAN/faster-whisper): CTranslate2 reimplementation up to 4× faster with INT8; recommended for self-hosted Whisper. **🟡 Intermediate**
 - [NVIDIA NeMo (Parakeet / Canary)](https://github.com/NVIDIA-NeMo/NeMo): Top-of-leaderboard open ASR models with streaming inference recipes. **🔴 Advanced**
 - [Moonshine](https://github.com/moonshine-ai/moonshine): Tiny on-device ASR (tiny 27M / base 61M params) optimized for live streaming on edge devices. **🟡 Intermediate**
 
 ### Benchmarks and explainers
+
 - [Open ASR Leaderboard (HuggingFace)](https://huggingface.co/spaces/hf-audio/open_asr_leaderboard): Community leaderboard across 11 datasets: your reference for open-source picks. **🟢 Beginner**
 - [Artificial Analysis: Speech-to-Text](https://artificialanalysis.ai/speech-to-text): Independent leaderboard ranking 48+ STT providers by WER, speed, and cost. **🟢 Beginner**
 - [Streaming vs Batch ASR (Arun Baby)](https://www.arunbaby.com/speech-tech/0001-streaming-asr/): Engineer-friendly explainer of RNN-T and Conformer streaming architectures. **🟡 Intermediate**
@@ -122,6 +149,7 @@ Pick **one streaming STT** and learn it deeply before shopping around. Deepgram,
 **Latency, not raw quality, is what kills voice agents**: prioritize providers offering true streaming with first-byte under 200 ms.
 
 ### Commercial APIs
+
 - [ElevenLabs Docs](https://elevenlabs.io/docs): Industry-leading quality, voice cloning, and Conversational AI in one SDK. **🟢 Beginner**
 - [Cartesia Sonic Quickstart](https://docs.cartesia.ai/get-started/realtime-text-to-speech-quickstart): Sub-100 ms first-byte latency, designed specifically for voice agents. **🟢 Beginner**
 - [Deepgram Aura](https://developers.deepgram.com/docs/tts-models): Low-latency streaming TTS that pairs cleanly with Deepgram STT. **🟢 Beginner**
@@ -129,6 +157,7 @@ Pick **one streaming STT** and learn it deeply before shopping around. Deepgram,
 - [Artificial Analysis: TTS leaderboard](https://artificialanalysis.ai/text-to-speech/models): ELO, price, and speed comparison covering Rime, PlayHT, Hume, Inworld, and others. **🟢 Beginner**
 
 ### Open source
+
 - [Coqui TTS (idiap fork)](https://github.com/idiap/coqui-ai-TTS): Maintained fork of Coqui-TTS / XTTS v2; the most battle-tested OSS TTS toolkit. **🟡 Intermediate**
 - [Piper (OHF-Voice/piper1-gpl)](https://github.com/OHF-Voice/piper1-gpl): Fast local neural TTS optimized for Raspberry Pi; perfect for offline projects. **🟢 Beginner**
 - [Kokoro 82M](https://github.com/hexgrad/kokoro): Tiny Apache-licensed model that tops community ELO arenas; runs on CPU. **🟢 Beginner**
@@ -137,6 +166,7 @@ Pick **one streaming STT** and learn it deeply before shopping around. Deepgram,
 - [Sesame CSM](https://github.com/SesameAILabs/csm): Conversational, context-aware multi-speaker TTS using a Llama backbone with the Mimi codec. **🔴 Advanced**
 
 ### Streaming and ethics
+
 - [Streaming TTS for Low-Latency Agents (Picovoice)](https://picovoice.ai/blog/streaming-text-to-speech-for-ai-agents/): Clear taxonomy of single, output-streaming, and dual-streaming TTS. **🟡 Intermediate**
 - [Ethics of Voice Cloning & Deepfakes (Deepgram)](https://deepgram.com/learn/ethics-of-voice-cloning-and-deepfakes): Vendor-neutral discussion of misuse, regulation, and developer responsibility. **🟢 Beginner**
 
@@ -145,16 +175,19 @@ Pick **one streaming STT** and learn it deeply before shopping around. Deepgram,
 A voice agent's perceived intelligence is bounded by **how fast the LLM streams its first token**. Sub-300 ms TTFT changes the conversation feel entirely.
 
 ### Low-latency inference
+
 - [Groq](https://groq.com/): LPU-based inference cloud delivering ~10× faster Llama tokens/sec than commodity GPUs. **🟢 Beginner**
 - [Cerebras Inference](https://www.cerebras.ai/inference): Wafer-scale chip inference with very high throughput on Llama models. **🟢 Beginner**
 - [SambaNova Cloud](https://cloud.sambanova.ai/): Reconfigurable Dataflow inference; stable throughput at low latency. **🟢 Beginner**
 
 ### Speech-to-speech models
+
 - [OpenAI Realtime API guide](https://platform.openai.com/docs/guides/realtime): Flagship S2S product with WebRTC/WebSocket transport. **🟡 Intermediate**
 - [Google Gemini Live](https://ai.google.dev/gemini-api/docs/live-api): Real-time multimodal voice/video with barge-in and 70-language support. **🟡 Intermediate**
 - [Moshi (kyutai-labs)](https://github.com/kyutai-labs/moshi): Open-source full-duplex speech-text foundation model with 200 ms latency: the premier OSS S2S model to study. **🔴 Advanced**
 
 ### Voice-specific prompting and tools
+
 - [OpenAI Voice Agents Guide](https://platform.openai.com/docs/guides/voice-agents): Compares chained vs S2S architectures with prompt and tool best practices. **🟢 Beginner**
 - [ElevenLabs Voice Agent Prompting Guide](https://elevenlabs.io/docs/agents-platform/best-practices/prompting-guide): Production-grade prompt structure tuned for voice; vendor-neutral lessons. **🟡 Intermediate**
 - [Voice AI Prompt Engineering Guide (VoiceInfra)](https://voiceinfra.ai/blog/voice-ai-prompt-engineering-complete-guide): Explains why voice prompts must be 60–70% shorter than chat prompts, with templates. **🟢 Beginner**
@@ -230,7 +263,7 @@ Clone these instead of writing boilerplate from scratch.
 - [livekit-examples (org)](https://github.com/livekit-examples): Official collection of LiveKit Python/React/Swift/Android starters. **🟢 Beginner**
 - [pipecat-ai/pipecat-examples](https://github.com/pipecat-ai/pipecat-examples): Sample apps for push-to-talk, websocket, telephony, and multimodal use cases. **🟢 → 🟡**
 - [elevenlabs/elevenlabs-examples](https://github.com/elevenlabs/elevenlabs-examples): Runnable Next.js and Python examples for TTS, STT, and real-time agents. **🟢 Beginner**
-- [vocodedev/vocode-core](https://github.com/vocodedev/vocode-core): Open-source modular framework for voice-LLM agents on phone, Zoom, or system audio. **🟡 Intermediate** *(less actively maintained than LiveKit/Pipecat)*
+- [vocodedev/vocode-core](https://github.com/vocodedev/vocode-core): Open-source modular framework for voice-LLM agents on phone, Zoom, or system audio. **🟡 Intermediate** _(less actively maintained than LiveKit/Pipecat)_
 - [kwindla/macos-local-voice-agents](https://github.com/kwindla/macos-local-voice-agents): Pipecat example hitting sub-800 ms voice-to-voice latency entirely on M-series Macs. **🟡 Intermediate**
 - [zzw922cn/awesome-speech-recognition-speech-synthesis-papers](https://github.com/zzw922cn/awesome-speech-recognition-speech-synthesis-papers): Comprehensive curated index of ASR, TTS, voice conversion, and speech-LLM papers. **🟡 Intermediate**
 - [wildminder/awesome-ai-voice](https://github.com/wildminder/awesome-ai-voice): Up-to-date 2025–2026 list of open-source TTS and voice-cloning models. **🟢 Beginner**
@@ -362,7 +395,7 @@ Subscribe to two or three to stay current: the field moves quickly.
 ## Suggested learning path
 
 1. **Week 1: Foundations:** Read the LiveKit pipeline post and Voice AI Illustrated Primer (sections 1, 8).
-2. **Week 2: First agent:** Finish the LiveKit *or* Pipecat quickstart end-to-end (sections 2, 10).
+2. **Week 2: First agent:** Finish the LiveKit _or_ Pipecat quickstart end-to-end (sections 2, 10).
 3. **Week 3: Components:** Swap STT, TTS, and LLM providers; benchmark latency (sections 3, 4, 5).
 4. **Week 4: Turn-taking, audio cleanup & telephony:** Add Silero VAD, a turn detector, and a speech-enhancement pass; connect a SIP trunk (sections 6, 7, 9).
 5. **Week 5: Production:** Add evaluation, observability, and read the FCC/EU AI Act material (sections 14, 15, 16).
@@ -370,7 +403,7 @@ Subscribe to two or three to stay current: the field moves quickly.
 
 ## Contributing
 
-Pull requests welcome. Resources must be **active in the last 12 months**, **accessible to developers**, and **vendor-neutral or clearly labeled** when authored by a commercial party. Open an issue to suggest additions or removals.
+Pull requests welcome. Resources must be **active in the last 12 months**, **accessible to developers**, and **vendor-neutral or clearly labeled** when authored by a commercial party. Open an issue to suggest additions or removals. See [CONTRIBUTING.md](CONTRIBUTING.md) for the full contribution guide.
 
 ## ⭐ Stargazers and contributors
 
