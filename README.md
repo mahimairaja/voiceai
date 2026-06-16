@@ -1,8 +1,21 @@
-![Banner Image](banner.png)
+<div align="center">
 
-> English | [中文版本](./README_zh.md)
+<img src="banner.png" alt="Voice AI: a curated learning path for building real-time voice agents" width="100%" />
 
-> A curated, developer friendly learning path for building real-time voice AI agents from your first STT call to scaling production telephony.
+# 🎙️ Voice AI
+
+**A curated, developer-friendly learning path for building real-time voice AI agents, from your first STT call to scaling production telephony.**
+
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+[![License: MIT](https://img.shields.io/github/license/mahimairaja/voiceai?style=flat-square&color=blue)](LICENSE)
+[![Stars](https://img.shields.io/github/stars/mahimairaja/voiceai?style=flat-square&logo=github&color=yellow)](https://github.com/mahimairaja/voiceai/stargazers)
+[![Last commit](https://img.shields.io/github/last-commit/mahimairaja/voiceai?style=flat-square&color=informational)](https://github.com/mahimairaja/voiceai/commits/main)
+[![Resources](https://img.shields.io/badge/resources-180%2B-5b21b6?style=flat-square)](#table-of-contents)
+[![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square)](#contributing)
+
+**English** · [中文版本](./README_zh.md)
+
+</div>
 
 Voice AI has moved from research demos into shipping product in under three years. **The modern stack is converging around a clear pattern**: a real-time transport layer (WebRTC or telephony), a streaming pipeline of speech-to-text → LLM → text-to-speech, and a turn-taking model that decides when the agent should speak. This list is structured to mirror that learning order: start with the foundations, pick a framework, then drill into individual components and production concerns.
 
@@ -34,6 +47,9 @@ The README you're reading collects the field's best free resources. The book is 
 
 ## Table of contents
 
+<details>
+<summary><b>📖 Expand the 21 sections</b></summary>
+
 1. [Foundational concepts and learning paths](#1-foundational-concepts-and-learning-paths)
 2. [Frameworks and orchestration platforms](#2-frameworks-and-orchestration-platforms)
 3. [Speech-to-text (STT / ASR)](#3-speech-to-text-stt--asr)
@@ -55,6 +71,8 @@ The README you're reading collects the field's best free resources. The book is 
 19. [Communities](#19-communities)
 20. [Conferences and events](#20-conferences-and-events)
 21. [Hackathons and competitions](#21-hackathons-and-competitions)
+
+</details>
 
 ---
 
@@ -370,7 +388,7 @@ Subscribe to two or three to stay current: the field moves quickly.
 
 ## Contributing
 
-Pull requests welcome. Resources must be **active in the last 12 months**, **accessible to developers**, and **vendor-neutral or clearly labeled** when authored by a commercial party. Open an issue to suggest additions or removals.
+Pull requests welcome. Resources must be **active in the last 12 months**, **accessible to developers**, and **vendor-neutral or clearly labeled** when authored by a commercial party. Open an issue to suggest additions or removals. See [CONTRIBUTING.md](CONTRIBUTING.md) for the full contribution guide.
 
 ## ⭐ Stargazers and contributors
 

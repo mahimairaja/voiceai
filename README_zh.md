@@ -1,8 +1,21 @@
-![Banner Image](banner.png)
+<div align="center">
 
-> [English version](./README.md) | 中文版本
+<img src="banner.png" alt="Voice AI：构建实时语音智能体的精选学习路径" width="100%" />
 
-> 一条精心整理的、面向开发者的学习路径：从第一次调用 STT，到把生产级电话语音智能体规模化上线。
+# 🎙️ Voice AI
+
+**一条精心整理的、面向开发者的学习路径：从第一次调用 STT，到把生产级电话语音智能体规模化上线。**
+
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+[![License: MIT](https://img.shields.io/github/license/mahimairaja/voiceai?style=flat-square&color=blue)](LICENSE)
+[![Stars](https://img.shields.io/github/stars/mahimairaja/voiceai?style=flat-square&logo=github&color=yellow)](https://github.com/mahimairaja/voiceai/stargazers)
+[![Last commit](https://img.shields.io/github/last-commit/mahimairaja/voiceai?style=flat-square&color=informational)](https://github.com/mahimairaja/voiceai/commits/main)
+[![Resources](https://img.shields.io/badge/resources-180%2B-5b21b6?style=flat-square)](#目录)
+[![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square)](#贡献)
+
+[English version](./README.md) · **中文版本**
+
+</div>
 
 语音智能体在不到三年里已从研究演示走进真实产品。**现代技术栈正收敛为一种清晰范式**：实时传输层（WebRTC 或电话网）、语音转文字 → 大语言模型 → 文字转语音的流式流水线，以及决定语音智能体何时开口的话轮模型。本清单的结构刻意贴近这一学习顺序——先打基础，再选框架，然后深入各组件与上线相关议题。
 
@@ -34,6 +47,9 @@
 
 ## 目录
 
+<details>
+<summary><b>📖 展开全部 21 个章节</b></summary>
+
 1. [基础概念与学习路径](#1-基础概念与学习路径)
 2. [框架与编排平台](#2-框架与编排平台)
 3. [语音转文字（STT / ASR）](#3-语音转文字stt--asr)
@@ -55,6 +71,8 @@
 19. [社区](#19-社区)
 20. [会议与活动](#20-会议与活动)
 21. [黑客松与竞赛](#21-黑客松与竞赛)
+
+</details>
 
 ---
 
@@ -370,7 +388,7 @@
 
 ## 贡献
 
-欢迎 Pull Request。资源须**在近 12 个月内仍活跃**、**对开发者可访问**，且为**厂商中立或由商业方撰写时已明确标注**。若要增删条目，也可开 issue 建议。
+欢迎 Pull Request。资源须**在近 12 个月内仍活跃**、**对开发者可访问**，且为**厂商中立或由商业方撰写时已明确标注**。若要增删条目，也可开 issue 建议。完整贡献指南见 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
 ## ⭐ Stargazers 与贡献者
 
