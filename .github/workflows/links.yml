@@ -26,7 +26,6 @@ jobs:
             --no-progress
             --max-concurrency 4
             --accept '200..=299,403,429'
-            --exclude-mail
             './**/*.md'
           output: ./lychee/out.md
           fail: true

@@ -1,6 +1,10 @@
 <div align="center">
 
-<img src="banner.png" alt="Voice AI：构建实时语音智能体的精选学习路径" width="100%" />
+<picture>
+<source media="(prefers-color-scheme: dark)" srcset="docs/assets/banner-dark.png">
+<source media="(prefers-color-scheme: light)" srcset="docs/assets/banner-light.png">
+<img src="docs/assets/banner-light.png" alt="Voice AI：构建实时语音智能体的精选学习路径" width="100%" />
+</picture>
 
 # 🎙️ Voice AI
 
