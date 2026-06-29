@@ -106,6 +106,7 @@ The frameworks below all let you wire STT, an LLM, and TTS together. **For open-
 - [Retell AI: Introduction & Quickstart](https://docs.retellai.com/general/introduction): Phone-agent platform with $10 free credit on signup. **🟢 Beginner**
 - [Bland AI: Send Your First Phone Call](https://www.bland.ai/blog/the-bland-ai-voice-call-api): Minimal API tutorial for placing your first AI phone call. **🟢 Beginner**
 - [ElevenLabs Agents: Quickstart](https://elevenlabs.io/docs/eleven-agents/quickstart): Build and embed a voice agent widget on any website in 5 minutes (formerly branded "Conversational AI," now ElevenAgents). **🟢 Beginner**
+- [Hermes: Operating platform for AI voice agencies](https://buildwithhermes.com): White-label managed platform that bundles voice agents with a built-in CRM, campaign orchestration and usage-based billing, so an agency runs one platform instead of stitching together Retell/VAPI, a CRM, Zapier, Stripe and Twilio. From $149/mo. **🟢 Beginner**
 
 ### Realtime / speech-to-speech APIs
 
