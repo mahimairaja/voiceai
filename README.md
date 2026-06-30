@@ -128,8 +128,8 @@ Pick **one streaming STT** and learn it deeply before shopping around. Deepgram,
 - [Deepgram Nova-3: STT benchmarks](https://deepgram.com/learn/speech-to-text-benchmarks): Primer on WER, latency, and cost alongside Deepgram's product reference; Nova-3 now spans 36+ languages with multilingual code-switching. **🟢 Beginner**
 - [AssemblyAI Universal-3 Pro](https://www.assemblyai.com/blog/build-voice-agent-function-calling): Streaming STT walkthrough that doubles as a function-calling tutorial; Universal-3 Pro is the current flagship, adding natural-language keyterm prompting. **🟡 Intermediate**
 - [OpenAI Whisper / gpt-4o-transcribe API docs](https://platform.openai.com/docs/guides/speech-to-text): Easiest cloud STT if you already use OpenAI. **🟢 Beginner**
-- [Soniox multilingual benchmark](https://soniox.com/benchmarks): Public WER comparison across 60 languages. **🟢 Beginner**
 - [Cartesia Ink 2](https://docs.cartesia.ai/build-with-cartesia/stt/latest): Streaming STT paired with Sonic TTS for a single-vendor low-latency stack. **🟢 Beginner**
+- [Soniox Speech-to-Text](https://soniox.com/docs/stt/get-started): One model spanning 60+ languages with real-time WebSocket streaming and async APIs, speaker diarization, language identification, endpoint detection, and built-in real-time speech translation (one-way or two-way). **🟢 Beginner**
 
 ### Open source
 
@@ -156,6 +156,7 @@ Pick **one streaming STT** and learn it deeply before shopping around. Deepgram,
 - [Cartesia Sonic Quickstart](https://docs.cartesia.ai/build-with-cartesia/tts-models/latest): Sonic 3.5, sub-90 ms first-byte latency, designed specifically for voice agents. **🟢 Beginner**
 - [Deepgram Aura-2](https://developers.deepgram.com/docs/tts-models): Low-latency streaming TTS (Aura-2) that pairs cleanly with Deepgram STT. **🟢 Beginner**
 - [OpenAI TTS (gpt-4o-mini-tts)](https://platform.openai.com/docs/guides/text-to-speech): Easiest plug-in TTS for the OpenAI stack. **🟢 Beginner**
+- [Soniox Text-to-Speech](https://soniox.com/docs/tts/get-started): Low-latency streaming TTS over WebSocket with multilingual voices; pairs with Soniox STT and translation. **🟢 Beginner**
 - [Artificial Analysis: TTS leaderboard](https://artificialanalysis.ai/text-to-speech/models): ELO, price, and speed comparison covering Rime, PlayHT, Hume, Inworld, and others. **🟢 Beginner**
 
 ### Open source
