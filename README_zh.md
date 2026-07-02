@@ -128,8 +128,8 @@
 - [Deepgram Nova-3：STT 基准](https://deepgram.com/learn/speech-to-text-benchmarks)：在 WER、延迟与成本语境下介绍 Deepgram 产品；Nova-3 现已覆盖 36+ 种语言，并支持多语种混说（code-switching）。**🟢 入门**
 - [AssemblyAI Universal-3 Pro](https://www.assemblyai.com/blog/build-voice-agent-function-calling)：流式 STT 教程，同时可作为 function calling 示例；Universal-3 Pro 为当前旗舰，新增自然语言关键术语提示（keyterm prompting）。**🟡 进阶**
 - [OpenAI Whisper / gpt-4o-transcribe API 文档](https://platform.openai.com/docs/guides/speech-to-text)：若已用 OpenAI，这是最容易上手的云端 STT。**🟢 入门**
-- [Soniox 多语言基准](https://soniox.com/benchmarks)：公开 WER，覆盖约 60 种语言。**🟢 入门**
 - [Cartesia Ink 2](https://docs.cartesia.ai/build-with-cartesia/stt/latest)：流式 STT 搭配 Sonic TTS，单供应商低延迟栈。**🟢 入门**
+- [Soniox 语音转文字](https://soniox.com/docs/stt/get-started)：单模型覆盖 60+ 种语言，提供实时 WebSocket 流式与异步 API，支持话者分离、语种识别、话末检测，并内置实时语音翻译（单向或双向）。**🟢 入门**
 
 ### 开源
 
@@ -156,6 +156,7 @@
 - [Cartesia Sonic Quickstart](https://docs.cartesia.ai/build-with-cartesia/tts-models/latest)：Sonic 3.5，首字节低于 90 ms，面向语音智能体设计。**🟢 入门**
 - [Deepgram Aura-2](https://developers.deepgram.com/docs/tts-models)：低延迟流式 TTS（Aura-2），与 Deepgram STT 衔接顺畅。**🟢 入门**
 - [OpenAI TTS（gpt-4o-mini-tts）](https://platform.openai.com/docs/guides/text-to-speech)：OpenAI 栈里最容易接入的 TTS。**🟢 入门**
+- [Soniox 文字转语音](https://soniox.com/docs/tts/get-started)：低延迟流式 TTS（WebSocket，另有 REST API），多语种音色；与 Soniox STT 及翻译搭配，构成单供应商实时语音到语音栈。**🟢 入门**
 - [Artificial Analysis：TTS 榜单](https://artificialanalysis.ai/text-to-speech/models)：ELO、价格与速度对比，含 Rime、PlayHT、Hume、Inworld 等。**🟢 入门**
 
 ### 开源
