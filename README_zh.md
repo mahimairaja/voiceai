@@ -12,7 +12,7 @@
 [![License: MIT](https://img.shields.io/github/license/mahimairaja/voiceai?style=flat-square&color=blue)](LICENSE)
 [![Stars](https://img.shields.io/github/stars/mahimairaja/voiceai?style=flat-square&logo=github&color=yellow)](https://github.com/mahimairaja/voiceai/stargazers)
 [![Last commit](https://img.shields.io/github/last-commit/mahimairaja/voiceai?style=flat-square&color=informational)](https://github.com/mahimairaja/voiceai/commits/main)
-[![Resources](https://img.shields.io/badge/resources-190%2B-5b21b6?style=flat-square)](#目录)
+[![Resources](https://img.shields.io/badge/resources-200%2B-5b21b6?style=flat-square)](#目录)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square)](#贡献)
 
 [English version](./README.md) · **中文版本**
@@ -97,7 +97,7 @@
 ### 开源框架
 
 - [LiveKit Agents：语音智能体快速入门](https://docs.livekit.io/agents/start/voice-ai/)：约 10 分钟内用 Python 或 TypeScript 跑通一个语音智能体示例，底层为 WebRTC。**🟢 入门**
-- [Pipecat：Quickstart](https://docs.pipecat.ai/getting-started/quickstart)：通过 Pipecat CLI（`uv tool install pipecat-ai-cli`，再 `pipecat init quickstart`）脚手架搭好 Deepgram + OpenAI + Cartesia 流水线；约 5 分钟内可在浏览器里对话。**🟢 入门**
+- [Pipecat：Quickstart](https://docs.pipecat.ai/pipecat/get-started/quickstart)：通过 Pipecat CLI（`uv tool install pipecat-ai-cli`，再 `pipecat init quickstart`）脚手架搭好 Deepgram + OpenAI + Cartesia 流水线；约 5 分钟内可在浏览器里对话。**🟢 入门**
 - [Ultravox（fixie-ai/ultravox）](https://github.com/fixie-ai/ultravox)：开放权重的多模态语音 LLM（Llama/Gemma/Qwen 等变体），省去独立 ASR 环节，首 token 时延（TTFT）约 150 ms。**🔴 高阶**
 
 ### 托管平台
@@ -109,8 +109,8 @@
 
 ### 实时 / 语音到语音 API
 
-- [OpenAI Realtime API：指南](https://platform.openai.com/docs/guides/realtime)：`gpt-realtime`（现已 GA）通过 WebRTC、WebSocket 或 SIP 接入的官方说明。**🟡 进阶**
-- [Google Gemini Live API：概览](https://ai.google.dev/gemini-api/docs/live-api)：低延迟双向语音 + 视觉，支持插话（barge-in）与工具调用，基于 Gemini 3 原生音频。**🟡 进阶**
+- [OpenAI Realtime API：指南](https://developers.openai.com/api/docs/guides/realtime)：`gpt-realtime-2`（GA；GPT-5 级、可配置推理）通过 WebRTC、WebSocket 或 SIP 接入的官方说明。**🟡 进阶**
+- [Google Gemini Live API：概览](https://ai.google.dev/gemini-api/docs/live-api)：低延迟双向语音 + 视觉，支持插话（barge-in）与工具调用，基于 Gemini 原生音频。**🟡 进阶**
 - [Twilio ConversationRelay](https://www.twilio.com/docs/voice/conversationrelay)：WebSocket 桥接，托管 STT/TTS，你专注 LLM 逻辑；可与任意 LLM 配合。**🟡 进阶**
 
 ### 厂商中立对比
@@ -125,18 +125,21 @@
 
 ### 商业 API
 
-- [Deepgram Nova-3：STT 基准](https://deepgram.com/learn/speech-to-text-benchmarks)：在 WER、延迟与成本语境下介绍 Deepgram 产品；Nova-3 现已覆盖 36+ 种语言，并支持多语种混说（code-switching）。**🟢 入门**
-- [AssemblyAI Universal-3 Pro](https://www.assemblyai.com/blog/build-voice-agent-function-calling)：流式 STT 教程，同时可作为 function calling 示例；Universal-3 Pro 为当前旗舰，新增自然语言关键术语提示（keyterm prompting）。**🟡 进阶**
-- [OpenAI Whisper / gpt-4o-transcribe API 文档](https://platform.openai.com/docs/guides/speech-to-text)：若已用 OpenAI，这是最容易上手的云端 STT。**🟢 入门**
-- [Cartesia Ink 2](https://docs.cartesia.ai/build-with-cartesia/stt/latest)：流式 STT 搭配 Sonic TTS，单供应商低延迟栈。**🟢 入门**
+- [Deepgram Nova-3：STT 基准](https://deepgram.com/learn/speech-to-text-benchmarks)：在 WER、延迟与成本语境下介绍 Deepgram 产品；Nova-3 覆盖 36+ 种语言，并支持多语种混说（code-switching）。**🟢 入门**
+- [AssemblyAI Universal-3 Pro Streaming](https://www.assemblyai.com/blog/build-voice-agent-function-calling)：流式 STT 教程，同时可作为 function calling 示例；Universal-3 Pro Streaming 为当前实时旗舰，新增实时说话人分离与关键术语提示（keyterm prompting）。**🟡 进阶**
+- [OpenAI Whisper / gpt-4o-transcribe API 文档](https://developers.openai.com/api/docs/guides/speech-to-text)：若已用 OpenAI，这是最容易上手的云端 STT。**🟢 入门**
+- [Cartesia Ink 2](https://docs.cartesia.ai/build-with-cartesia/stt/latest)：已 GA 的流式 STT，内置急速话末检测与抗噪能力，搭配 Sonic TTS 组成单供应商低延迟栈。**🟢 入门**
 - [Soniox 语音转文字](https://soniox.com/docs/stt/get-started)：单模型覆盖 60+ 种语言，提供实时 WebSocket 流式与异步 API，支持话者分离、语种识别、话末检测，并内置实时语音翻译（单向或双向）。**🟢 入门**
+- [Speechmatics Melia](https://www.speechmatics.com/company/articles-and-news/introducing-melia-multilingual-speech-to-text-model)：单次前向的多语言 STT，原生多语种混说，覆盖 56+ 种语言。**🟡 进阶**
+- [Gladia Solaria-3](https://www.gladia.io/blog/solaria-3-speech-to-text-model-for-european-languages)：面向嘈杂、多说话人欧洲商务音频优化的 STT（英语生产音频 WER 9.6%）。**🟡 进阶**
 
 ### 开源
 
 - [openai/whisper](https://github.com/openai/whisper)：原仓库与 DIY ASR 的事实起点。**🟢 入门**
 - [SYSTRAN/faster-whisper](https://github.com/SYSTRAN/faster-whisper)：基于 CTranslate2 的实现，INT8 下可达约 4× 提速；自托管 Whisper 常用。**🟡 进阶**
-- [NVIDIA NeMo（Parakeet / Canary）](https://github.com/NVIDIA-NeMo/NeMo)：榜单前列的开源 ASR 与流式推理方案。**🔴 高阶**
+- [NVIDIA NeMo（Parakeet / Canary）](https://github.com/NVIDIA-NeMo/Speech)：榜单前列的开源 ASR 与流式推理方案。**🔴 高阶**
 - [Moonshine](https://github.com/moonshine-ai/moonshine)：轻量端侧 ASR（tiny 27M / base 61M 参数）；v2 新增遍历式（ergodic）流式编码器，面向边缘设备上对延迟敏感的实时转写。**🟡 进阶**
+- [NVIDIA Nemotron 3.5 ASR Streaming 0.6B](https://huggingface.co/nvidia/nemotron-3.5-asr-streaming-0.6b)：开放权重、缓存感知的 FastConformer 流式 ASR，覆盖 40 个语言地区，延迟可运行时配置（80 ms 至 1.1 s）。**🔴 高阶**
 
 ### 基准与讲解
 
@@ -153,11 +156,12 @@
 ### 商业 API
 
 - [ElevenLabs 文档](https://elevenlabs.io/docs)：业界领先音质、声音克隆与 Agents 平台同属一套 SDK。**🟢 入门**
-- [Cartesia Sonic Quickstart](https://docs.cartesia.ai/build-with-cartesia/tts-models/latest)：Sonic 3.5，首字节低于 90 ms，面向语音智能体设计。**🟢 入门**
+- [Cartesia Sonic Quickstart](https://docs.cartesia.ai/build-with-cartesia/tts-models/latest)：Sonic 3.5（42 种语言，原生话末检测），首字节低于 90 ms，面向语音智能体设计。**🟢 入门**
 - [Deepgram Aura-2](https://developers.deepgram.com/docs/tts-models)：低延迟流式 TTS（Aura-2），与 Deepgram STT 衔接顺畅。**🟢 入门**
-- [OpenAI TTS（gpt-4o-mini-tts）](https://platform.openai.com/docs/guides/text-to-speech)：OpenAI 栈里最容易接入的 TTS。**🟢 入门**
+- [OpenAI TTS（gpt-4o-mini-tts）](https://developers.openai.com/api/docs/guides/text-to-speech)：OpenAI 栈里最容易接入的 TTS。**🟢 入门**
 - [Soniox 文字转语音](https://soniox.com/docs/tts/get-started)：低延迟流式 TTS（WebSocket，另有 REST API），多语种音色；与 Soniox STT 及翻译搭配，构成单供应商实时语音到语音栈。**🟢 入门**
 - [Artificial Analysis：TTS 榜单](https://artificialanalysis.ai/text-to-speech/models)：ELO、价格与速度对比，含 Rime、PlayHT、Hume、Inworld 等。**🟢 入门**
+- [Best Text-to-Speech Providers in 2026（Coval）](https://www.coval.ai/blog/best-text-to-speech-providers-in-2026-how-to-choose-%28and-why-vendor-benchmarks-lie%29/)：对 14 家 TTS 供应商在延迟、自然度与成本上的独立横评；注意作者为商业方。**🟡 进阶**
 
 ### 开源
 
@@ -185,14 +189,14 @@
 
 ### 语音到语音模型
 
-- [OpenAI Realtime API 指南](https://platform.openai.com/docs/guides/realtime)：旗舰级 S2S，传输为 WebRTC/WebSocket（`gpt-realtime`，现已 GA）。**🟡 进阶**
-- [Google Gemini Live](https://ai.google.dev/gemini-api/docs/live-api)：实时多模态语音/视频，支持插话与广泛语言，基于 Gemini 3 原生音频。**🟡 进阶**
+- [OpenAI Realtime API 指南](https://developers.openai.com/api/docs/guides/realtime)：旗舰级 S2S，传输为 WebRTC/WebSocket（`gpt-realtime-2`，GA）。**🟡 进阶**
+- [Google Gemini Live](https://ai.google.dev/gemini-api/docs/live-api)：实时多模态语音/视频，支持插话与广泛语言，基于 Gemini 原生音频。**🟡 进阶**
 - [Moshi（kyutai-labs）](https://github.com/kyutai-labs/moshi)：开源全双工语音–文本基础模型（约 200 ms，Mimi 编解码）。Kyutai 更完整的技术栈现已包含 Unmute（级联 STT+LLM+TTS，支持工具调用）、Kyutai STT/TTS 与 Hibiki（流式翻译）。**🔴 高阶**
 - [Speech-to-Speech Models in 2026: Three Architectural Bets（Krzysztof Sopyla）](https://ai.ksopyla.com/posts/voice-to-voice-models-2026-review/)：厂商中立对比全双工（Moshi）、近双工多模态（Qwen-Omni）与级联三种路线，附 FullDuplexBench 数据与取舍。**🟡 进阶**
 
 ### 面向语音智能体的提示与工具
 
-- [OpenAI Voice Agents 指南](https://platform.openai.com/docs/guides/voice-agents)：对比链式 vs S2S 架构，含提示与工具最佳实践。**🟢 入门**
+- [OpenAI Voice Agents 指南](https://developers.openai.com/api/docs/guides/voice-agents)：对比链式 vs S2S 架构，含提示与工具最佳实践。**🟢 入门**
 - [ElevenLabs Voice Agent Prompting 指南](https://elevenlabs.io/docs/eleven-agents/best-practices/prompting-guide)：面向语音智能体的生产级提示结构，经验可泛化。**🟡 进阶**
 - [Voice AI Prompt Engineering Guide（VoiceInfra）](https://voiceinfra.ai/blog/voice-ai-prompt-engineering-complete-guide)：解释为何面向语音智能体的提示通常要比聊天场景短约 60–70%，附模板。**🟢 入门**
 - [Tool Definition and Use for Voice Agents（LiveKit 文档）](https://docs.livekit.io/agents/logic/tools/definition/)：在语音智能体中定义 `@function_tool` 工具与原始 schema 工具。**🟡 进阶**
@@ -205,12 +209,14 @@
 - [py-webrtcvad](https://github.com/wiseman/py-webrtcvad)：经典 Google WebRTC VAD 的 Python 绑定；轻量基线。**🟢 入门**
 - [LiveKit Turn Detector 博文](https://livekit.com/blog/using-a-transformer-to-improve-end-of-turn-detection)：基于小型 Transformer 的话末（EOU）模型如何用语义补足 VAD。**🟡 进阶**
 - [LiveKit turn-detector 模型（HuggingFace）](https://huggingface.co/livekit/turn-detector)：开放权重多语言 EOU 模型，CPU 上以 ONNX 运行，内存占用不足 500 MB。**🟡 进阶**
+- [LiveKit Turn Detector v1.0](https://livekit.com/blog/solving-end-of-turn-detection)：音频原生的话末检测模型（语义 + 声学融合，无需转写），覆盖 14 种语言；现为 LiveKit 默认。**🟡 进阶**
 - [Deepgram Flux](https://deepgram.com/learn/fluxing-conversational-state-and-speech-to-text)：内置话末检测的一体化对话式 STT（话末检测中位数 <300 ms），与 Deepgram 的 Voice Agent API 集成；把 STT 与话轮检测合并到单个模型中。**🟡 进阶**
 - [Pipecat Smart Turn v3](https://www.daily.co/blog/announcing-smart-turn-v3-with-cpu-inference-in-just-12ms/)：基于 Whisper-Tiny 的音频语义 VAD，CPU 上推理很快（按 v3 仓库，约 12 ms / 标准实例），BSD-2 许可。**🟡 进阶**
 - [pipecat-ai/smart-turn](https://github.com/pipecat-ai/smart-turn)：模型代码、训练脚本与集成示例（约 8M 参数，Whisper-Tiny 基座）。**🟡 进阶**
 - [Krisp Turn-Taking](https://krisp.ai/)：商业话轮模型，可与任意 STT/LLM/TTS 栈搭配使用。**🟡 进阶**
 - [The Complete Guide to AI Turn-Taking（Tavus）](https://www.tavus.io/blog/ai-turn-taking)：易读总览：纯 VAD 为何在真实对话里失效。**🟢 入门**
 - [Tackling Turn Detection in Voice AI（Notch）](https://www.notch.cx/post/turn-detection-in-voice-ai)：面向工程师的分步导读：VAD 概率、音量与 TTS 标记的组合。**🟡 进阶**
+- [What Is Endpointing in Voice AI?（Cekura）](https://www.cekura.ai/blogs/endpointing-in-voice-ai-turn-detection)：讲解「三信号」话末检测栈，并带测试视角；注意作者为商业方。**🟡 进阶**
 - [Evaluating End-of-Turn Detection Models（Deepgram）](https://deepgram.com/learn/evaluating-end-of-turn-detection-models)：方法论，并对 Flux、Pipecat Smart Turn 与 LiveKit EOU 做正面对比；注意作者为商业方。**🟡 进阶**
 - [ai-coustics VAD](https://developers.ai-coustics.com/)：与实时语音增强、降噪与人声分离打包在同一个音频预处理 SDK 中的 VAD；当你需要同一个组件同时给出清洁后的音频与话轮信号时尤其合适。**🟢 入门**
 
@@ -248,10 +254,10 @@
 - [Telnyx Voice API](https://telnyx.com/products/voice-api)：强有力的 Twilio 替代，含 WebSocket 媒体流与 AI Assistant 工具。**🟢 入门**
 - [Telnyx：How to Set Up a SIP Trunk](https://support.telnyx.com/en/articles/8096455-how-to-configure-a-sip-trunk)：SIP trunk 架构、编解码与认证的友好说明。**🟢 入门**
 - [Plivo Voice API 文档](https://www.plivo.com/docs/voice/)：XML 呼叫控制与面向语音智能体的音频流集成。**🟢 入门**
-- [SignalWire Voice 文档](https://developer.signalwire.com/voice/)：基于 FreeSWITCH；SWML、类 TwiML API 与语音智能体 SDK（AI Agents SDK）。**🟡 进阶**
+- [SignalWire Voice 文档](https://signalwire.com/docs/platform/voice)：基于 FreeSWITCH；SWML、类 TwiML API 与语音智能体 SDK（AI Agents SDK）。**🟡 进阶**
 - [LiveKit SIP Primer](https://docs.livekit.io/reference/telephony/sip-primer/)：PSTN → 中继 → SIP 服务 → 语音智能体 的最佳示意图说明。**🟢 入门**
 - [LiveKit SIP Trunk Setup](https://docs.livekit.io/telephony/start/sip-trunk-setup/)：将 Twilio/Telnyx/Plivo/Wavix/Sinch 中继接入 LiveKit 的实操。**🟡 进阶**
-- [Pipecat Telephony Overview](https://docs.pipecat.ai/guides/telephony/overview)：基于 WebSocket 的电话与基于 SIP 的呼叫控制之差异。**🟡 进阶**
+- [Pipecat Telephony Overview](https://docs.pipecat.ai/pipecat/telephony/overview)：基于 WebSocket 的电话与基于 SIP 的呼叫控制之差异。**🟡 进阶**
 
 ## 10. 教程与动手项目
 
@@ -259,13 +265,14 @@
 
 - [LiveKit 语音智能体 Quickstart](https://docs.livekit.io/agents/start/voice-ai/)：官方约 10 分钟 Python/Node 教程与模板。**🟢 入门**
 - [Build Your First AI Voice Agent in Python（LiveKit）](https://livekit.com/blog/build-your-first-ai-voice-agent-python)：端到端 Python：流式、延迟与部署。**🟢 入门**
-- [Pipecat Quickstart](https://docs.pipecat.ai/getting-started/quickstart)：通过 Pipecat CLI 约 10 分钟搭好并部署 Deepgram + OpenAI + Cartesia 机器人。**🟢 入门**
+- [Pipecat Quickstart](https://docs.pipecat.ai/pipecat/get-started/quickstart)：通过 Pipecat CLI 约 10 分钟搭好并部署 Deepgram + OpenAI + Cartesia 机器人。**🟢 入门**
 - [How to Build a Real-Time Voice Agent with Pipecat（AssemblyAI）](https://www.assemblyai.com/blog/building-a-voice-agent-with-pipecat)：偏生产：本地测试与 Pipecat Cloud 部署。**🟡 进阶**
 - [Build a Voice Agent with LiveKit（AssemblyAI）](https://www.assemblyai.com/blog/build-voice-agent-livekit)：端到端串联 LiveKit Agents + AssemblyAI Universal-3 Pro + Cartesia，先本地运行再上 Agents Playground。**🟡 进阶**
 - [Deepgram：Build a Voice AI Agent](https://deepgram.com/learn/how-to-build-a-voice-ai-agent)：分步串联 Deepgram STT、GPT 与 Aura TTS。**🟢 入门**
 - [Build a Voice Assistant with Twilio ConversationRelay + LiteLLM](https://www.twilio.com/en-us/blog/developers/tutorials/product/voice-ai-assistant-conversationrelay-litellm-python)：供应商无关，可接 OpenAI、Anthropic 或 DeepSeek。**🟡 进阶**
 - [freeCodeCamp：Build Advanced AI Agents（LiveKit, Exa, LangChain）](https://www.youtube.com/watch?v=B0TJC4lmzEM)：免费三部分视频，端到端交互式语音智能体。**🟢 入门**
 - [freeCodeCamp：Build a Voice AI Agent with Open-Source Tools](https://www.freecodecamp.org/news/how-to-build-a-voice-ai-agent-using-open-source-tools/)：动手搭建本地栈，涵盖开源 STT、本地 LLM 与系统 TTS，并讨论级联 vs 端到端的取舍。**🟡 进阶**
+- [DeepLearning.AI：Voice for AI Agents and Applications](https://www.deeplearning.ai/courses/voice-for-ai-agents-and-applications)：免费短课（2026 年 6 月），讲解三种语音集成模式：内嵌式、叠加在文本智能体之上，以及作为可调用工具。**🟢 入门**
 
 ## 11. GitHub 入门仓库与 Awesome 列表
 
@@ -323,6 +330,8 @@
 - [Twilio：How Do You Know if Your Voice AI Agents Are Working?](https://www.twilio.com/en-us/blog/developers/evaluating-voice-ai-agents)：2025 厂商中立文：主张业务结果指标优于单纯 WER/延迟。**🟢 入门**
 - [Future AGI simulate-sdk](https://github.com/future-agi/simulate-sdk)：开源语音 AI 仿真 SDK，用于测试 AI 智能体；可生成合成对话用于评测。**🟡 进阶**
 - [Future AGI](https://github.com/future-agi/future-agi)：开源平台，在同一反馈闭环中对语音与 AI 智能体应用进行仿真、评测、追踪、护栏与优化；支持基于人物画像的仿真与 50+ 评测指标。**🟡 进阶**
+- [Roark](https://roark.ai/)：语音 AI 的 QA 与可观测性平台（YC W25），把失败的生产通话转化为可重放的回归测试。**🟡 进阶**
+- [Cekura for Agents（MCP server）](https://www.cekura.ai/blogs/cekura-for-agents)：MCP server，让编码智能体（Claude Code、Cursor、Codex）触发并调度语音智能体测试运行。**🟡 进阶**
 
 ## 15. 生产、部署与扩展
 
@@ -345,10 +354,12 @@
 - [FCC：AI-Generated Voices in Robocalls Illegal（2024 年 2 月）](https://www.fcc.gov/document/fcc-makes-ai-generated-voices-robocalls-illegal)：TCPA 里程碑裁定，美国语音智能体开发者应读。**🟢 入门**
 - [EU AI Act：Article 50（深度伪造与 AI 交互的透明度）](https://artificialintelligenceact.eu/article/50/)：欧盟披露规则权威条文；透明度义务自 2026 年 8 月 2 日起适用（在此日期前已上市的系统可延至 2026 年 12 月 2 日合规）。**🟡 进阶**
 - [European Commission：Code of Practice on AI-Generated Content](https://digital-strategy.ec.europa.eu/en/policies/code-practice-ai-generated-content)：官方实施指引：水印与标注；最终版《行为准则》已于 2026 年 6 月 10 日发布。**🟡 进阶**
+- [Digital Omnibus on AI：欧盟 AI 法简化（欧洲议会）](https://www.europarl.europa.eu/legislative-train/package-digital-package/file-digital-omnibus-on-ai)：2026 年 6 月的一揽子方案（经议会与理事会背书），调整 AI 法的透明度与时间线义务；关注其对披露规则的改动。**🟡 进阶**
 - [FTC：Approaches to Address AI-Enabled Voice Cloning](https://www.ftc.gov/policy/advocacy-research/tech-at-ftc/2024/04/approaches-address-ai-enabled-voice-cloning)：通俗总结 Voice Cloning Challenge 与冒充规则。**🟢 入门**
 - [FTC：拟议的 AI 个人冒充规则（2024 年 2 月）](https://www.ftc.gov/news-events/news/press-releases/2024/02/ftc-proposes-new-protections-combat-ai-impersonation-individuals)：美国冒充欺诈规则的一手来源，涵盖 AI 深度伪造。**🟢 入门**
 - [Pindrop：Voice Intelligence & Security Report](https://www.pindrop.com/research/report/voice-intelligence-security-report/)：行业报告：深度伪造诈骗尝试急剧上升。**🟢 入门**
 - [Voice Cloning Ethics（CAMB.AI）](https://www.camb.ai/blog-post/voice-cloning-ethics-consent-deepfakes-responsible-ai-voice-use)：同意框架、ELVIS 法案与欧盟 AI 法的实践概览。**🟢 入门**
+- [Detecting AI Audio with SynthID（ElevenLabs）](https://elevenlabs.io/blog/synthid)：ElevenLabs 在其生成音频中全面采用 Google DeepMind 的不可听 SynthID 水印，并推出免费公开的 Audio Detector。**🟢 入门**
 - [NCLC：Top Six TCPA/Robocall Developments 2024/2025](https://library.nclc.org/article/top-six-tcparobocall-developments-20242025)：消费者保护视角看实际执法重点。**🟡 进阶**
 
 ## 17. 博客与通讯
@@ -386,17 +397,17 @@
 
 ## 20. 会议与活动
 
-- [AI Engineer World's Fair](https://www.ai.engineer/worldsfair)：规模最大的 AI 工程会议；语音智能体分论坛曾有 ElevenLabs、Vapi、LiveKit、Pipecat、Cartesia 等重大发布。2026 年将于 6 月 29 日至 7 月 2 日在旧金山 Moscone West 举办。
+- [AI Engineer World's Fair](https://www.ai.engineer/worldsfair)：规模最大的 AI 工程会议；语音智能体分论坛曾有 ElevenLabs、Vapi、LiveKit、Pipecat、Cartesia 等重大发布。2026 年已于 6 月 29 日至 7 月 2 日在旧金山 Moscone West 举办；演讲录像免费发布在 AI Engineer YouTube 频道。
 - [AI Engineer YouTube 频道](https://www.youtube.com/@aiDotEngineer)：World's Fair 与 Summit 演讲免费上线，语音智能体相关演讲的优质资源库。
 - [AI Engineer Summit Online：语音播放列表](https://www.youtube.com/playlist?list=PLcfpQ4tk2k0VetQVGT1EqTbcr-qcgbfFs)：精选 YouTube 播放列表，含领先实验室的语音智能体相关场次。
 - [AIEWF 2025 Recap（Latent Space）](https://www.latent.space/p/aiewf-2025-keynotes)：2025 语音智能体分论坛与重要发布的长文复盘。
-- [VOICE & AI（Modev）](https://www.voicesummit.ai/)：长期聚焦语音智能体与语音技术的会议，覆盖更广的客户体验与语音机器人，将于 2026 年 10 月 5–7 日举办。
+- [AGENTIC AI Summit（Modev，原 VOICE & AI）](https://gotoagentic.ai/)：Modev 旗下长期运行的语音会议，现已扩展至智能体 AI；2026 年 10 月 5-7 日于美国弗吉尼亚州劳登县举办。
 - [Interspeech 2026](https://interspeech2026.org/)：语音科学顶会；门槛高但值得关注，大量里程碑论文首发于此。澳大利亚悉尼，2026 年 9 月 27 日至 10 月 1 日。
 
 ## 21. 黑客松与竞赛
 
 - [ElevenHacks（每周冲刺）](https://hacks.elevenlabs.io/)：每周主题挑战，含额度与奖品；低压力「一周一项目」。**🟢 入门**
-- [AI Engineer World's Fair Hackathon](https://cerebralvalley.ai/e/aiewf-hackathon-2026)：与大会同期；$10K 奖金，3000+ AI 工程师评审，语音智能体相关项目与竞赛活跃，将于 6 月 27 日上午 9:00 至 6 月 28 日下午 5:00（PDT）举办。**🟡 进阶**
+- [AI Engineer World's Fair Hackathon](https://cerebralvalley.ai/e/aiewf-hackathon-2026)：与大会同期；$10K 奖金，3000+ AI 工程师评审，语音智能体相关项目与竞赛活跃；2026 年场次已于 6 月 27-28 日（PDT）举办。**🟡 进阶**
 - [lablab.ai AI Hackathons](https://lablab.ai/event)：持续更新的短期线上黑客松日历，常有语音智能体厂商赞助。**🟢 入门**
 - [Devpost：Voice AI Hackathons](https://devpost.com/hackathons?search=voice+ai)：集中检索进行中的语音智能体黑客松。**🟢 入门**
 

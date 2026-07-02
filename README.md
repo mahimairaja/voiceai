@@ -12,7 +12,7 @@
 [![License: MIT](https://img.shields.io/github/license/mahimairaja/voiceai?style=flat-square&color=blue)](LICENSE)
 [![Stars](https://img.shields.io/github/stars/mahimairaja/voiceai?style=flat-square&logo=github&color=yellow)](https://github.com/mahimairaja/voiceai/stargazers)
 [![Last commit](https://img.shields.io/github/last-commit/mahimairaja/voiceai?style=flat-square&color=informational)](https://github.com/mahimairaja/voiceai/commits/main)
-[![Resources](https://img.shields.io/badge/resources-190%2B-5b21b6?style=flat-square)](#table-of-contents)
+[![Resources](https://img.shields.io/badge/resources-200%2B-5b21b6?style=flat-square)](#table-of-contents)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square)](#contributing)
 
 **English** · [中文版本](./README_zh.md)
@@ -97,7 +97,7 @@ The frameworks below all let you wire STT, an LLM, and TTS together. **For open-
 ### Open-source frameworks
 
 - [LiveKit Agents: Voice AI Quickstart](https://docs.livekit.io/agents/start/voice-ai/): Working assistant in <10 min via Python or TypeScript, runs on top of WebRTC. **🟢 Beginner**
-- [Pipecat: Quickstart](https://docs.pipecat.ai/getting-started/quickstart): Scaffolds a Deepgram + OpenAI + Cartesia pipeline via the Pipecat CLI (`uv tool install pipecat-ai-cli`, then `pipecat init quickstart`); talk to it in the browser in ~5 minutes. **🟢 Beginner**
+- [Pipecat: Quickstart](https://docs.pipecat.ai/pipecat/get-started/quickstart): Scaffolds a Deepgram + OpenAI + Cartesia pipeline via the Pipecat CLI (`uv tool install pipecat-ai-cli`, then `pipecat init quickstart`); talk to it in the browser in ~5 minutes. **🟢 Beginner**
 - [Ultravox (fixie-ai/ultravox)](https://github.com/fixie-ai/ultravox): Open-weight multimodal speech LLM (Llama/Gemma/Qwen variants) that skips the separate ASR stage for ~150 ms TTFT. **🔴 Advanced**
 
 ### Managed platforms
@@ -109,8 +109,8 @@ The frameworks below all let you wire STT, an LLM, and TTS together. **For open-
 
 ### Realtime / speech-to-speech APIs
 
-- [OpenAI Realtime API: Guide](https://platform.openai.com/docs/guides/realtime): Official guide to `gpt-realtime` (now GA) over WebRTC, WebSockets, or SIP. **🟡 Intermediate**
-- [Google Gemini Live API: Overview](https://ai.google.dev/gemini-api/docs/live-api): Low-latency, bidirectional voice + vision agents with barge-in and tool use, on Gemini 3 native audio. **🟡 Intermediate**
+- [OpenAI Realtime API: Guide](https://developers.openai.com/api/docs/guides/realtime): Official guide to `gpt-realtime-2` (GA; GPT-5-class with configurable reasoning) over WebRTC, WebSockets, or SIP. **🟡 Intermediate**
+- [Google Gemini Live API: Overview](https://ai.google.dev/gemini-api/docs/live-api): Low-latency, bidirectional voice + vision agents with barge-in and tool use, on Gemini native audio. **🟡 Intermediate**
 - [Twilio ConversationRelay](https://www.twilio.com/docs/voice/conversationrelay): WebSocket bridge that handles STT/TTS so you focus on LLM logic; works with any LLM. **🟡 Intermediate**
 
 ### Vendor-neutral comparisons
@@ -125,18 +125,21 @@ Pick **one streaming STT** and learn it deeply before shopping around. Deepgram,
 
 ### Commercial APIs
 
-- [Deepgram Nova-3: STT benchmarks](https://deepgram.com/learn/speech-to-text-benchmarks): Primer on WER, latency, and cost alongside Deepgram's product reference; Nova-3 now spans 36+ languages with multilingual code-switching. **🟢 Beginner**
-- [AssemblyAI Universal-3 Pro](https://www.assemblyai.com/blog/build-voice-agent-function-calling): Streaming STT walkthrough that doubles as a function-calling tutorial; Universal-3 Pro is the current flagship, adding natural-language keyterm prompting. **🟡 Intermediate**
-- [OpenAI Whisper / gpt-4o-transcribe API docs](https://platform.openai.com/docs/guides/speech-to-text): Easiest cloud STT if you already use OpenAI. **🟢 Beginner**
-- [Cartesia Ink 2](https://docs.cartesia.ai/build-with-cartesia/stt/latest): Streaming STT paired with Sonic TTS for a single-vendor low-latency stack. **🟢 Beginner**
+- [Deepgram Nova-3: STT benchmarks](https://deepgram.com/learn/speech-to-text-benchmarks): Primer on WER, latency, and cost alongside Deepgram's product reference; Nova-3 spans 36+ languages with multilingual code-switching. **🟢 Beginner**
+- [AssemblyAI Universal-3 Pro Streaming](https://www.assemblyai.com/blog/build-voice-agent-function-calling): Streaming STT walkthrough that doubles as a function-calling tutorial; Universal-3 Pro Streaming is the current real-time flagship, adding real-time diarization and keyterm prompting. **🟡 Intermediate**
+- [OpenAI Whisper / gpt-4o-transcribe API docs](https://developers.openai.com/api/docs/guides/speech-to-text): Easiest cloud STT if you already use OpenAI. **🟢 Beginner**
+- [Cartesia Ink 2](https://docs.cartesia.ai/build-with-cartesia/stt/latest): GA streaming STT with built-in eager turn detection and noise robustness, paired with Sonic TTS for a single-vendor low-latency stack. **🟢 Beginner**
 - [Soniox Speech-to-Text](https://soniox.com/docs/stt/get-started): One model spanning 60+ languages with real-time WebSocket streaming and async APIs, speaker diarization, language identification, endpoint detection, and built-in real-time speech translation (one-way or two-way). **🟢 Beginner**
+- [Speechmatics Melia](https://www.speechmatics.com/company/articles-and-news/introducing-melia-multilingual-speech-to-text-model): Single-pass multilingual STT with native code-switching across 56+ languages. **🟡 Intermediate**
+- [Gladia Solaria-3](https://www.gladia.io/blog/solaria-3-speech-to-text-model-for-european-languages): STT tuned for noisy, multi-speaker European business audio (9.6% WER on English production calls). **🟡 Intermediate**
 
 ### Open source
 
 - [openai/whisper](https://github.com/openai/whisper): The original repo and the de facto starting point for any DIY ASR project. **🟢 Beginner**
 - [SYSTRAN/faster-whisper](https://github.com/SYSTRAN/faster-whisper): CTranslate2 reimplementation up to 4× faster with INT8; recommended for self-hosted Whisper. **🟡 Intermediate**
-- [NVIDIA NeMo (Parakeet / Canary)](https://github.com/NVIDIA-NeMo/NeMo): Top-of-leaderboard open ASR models with streaming inference recipes. **🔴 Advanced**
+- [NVIDIA NeMo (Parakeet / Canary)](https://github.com/NVIDIA-NeMo/Speech): Top-of-leaderboard open ASR models with streaming inference recipes. **🔴 Advanced**
 - [Moonshine](https://github.com/moonshine-ai/moonshine): Tiny on-device ASR (tiny 27M / base 61M params); v2 adds an ergodic streaming encoder built for latency-critical live transcription on edge devices. **🟡 Intermediate**
+- [NVIDIA Nemotron 3.5 ASR Streaming 0.6B](https://huggingface.co/nvidia/nemotron-3.5-asr-streaming-0.6b): Open-weights cache-aware FastConformer streaming ASR across 40 locales, with runtime-configurable latency (80 ms to 1.1 s). **🔴 Advanced**
 
 ### Benchmarks and explainers
 
@@ -153,11 +156,12 @@ Pick **one streaming STT** and learn it deeply before shopping around. Deepgram,
 ### Commercial APIs
 
 - [ElevenLabs Docs](https://elevenlabs.io/docs): Industry-leading quality, voice cloning, and Agents platform in one SDK. **🟢 Beginner**
-- [Cartesia Sonic Quickstart](https://docs.cartesia.ai/build-with-cartesia/tts-models/latest): Sonic 3.5, sub-90 ms first-byte latency, designed specifically for voice agents. **🟢 Beginner**
+- [Cartesia Sonic Quickstart](https://docs.cartesia.ai/build-with-cartesia/tts-models/latest): Sonic 3.5 (42 languages, native turn detection), sub-90 ms first-byte latency, designed specifically for voice agents. **🟢 Beginner**
 - [Deepgram Aura-2](https://developers.deepgram.com/docs/tts-models): Low-latency streaming TTS (Aura-2) that pairs cleanly with Deepgram STT. **🟢 Beginner**
-- [OpenAI TTS (gpt-4o-mini-tts)](https://platform.openai.com/docs/guides/text-to-speech): Easiest plug-in TTS for the OpenAI stack. **🟢 Beginner**
+- [OpenAI TTS (gpt-4o-mini-tts)](https://developers.openai.com/api/docs/guides/text-to-speech): Easiest plug-in TTS for the OpenAI stack. **🟢 Beginner**
 - [Soniox Text-to-Speech](https://soniox.com/docs/tts/get-started): Low-latency streaming TTS over WebSocket with multilingual voices; pairs with Soniox STT and translation. **🟢 Beginner**
 - [Artificial Analysis: TTS leaderboard](https://artificialanalysis.ai/text-to-speech/models): ELO, price, and speed comparison covering Rime, PlayHT, Hume, Inworld, and others. **🟢 Beginner**
+- [Best Text-to-Speech Providers in 2026 (Coval)](https://www.coval.ai/blog/best-text-to-speech-providers-in-2026-how-to-choose-%28and-why-vendor-benchmarks-lie%29/): Independent head-to-head of 14 TTS providers on latency, naturalness, and cost; note the commercial author. **🟡 Intermediate**
 
 ### Open source
 
@@ -185,14 +189,14 @@ A voice agent's perceived intelligence is bounded by **how fast the LLM streams 
 
 ### Speech-to-speech models
 
-- [OpenAI Realtime API guide](https://platform.openai.com/docs/guides/realtime): Flagship S2S product with WebRTC/WebSocket transport (`gpt-realtime`, now GA). **🟡 Intermediate**
-- [Google Gemini Live](https://ai.google.dev/gemini-api/docs/live-api): Real-time multimodal voice/video with barge-in and broad language support, on Gemini 3 native audio. **🟡 Intermediate**
+- [OpenAI Realtime API guide](https://developers.openai.com/api/docs/guides/realtime): Flagship S2S product with WebRTC/WebSocket transport (`gpt-realtime-2`, GA). **🟡 Intermediate**
+- [Google Gemini Live](https://ai.google.dev/gemini-api/docs/live-api): Real-time multimodal voice/video with barge-in and broad language support, on Gemini native audio. **🟡 Intermediate**
 - [Moshi (kyutai-labs)](https://github.com/kyutai-labs/moshi): Open full-duplex speech-text foundation model (~200 ms, Mimi codec). Kyutai's broader stack now includes Unmute (cascaded STT+LLM+TTS with tool use), Kyutai STT/TTS, and Hibiki (streaming translation). **🔴 Advanced**
 - [Speech-to-Speech Models in 2026: Three Architectural Bets (Krzysztof Sopyla)](https://ai.ksopyla.com/posts/voice-to-voice-models-2026-review/): Vendor-neutral comparison of full-duplex (Moshi), near-duplex multimodal (Qwen-Omni), and cascade approaches, with FullDuplexBench numbers and tradeoffs. **🟡 Intermediate**
 
 ### Voice-specific prompting and tools
 
-- [OpenAI Voice Agents Guide](https://platform.openai.com/docs/guides/voice-agents): Compares chained vs S2S architectures with prompt and tool best practices. **🟢 Beginner**
+- [OpenAI Voice Agents Guide](https://developers.openai.com/api/docs/guides/voice-agents): Compares chained vs S2S architectures with prompt and tool best practices. **🟢 Beginner**
 - [ElevenLabs Voice Agent Prompting Guide](https://elevenlabs.io/docs/eleven-agents/best-practices/prompting-guide): Production-grade prompt structure tuned for voice; vendor-neutral lessons. **🟡 Intermediate**
 - [Voice AI Prompt Engineering Guide (VoiceInfra)](https://voiceinfra.ai/blog/voice-ai-prompt-engineering-complete-guide): Explains why voice prompts must be 60–70% shorter than chat prompts, with templates. **🟢 Beginner**
 - [Tool Definition and Use for Voice Agents (LiveKit Docs)](https://docs.livekit.io/agents/logic/tools/definition/): Defining `@function_tool` tools and raw-schema tools inside a voice agent. **🟡 Intermediate**
@@ -205,12 +209,14 @@ Pure VAD is no longer enough: modern agents combine **acoustic VAD with a small 
 - [py-webrtcvad](https://github.com/wiseman/py-webrtcvad): Python bindings for Google's classic WebRTC VAD; lightweight baseline. **🟢 Beginner**
 - [LiveKit Turn Detector: blog post](https://livekit.com/blog/using-a-transformer-to-improve-end-of-turn-detection): How a small transformer-based EOU model complements VAD with semantic context. **🟡 Intermediate**
 - [LiveKit turn-detector model on HuggingFace](https://huggingface.co/livekit/turn-detector): Open-weights multilingual EOU model running ONNX on CPU in under 500 MB. **🟡 Intermediate**
+- [LiveKit Turn Detector v1.0](https://livekit.com/blog/solving-end-of-turn-detection): Audio-native end-of-turn model (fused semantic + acoustic, no transcript) across 14 languages; now the LiveKit default. **🟡 Intermediate**
 - [Deepgram Flux](https://deepgram.com/learn/fluxing-conversational-state-and-speech-to-text): All-in-one conversational STT with built-in end-of-turn detection (median EOT <300 ms), integrated with Deepgram's Voice Agent API; collapses STT and turn detection into a single model. **🟡 Intermediate**
 - [Pipecat Smart Turn v3](https://www.daily.co/blog/announcing-smart-turn-v3-with-cpu-inference-in-just-12ms/): Whisper-Tiny-based audio semantic VAD with fast CPU inference (~12 ms on a standard instance per the v3 repo), BSD-2 licensed. **🟡 Intermediate**
 - [pipecat-ai/smart-turn](https://github.com/pipecat-ai/smart-turn): Repo with model code, training scripts, and integration examples (~8M params, Whisper-Tiny base). **🟡 Intermediate**
 - [Krisp Turn-Taking](https://krisp.ai/): Commercial turn-taking model used alongside any STT/LLM/TTS stack. **🟡 Intermediate**
 - [The Complete Guide to AI Turn-Taking (Tavus)](https://www.tavus.io/blog/ai-turn-taking): Reader-friendly overview of why pure VAD fails in real conversations. **🟢 Beginner**
 - [Tackling Turn Detection in Voice AI (Notch)](https://www.notch.cx/post/turn-detection-in-voice-ai): Engineer-first walkthrough combining VAD probability, volume, and TTS markers. **🟡 Intermediate**
+- [What Is Endpointing in Voice AI? (Cekura)](https://www.cekura.ai/blogs/endpointing-in-voice-ai-turn-detection): Explainer on the three-signal endpointing stack with a testing angle; note the commercial author. **🟡 Intermediate**
 - [Evaluating End-of-Turn Detection Models (Deepgram)](https://deepgram.com/learn/evaluating-end-of-turn-detection-models): Methodology plus a head-to-head of Flux, Pipecat Smart Turn, and LiveKit EOU; note the commercial author. **🟡 Intermediate**
 - [ai-coustics VAD](https://developers.ai-coustics.com/): VAD bundled with real-time speech enhancement, noise suppression, and voice isolation in a single audio preprocessing SDK; useful when you want cleanup and turn-taking signals from the same component. **🟢 Beginner**
 
@@ -248,10 +254,10 @@ The phone network has its own physics. Once you know which **SIP trunk provider*
 - [Telnyx Voice API](https://telnyx.com/products/voice-api): Strong Twilio alternative with WebSocket media streaming and AI Assistant tooling. **🟢 Beginner**
 - [Telnyx: How to Set Up a SIP Trunk](https://support.telnyx.com/en/articles/8096455-how-to-configure-a-sip-trunk): Friendly walkthrough of SIP trunking architecture, codecs, and authentication. **🟢 Beginner**
 - [Plivo Voice API Documentation](https://www.plivo.com/docs/voice/): XML call control and audio-streaming integrations for AI agents. **🟢 Beginner**
-- [SignalWire Voice Docs](https://developer.signalwire.com/voice/): Built on FreeSWITCH; SWML, TwiML-compatible API, and an AI Agents SDK. **🟡 Intermediate**
+- [SignalWire Voice Docs](https://signalwire.com/docs/platform/voice): Built on FreeSWITCH; SWML, TwiML-compatible API, and an AI Agents SDK. **🟡 Intermediate**
 - [LiveKit SIP Primer](https://docs.livekit.io/reference/telephony/sip-primer/): Best diagram of how a call flows from PSTN → trunk → SIP service → agent. **🟢 Beginner**
 - [LiveKit SIP Trunk Setup](https://docs.livekit.io/telephony/start/sip-trunk-setup/): Practical guide for wiring Twilio/Telnyx/Plivo/Wavix/Sinch trunks into LiveKit. **🟡 Intermediate**
-- [Pipecat Telephony Overview](https://docs.pipecat.ai/guides/telephony/overview): Differences between WebSocket-based telephony and SIP-based call control. **🟡 Intermediate**
+- [Pipecat Telephony Overview](https://docs.pipecat.ai/pipecat/telephony/overview): Differences between WebSocket-based telephony and SIP-based call control. **🟡 Intermediate**
 
 ## 10. Tutorials and hands-on projects
 
@@ -259,13 +265,14 @@ Pick **one tutorial and finish it before starting another**. Voice AI is unforgi
 
 - [LiveKit Voice AI Quickstart](https://docs.livekit.io/agents/start/voice-ai/): Official 10-minute walkthrough in Python or Node with starter templates. **🟢 Beginner**
 - [Build Your First AI Voice Agent in Python (LiveKit)](https://livekit.com/blog/build-your-first-ai-voice-agent-python): End-to-end Python tutorial covering streaming, latency, and deployment. **🟢 Beginner**
-- [Pipecat Quickstart](https://docs.pipecat.ai/getting-started/quickstart): Build and deploy a Deepgram + OpenAI + Cartesia bot via the Pipecat CLI in roughly 10 minutes. **🟢 Beginner**
+- [Pipecat Quickstart](https://docs.pipecat.ai/pipecat/get-started/quickstart): Build and deploy a Deepgram + OpenAI + Cartesia bot via the Pipecat CLI in roughly 10 minutes. **🟢 Beginner**
 - [How to Build a Real-Time Voice Agent with Pipecat (AssemblyAI)](https://www.assemblyai.com/blog/building-a-voice-agent-with-pipecat): Production-oriented walkthrough including local testing and Pipecat Cloud deployment. **🟡 Intermediate**
 - [Build a Voice Agent with LiveKit (AssemblyAI)](https://www.assemblyai.com/blog/build-voice-agent-livekit): End-to-end walkthrough wiring LiveKit Agents + AssemblyAI Universal-3 Pro + Cartesia, run locally then on the Agents Playground. **🟡 Intermediate**
 - [Deepgram: Build a Voice AI Agent](https://deepgram.com/learn/how-to-build-a-voice-ai-agent): Step-by-step guide wiring Deepgram STT, GPT, and Aura TTS. **🟢 Beginner**
 - [Build a Voice Assistant with Twilio ConversationRelay + LiteLLM](https://www.twilio.com/en-us/blog/developers/tutorials/product/voice-ai-assistant-conversationrelay-litellm-python): Provider-agnostic tutorial supporting OpenAI, Anthropic, or DeepSeek. **🟡 Intermediate**
 - [freeCodeCamp: Build Advanced AI Agents (LiveKit, Exa, LangChain)](https://www.youtube.com/watch?v=B0TJC4lmzEM): Free 3-part video course covering interactive voice agents end-to-end. **🟢 Beginner**
 - [freeCodeCamp: Build a Voice AI Agent with Open-Source Tools](https://www.freecodecamp.org/news/how-to-build-a-voice-ai-agent-using-open-source-tools/): Hands-on local stack covering open-source STT, a local LLM, and system TTS, plus the cascaded vs end-to-end tradeoff. **🟡 Intermediate**
+- [DeepLearning.AI: Voice for AI Agents and Applications](https://www.deeplearning.ai/courses/voice-for-ai-agents-and-applications): Free short course (June 2026) on three voice integration patterns: embedded, layered on a text agent, and voice as a callable tool. **🟢 Beginner**
 
 ## 11. GitHub starter repos and awesome lists
 
@@ -323,6 +330,8 @@ You can't ship what you can't measure. **Voice-agent evaluation is fundamentally
 - [Twilio: How Do You Know if Your Voice AI Agents Are Working?](https://www.twilio.com/en-us/blog/developers/evaluating-voice-ai-agents): Vendor-neutral 2025 guide arguing for business-outcome metrics over raw WER/latency. **🟢 Beginner**
 - [Future AGI simulate-sdk](https://github.com/future-agi/simulate-sdk): Open-source voice AI simulation SDK for testing AI agents; generates synthetic conversations for evaluation. **🟡 Intermediate**
 - [Future AGI](https://github.com/future-agi/future-agi): Open-source platform to simulate, evaluate, trace, guardrail, and optimize voice and AI agent apps in one feedback loop, with persona-driven simulation and 50+ eval metrics. **🟡 Intermediate**
+- [Roark](https://roark.ai/): Voice-AI QA and observability (YC W25) that turns failed production calls into replayable regression tests. **🟡 Intermediate**
+- [Cekura for Agents (MCP server)](https://www.cekura.ai/blogs/cekura-for-agents): MCP server that lets coding agents (Claude Code, Cursor, Codex) trigger and schedule voice-agent test runs. **🟡 Intermediate**
 
 ## 15. Production, deployment, and scaling
 
@@ -345,10 +354,12 @@ If you're shipping a voice agent in 2026, **disclosure and consent are no longer
 - [FCC: AI-Generated Voices in Robocalls Illegal (Feb 2024)](https://www.fcc.gov/document/fcc-makes-ai-generated-voices-robocalls-illegal): The landmark TCPA ruling every U.S. voice-agent dev must read. **🟢 Beginner**
 - [EU AI Act: Article 50 (Transparency for Deepfakes & AI Interactions)](https://artificialintelligenceact.eu/article/50/): Authoritative text of EU disclosure rules; transparency obligations apply from 2 August 2026 (systems already on the market before that date have until 2 December 2026 to comply). **🟡 Intermediate**
 - [European Commission: Code of Practice on AI-Generated Content](https://digital-strategy.ec.europa.eu/en/policies/code-practice-ai-generated-content): Official EU implementation guidance on watermarking and labelling; the finalized Code was published on 10 June 2026. **🟡 Intermediate**
+- [Digital Omnibus on AI: EU AI Act simplification (European Parliament)](https://www.europarl.europa.eu/legislative-train/package-digital-package/file-digital-omnibus-on-ai): June 2026 package (Parliament- and Council-endorsed) adjusting AI Act transparency and timeline obligations; track it for disclosure-rule changes. **🟡 Intermediate**
 - [FTC: Approaches to Address AI-Enabled Voice Cloning](https://www.ftc.gov/policy/advocacy-research/tech-at-ftc/2024/04/approaches-address-ai-enabled-voice-cloning): Plain-English summary of the Voice Cloning Challenge winners and Impersonation Rule. **🟢 Beginner**
 - [FTC: Proposed Rule on AI Impersonation of Individuals (Feb 2024)](https://www.ftc.gov/news-events/news/press-releases/2024/02/ftc-proposes-new-protections-combat-ai-impersonation-individuals): Direct source on U.S. impersonation-fraud rules covering AI deepfakes. **🟢 Beginner**
 - [Pindrop: Voice Intelligence & Security Report](https://www.pindrop.com/research/report/voice-intelligence-security-report/): Industry report documenting the sharp rise in deepfake fraud attempts. **🟢 Beginner**
 - [Voice Cloning Ethics (CAMB.AI)](https://www.camb.ai/blog-post/voice-cloning-ethics-consent-deepfakes-responsible-ai-voice-use): Practical overview of consent frameworks, ELVIS Act, and EU AI Act. **🟢 Beginner**
+- [Detecting AI Audio with SynthID (ElevenLabs)](https://elevenlabs.io/blog/synthid): ElevenLabs adopts Google DeepMind's inaudible SynthID watermark across generated audio and ships a free public Audio Detector. **🟢 Beginner**
 - [NCLC: Top Six TCPA/Robocall Developments 2024/2025](https://library.nclc.org/article/top-six-tcparobocall-developments-20242025): Consumer-protection lens on what's actually being enforced. **🟡 Intermediate**
 
 ## 17. Blogs and newsletters
@@ -386,17 +397,17 @@ Subscribe to two or three to stay current: the field moves quickly.
 
 ## 20. Conferences and events
 
-- [AI Engineer World's Fair](https://www.ai.engineer/worldsfair): Biggest AI-engineering conference; the Voice track has hosted major launches from ElevenLabs, Vapi, LiveKit, Pipecat, and Cartesia. The 2026 edition runs 29 June - 2 July 2026 at Moscone West, San Francisco.
+- [AI Engineer World's Fair](https://www.ai.engineer/worldsfair): Biggest AI-engineering conference; the Voice track has hosted major launches from ElevenLabs, Vapi, LiveKit, Pipecat, and Cartesia. The 2026 edition ran 29 June - 2 July 2026 at Moscone West, San Francisco; session recordings post free to the AI Engineer YouTube channel.
 - [AI Engineer YouTube channel](https://www.youtube.com/@aiDotEngineer): All World's Fair and Summit talks are posted free; the best library of recent voice-AI talks.
 - [AI Engineer Summit Online: Voice playlist](https://www.youtube.com/playlist?list=PLcfpQ4tk2k0VetQVGT1EqTbcr-qcgbfFs): Curated playlist including voice-track sessions from leading labs.
 - [AIEWF 2025 Recap (Latent Space)](https://www.latent.space/p/aiewf-2025-keynotes): Written deep-dive into 2025's voice-track talks and major launches.
-- [VOICE & AI (Modev)](https://www.voicesummit.ai/): Long-running voice technology conference with broader CX and voicebot focus, happening on Oct 5–7, 2026
+- [AGENTIC AI Summit (Modev, formerly VOICE & AI)](https://gotoagentic.ai/): Long-running Modev voice conference, now broadened to agentic AI; October 5-7, 2026 in Loudoun County, Virginia.
 - [Interspeech 2026](https://interspeech2026.org/): Top academic speech-science conference; intimidating but worth knowing, since most landmark papers debut here. Sydney, Australia, 27 September - 1 October 2026.
 
 ## 21. Hackathons and competitions
 
 - [ElevenHacks (weekly sprints)](https://hacks.elevenlabs.io/): Weekly themed challenges with credits and prizes; low-pressure way to ship one project per week. **🟢 Beginner**
-- [AI Engineer World's Fair Hackathon](https://cerebralvalley.ai/e/aiewf-hackathon-2026): Co-located with the conference; $10K prizes judged by 3,000+ AI engineers, with a strong voice track, happening on Jun 27 at 9:00 AM - Jun 28 at 5:00 PM (PDT). **🟡 Intermediate**
+- [AI Engineer World's Fair Hackathon](https://cerebralvalley.ai/e/aiewf-hackathon-2026): Co-located with the conference; $10K prizes judged by 3,000+ AI engineers, with a strong voice track; the 2026 edition ran 27-28 June (PDT). **🟡 Intermediate**
 - [lablab.ai AI Hackathons](https://lablab.ai/event): Continuous calendar of short online hackathons frequently sponsored by voice-AI vendors. **🟢 Beginner**
 - [Devpost: Voice AI Hackathons](https://devpost.com/hackathons?search=voice+ai): Centralized search for active voice-AI hackathons; the best way to find what's open right now. **🟢 Beginner**
 
