@@ -146,7 +146,7 @@
 | **NVIDIA Parakeet（NeMo）** | 开源 | 榜单前列准确率 |
 
 <details>
-<summary><b>17 项资源</b></summary>
+<summary><b>19 项资源</b></summary>
 
 ### 商业 API
 
@@ -162,6 +162,8 @@
 - 🟢 [openai/whisper](https://github.com/openai/whisper)：原仓库与 DIY ASR 的事实起点。
 - 🟡 [SYSTRAN/faster-whisper](https://github.com/SYSTRAN/faster-whisper)：基于 CTranslate2 的实现，INT8 下可达约 4× 提速；自托管 Whisper 常用。
 - 🔴 [NVIDIA NeMo（Parakeet / Canary）](https://github.com/NVIDIA-NeMo/Speech)：榜单前列的开源 ASR 与流式推理方案。
+- 🟡 [FunASR](https://github.com/modelscope/FunASR)：工业级开源 ASR 工具包，覆盖 Paraformer、SenseVoice、VAD、标点、说话人分离、流式服务与 OpenAI 兼容 API，适合自托管语音智能体。
+- 🟡 [SenseVoice](https://github.com/FunAudioLLM/SenseVoice)：多语种语音理解模型，支持 ASR、语种识别、情感识别和音频事件检测，并提供 FunASR 集成与 ONNX/libtorch 导出示例。
 - 🟡 [Moonshine](https://github.com/moonshine-ai/moonshine)：轻量端侧 ASR（tiny 27M / base 61M 参数）；v2 新增遍历式（ergodic）流式编码器，面向边缘设备上对延迟敏感的实时转写。
 - 🔴 [NVIDIA Nemotron 3.5 ASR Streaming 0.6B](https://huggingface.co/nvidia/nemotron-3.5-asr-streaming-0.6b)：开放权重、缓存感知的 FastConformer 流式 ASR，覆盖 40 个语言地区，延迟可运行时配置（80 ms 至 1.1 s）。
 ### 基准与讲解
