@@ -10,7 +10,7 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![License: MIT](https://img.shields.io/github/license/mahimairaja/voiceai?style=flat-square&color=blue)](LICENSE)
-[![Stars](https://img.shields.io/github/stars/mahimairaja/voiceai?style=flat-square&logo=github&color=yellow)](https://github.com/mahimairaja/voiceai/stargazers)
+[![Stars](https://img.shields.io/github/stars/mahimairaja/voiceai?style=flat-square&logo=github&color=yellow)](https://github.com/mahimairaja/voiceai)
 [![Last commit](https://img.shields.io/github/last-commit/mahimairaja/voiceai?style=flat-square&color=informational)](https://github.com/mahimairaja/voiceai/commits/main)
 [![Resources](https://img.shields.io/badge/resources-200%2B-5b21b6?style=flat-square)](#table-of-contents)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square)](#contributing)
@@ -146,7 +146,7 @@ Pick **one streaming STT** and learn it deeply before shopping around. Deepgram,
 | **NVIDIA Parakeet (NeMo)** | Open source | Top-of-leaderboard accuracy |
 
 <details>
-<summary><b>17 resources</b></summary>
+<summary><b>19 resources</b></summary>
 
 ### Commercial APIs
 
@@ -162,6 +162,8 @@ Pick **one streaming STT** and learn it deeply before shopping around. Deepgram,
 - 🟢 [openai/whisper](https://github.com/openai/whisper): The original repo and the de facto starting point for any DIY ASR project.
 - 🟡 [SYSTRAN/faster-whisper](https://github.com/SYSTRAN/faster-whisper): CTranslate2 reimplementation up to 4× faster with INT8; recommended for self-hosted Whisper.
 - 🔴 [NVIDIA NeMo (Parakeet / Canary)](https://github.com/NVIDIA-NeMo/Speech): Top-of-leaderboard open ASR models with streaming inference recipes.
+- 🟡 [FunASR](https://github.com/modelscope/FunASR): Industrial open-source ASR toolkit with Paraformer, SenseVoice, VAD, punctuation, diarization, streaming services, and an OpenAI-compatible API for self-hosted voice agents.
+- 🟡 [SenseVoice](https://github.com/FunAudioLLM/SenseVoice): Multilingual speech understanding model for ASR, language identification, emotion recognition, and audio event detection, with FunASR integration and ONNX/libtorch export examples.
 - 🟡 [Moonshine](https://github.com/moonshine-ai/moonshine): Tiny on-device ASR (tiny 27M / base 61M params); v2 adds an ergodic streaming encoder built for latency-critical live transcription on edge devices.
 - 🔴 [NVIDIA Nemotron 3.5 ASR Streaming 0.6B](https://huggingface.co/nvidia/nemotron-3.5-asr-streaming-0.6b): Open-weights cache-aware FastConformer streaming ASR across 40 locales, with runtime-configurable latency (80 ms to 1.1 s).
 ### Benchmarks and explainers
