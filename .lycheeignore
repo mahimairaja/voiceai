@@ -11,3 +11,6 @@ https://img.shields.io/
 https://awesome.re/
 https://api.star-history.com/
 https://contrib.rocks/
+
+# GitHub stat sub-pages 404 for unauthenticated checkers but load for humans.
+https://github\.com/[^/]+/[^/]+/(stargazers|network|watchers|graphs)
