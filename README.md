@@ -352,7 +352,7 @@ Pick **one tutorial and finish it before starting another**. Voice AI is unforgi
 Clone these instead of writing boilerplate from scratch.
 
 <details>
-<summary><b>9 resources</b></summary>
+<summary><b>10 resources</b></summary>
 
 - 🟢→🔴 [livekit/agents](https://github.com/livekit/agents): The flagship open-source Python/Node framework for production voice agents (tip: pair it with the LiveKit Docs MCP server and Agent Skill for AI-assisted builds).
 - 🟢→🔴 [pipecat-ai/pipecat](https://github.com/pipecat-ai/pipecat): Vendor-neutral framework with 40+ STT/LLM/TTS service plugins.
@@ -363,6 +363,7 @@ Clone these instead of writing boilerplate from scratch.
 - 🟡 [kwindla/macos-local-voice-agents](https://github.com/kwindla/macos-local-voice-agents): Pipecat example hitting sub-800 ms voice-to-voice latency entirely on M-series Macs.
 - 🟡 [zzw922cn/awesome-speech-recognition-speech-synthesis-papers](https://github.com/zzw922cn/awesome-speech-recognition-speech-synthesis-papers): Comprehensive curated index of ASR, TTS, voice conversion, and speech-LLM papers.
 - 🟢 [wildminder/awesome-ai-voice](https://github.com/wildminder/awesome-ai-voice): Actively maintained 2026 list of open-source TTS, voice-cloning, and audio/music-generation models.
+- 🟡 [baptistecristo/AI-agents-for-dumbphones](https://github.com/baptistecristo/AI-agents-for-dumbphones): Apache-2.0 Next.js and Supabase app wrapped around a telephony voice agent, covering the layer above the framework: skills (calendar, reminders, weather), an append-only consent registry, and cron-scheduled outbound calls.
 
 </details>
 
