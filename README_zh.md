@@ -352,7 +352,7 @@
 与其从零写样板，不如直接 clone。
 
 <details>
-<summary><b>9 项资源</b></summary>
+<summary><b>10 项资源</b></summary>
 
 - 🟢→🔴 [livekit/agents](https://github.com/livekit/agents)：旗舰级开源 Python/Node 生产语音智能体框架（小贴士：搭配 LiveKit Docs MCP server 与 Agent Skill 可获得 AI 辅助开发）。
 - 🟢→🔴 [pipecat-ai/pipecat](https://github.com/pipecat-ai/pipecat)：厂商中立，含 40+ STT/LLM/TTS 服务插件。
@@ -363,6 +363,7 @@
 - 🟡 [kwindla/macos-local-voice-agents](https://github.com/kwindla/macos-local-voice-agents)：Pipecat 示例：在 M 系列 Mac 上全本地实现端到端语音延迟低于 800 ms。
 - 🟡 [zzw922cn/awesome-speech-recognition-speech-synthesis-papers](https://github.com/zzw922cn/awesome-speech-recognition-speech-synthesis-papers)：ASR、TTS、声音转换与语音–LLM 论文索引。
 - 🟢 [wildminder/awesome-ai-voice](https://github.com/wildminder/awesome-ai-voice)：活跃维护的 2026 年开源 TTS、声音克隆与音频/音乐生成模型列表。
+- 🟡 [baptistecristo/AI-agents-for-dumbphones](https://github.com/baptistecristo/AI-agents-for-dumbphones)：Apache-2.0 的 Next.js + Supabase 应用，围绕电话语音智能体构建：技能（日历、提醒、天气）、仅追加的同意记录，以及定时外呼。可作为框架之上应用层的示例。
 
 </details>
 
