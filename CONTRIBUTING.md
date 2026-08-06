@@ -19,13 +19,17 @@ If you authored or work on the resource, please disclose that in the pull reques
 2. Add a single bullet that matches the existing format:
 
    ```
-   - [Title](https://link): One-line description of what it is and why it is useful. **🟢 Beginner**
+   - 🟢 [Title](https://link): One-line description of what it is and why it is useful.
    ```
 
-   - The separator between the link and the description is a colon.
-   - Tag the level: **🟢 Beginner**, **🟡 Intermediate**, or **🔴 Advanced**. Blogs, podcasts, and communities (sections 17-19) are left untagged.
-3. **Keep both languages in parity.** Add the matching entry to **both** `README.md` and `README_zh.md`. If you cannot translate it, add the English entry and note in the PR that the Chinese line still needs a translation.
-4. Keep it concise and specific. No marketing language.
+   - The level tag is a single emoji at the start of the bullet: 🟢 beginner, 🟡 intermediate, 🔴 advanced. Blogs, podcasts, and communities (sections 17-19) are left untagged.
+   - The separator between the link and the description is a colon, and the description ends with a period.
+3. Bump the resource count in that section's `<summary>` line (both languages).
+4. **Keep both languages in parity.** Add the matching entry to **both** `README.md` and `README_zh.md`. If you cannot translate it, add the English entry and note in the PR that the Chinese line still needs a translation.
+
+   - `README_zh.md` uses full-width punctuation: `：` after the link, `、` between listed items, `（）` for parentheses, and `。` to end the line.
+   - Translate "agent" as 智能体. Bare "Agent" is reserved for product names such as LiveKit Agents.
+5. Keep it concise and specific. No marketing language.
 
 ## Reporting issues
 
