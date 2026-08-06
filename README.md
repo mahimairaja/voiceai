@@ -107,13 +107,14 @@ The frameworks below all let you wire STT, an LLM, and TTS together. **For open-
 | **OpenAI Realtime / Gemini Live** | Realtime API | Speech-to-speech |
 
 <details>
-<summary><b>13 resources</b></summary>
+<summary><b>14 resources</b></summary>
 
 ### Open-source frameworks
 
 - 🟢 [LiveKit Agents: Voice AI Quickstart](https://docs.livekit.io/agents/start/voice-ai/): Working assistant in <10 min via Python or TypeScript, runs on top of WebRTC.
 - 🟢 [Pipecat: Quickstart](https://docs.pipecat.ai/pipecat/get-started/quickstart): Scaffolds a Deepgram + OpenAI + Cartesia pipeline via the Pipecat CLI (`uv tool install pipecat-ai-cli`, then `pipecat init quickstart`); talk to it in the browser in ~5 minutes.
 - 🔴 [Ultravox (fixie-ai/ultravox)](https://github.com/fixie-ai/ultravox): Open-weight multimodal speech LLM (Llama/Gemma/Qwen variants) that skips the separate ASR stage for ~150 ms TTFT.
+- 🟡 [qwen-audio-agent](https://github.com/QwenAudio/qwen-audio-agent): Full-duplex voice runtime that drives coding agents (OpenCode, Claude Code, Codex, and other ACP backends) with barge-in, parallel background tasks, and a local wake word.
 ### Managed platforms
 
 - 🟢 [Vapi: Quickstart](https://docs.vapi.ai/quickstart/introduction): Dashboard-first; ship an agent on a free US phone number in under 5 minutes.

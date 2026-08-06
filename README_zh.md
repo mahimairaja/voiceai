@@ -107,13 +107,14 @@
 | **OpenAI Realtime / Gemini Live** | 实时 API | 语音到语音 |
 
 <details>
-<summary><b>13 项资源</b></summary>
+<summary><b>14 项资源</b></summary>
 
 ### 开源框架
 
 - 🟢 [LiveKit Agents：语音智能体快速入门](https://docs.livekit.io/agents/start/voice-ai/)：约 10 分钟内用 Python 或 TypeScript 跑通一个语音智能体示例，底层为 WebRTC。
 - 🟢 [Pipecat：Quickstart](https://docs.pipecat.ai/pipecat/get-started/quickstart)：通过 Pipecat CLI（`uv tool install pipecat-ai-cli`，再 `pipecat init quickstart`）脚手架搭好 Deepgram + OpenAI + Cartesia 流水线；约 5 分钟内可在浏览器里对话。
 - 🔴 [Ultravox（fixie-ai/ultravox）](https://github.com/fixie-ai/ultravox)：开放权重的多模态语音 LLM（Llama/Gemma/Qwen 等变体），省去独立 ASR 环节，首 token 时延（TTFT）约 150 ms。
+- 🟡 [qwen-audio-agent](https://github.com/QwenAudio/qwen-audio-agent)：全双工语音运行时，通过 ACP 驱动编码 Agent（OpenCode、Claude Code、Codex 等），支持自然打断、后台任务并行与本地唤醒词。
 ### 托管平台
 
 - 🟢 [Vapi：Quickstart](https://docs.vapi.ai/quickstart/introduction)：以控制台为先；约 5 分钟内可在免费美国号码上发布语音智能体。
