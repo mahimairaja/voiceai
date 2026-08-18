@@ -557,7 +557,7 @@ Pull requests welcome. Resources must be **active in the last 12 months**, **acc
 
 ## ⭐ Stargazers and contributors
 
-[![Star History Chart](https://api.star-history.com/svg?repos=mahimairaja/voiceai&type=Date)](https://star-history.com/#mahimairaja/voiceai&Date)
+[![Star History Chart](https://star-history.dera.page/svg?repos=mahimairaja/voiceai&type=Date)](https://star-history.dera.page/#mahimairaja/voiceai&Date)
 
 <a href="https://github.com/mahimairaja/voiceai/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=mahimairaja/voiceai&max=40&columns=10&anon=0" alt="Contributors" />

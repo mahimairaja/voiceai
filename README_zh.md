@@ -557,7 +557,7 @@
 
 ## ⭐ Stargazers 与贡献者
 
-[![Star History Chart](https://api.star-history.com/svg?repos=mahimairaja/voiceai&type=Date)](https://star-history.com/#mahimairaja/voiceai&Date)
+[![Star History Chart](https://star-history.dera.page/svg?repos=mahimairaja/voiceai&type=Date)](https://star-history.dera.page/#mahimairaja/voiceai&Date)
 
 <a href="https://github.com/mahimairaja/voiceai/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=mahimairaja/voiceai&max=40&columns=10&anon=0" alt="Contributors" />
