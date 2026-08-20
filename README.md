@@ -147,7 +147,7 @@ Pick **one streaming STT** and learn it deeply before shopping around. Deepgram,
 | **NVIDIA Parakeet (NeMo)** | Open source | Top-of-leaderboard accuracy |
 
 <details>
-<summary><b>19 resources</b></summary>
+<summary><b>20 resources</b></summary>
 
 ### Commercial APIs
 
@@ -158,6 +158,7 @@ Pick **one streaming STT** and learn it deeply before shopping around. Deepgram,
 - 🟢 [Soniox Speech-to-Text](https://soniox.com/docs/stt/get-started): One model spanning 60+ languages with real-time WebSocket streaming and async APIs, speaker diarization, language identification, endpoint detection, and built-in real-time speech translation (one-way or two-way).
 - 🟡 [Speechmatics Melia](https://www.speechmatics.com/company/articles-and-news/introducing-melia-multilingual-speech-to-text-model): Single-pass multilingual STT with native code-switching across 56+ languages.
 - 🟡 [Gladia Solaria-3](https://www.gladia.io/blog/solaria-3-speech-to-text-model-for-european-languages): STT tuned for noisy, multi-speaker European business audio (9.6% WER on English production calls).
+- 🟢 [Gradium STT](https://docs.gradium.ai/guides/speech-to-text): Streaming STT with built-in semantic VAD; step messages every 80 ms carry end-of-turn probabilities so agents can decide when a speaker has finished.
 ### Open source
 
 - 🟢 [openai/whisper](https://github.com/openai/whisper): The original repo and the de facto starting point for any DIY ASR project.
@@ -190,7 +191,7 @@ Pick **one streaming STT** and learn it deeply before shopping around. Deepgram,
 | **Chatterbox** | Open source | Cloning + emotion control |
 
 <details>
-<summary><b>15 resources</b></summary>
+<summary><b>16 resources</b></summary>
 
 ### Commercial APIs
 
@@ -199,6 +200,7 @@ Pick **one streaming STT** and learn it deeply before shopping around. Deepgram,
 - 🟢 [Deepgram Aura-2](https://developers.deepgram.com/docs/tts-models): Low-latency streaming TTS (Aura-2) that pairs cleanly with Deepgram STT.
 - 🟢 [OpenAI TTS (gpt-4o-mini-tts)](https://developers.openai.com/api/docs/guides/text-to-speech): Easiest plug-in TTS for the OpenAI stack.
 - 🟢 [Soniox Text-to-Speech](https://soniox.com/docs/tts/get-started): Low-latency streaming TTS over WebSocket with multilingual voices; pairs with Soniox STT and translation.
+- 🟢 [Gradium TTS](https://docs.gradium.ai/guides/text-to-speech): Streaming WebSocket TTS with 158 ms P50 time to first audio and instant voice cloning in five languages.
 - 🟢 [Artificial Analysis: TTS leaderboard](https://artificialanalysis.ai/text-to-speech/models): ELO, price, and speed comparison covering Rime, PlayHT, Hume, Inworld, and others.
 - 🟡 [Best Text-to-Speech Providers in 2026 (Coval)](https://www.coval.ai/blog/best-text-to-speech-providers-in-2026-how-to-choose-%28and-why-vendor-benchmarks-lie%29/): Independent head-to-head of 14 TTS providers on latency, naturalness, and cost; note the commercial author.
 ### Open source
@@ -248,7 +250,7 @@ A voice agent's perceived intelligence is bounded by **how fast the LLM streams 
 Pure VAD is no longer enough: modern agents combine **acoustic VAD with a small semantic model** that predicts end-of-utterance from words and prosody.
 
 <details>
-<summary><b>14 resources</b></summary>
+<summary><b>15 resources</b></summary>
 
 - 🟢 [Silero VAD](https://github.com/snakers4/silero-vad): MIT-licensed pre-trained VAD; <1 ms per chunk on CPU. The de facto VAD inside LiveKit and Pipecat.
 - 🟢 [py-webrtcvad](https://github.com/wiseman/py-webrtcvad): Python bindings for Google's classic WebRTC VAD; lightweight baseline.
@@ -263,6 +265,7 @@ Pure VAD is no longer enough: modern agents combine **acoustic VAD with a small 
 - 🟡 [Tackling Turn Detection in Voice AI (Notch)](https://www.notch.cx/post/turn-detection-in-voice-ai): Engineer-first walkthrough combining VAD probability, volume, and TTS markers.
 - 🟡 [What Is Endpointing in Voice AI? (Cekura)](https://www.cekura.ai/blogs/endpointing-in-voice-ai-turn-detection): Explainer on the three-signal endpointing stack with a testing angle; note the commercial author.
 - 🟡 [Evaluating End-of-Turn Detection Models (Deepgram)](https://deepgram.com/learn/evaluating-end-of-turn-detection-models): Methodology plus a head-to-head of Flux, Pipecat Smart Turn, and LiveKit EOU; note the commercial author.
+- 🟡 [Semantic VAD (Gradium)](https://gradium.ai/blog/semantic-vad): Explainer on multi-horizon end-of-utterance prediction, with streaming inactivity probabilities every 80 ms and guidance on tuning the latency vs interruption tradeoff; note the commercial author.
 - 🟢 [ai-coustics VAD](https://developers.ai-coustics.com/): VAD bundled with real-time speech enhancement, noise suppression, and voice isolation in a single audio preprocessing SDK; useful when you want cleanup and turn-taking signals from the same component.
 
 </details>

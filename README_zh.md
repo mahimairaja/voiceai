@@ -147,7 +147,7 @@
 | **NVIDIA Parakeet（NeMo）** | 开源 | 榜单前列准确率 |
 
 <details>
-<summary><b>19 项资源</b></summary>
+<summary><b>20 项资源</b></summary>
 
 ### 商业 API
 
@@ -158,6 +158,7 @@
 - 🟢 [Soniox 语音转文字](https://soniox.com/docs/stt/get-started)：单模型覆盖 60+ 种语言，提供实时 WebSocket 流式与异步 API，支持话者分离、语种识别、话末检测，并内置实时语音翻译（单向或双向）。
 - 🟡 [Speechmatics Melia](https://www.speechmatics.com/company/articles-and-news/introducing-melia-multilingual-speech-to-text-model)：单次前向的多语言 STT，原生多语种混说，覆盖 56+ 种语言。
 - 🟡 [Gladia Solaria-3](https://www.gladia.io/blog/solaria-3-speech-to-text-model-for-european-languages)：面向嘈杂、多说话人欧洲商务音频优化的 STT（英语生产音频 WER 9.6%）。
+- 🟢 [Gradium STT](https://docs.gradium.ai/guides/speech-to-text)：内置语义 VAD 的流式 STT：每 80 ms 的 step 消息携带话末概率，便于智能体判断说话人是否讲完。
 ### 开源
 
 - 🟢 [openai/whisper](https://github.com/openai/whisper)：原仓库与 DIY ASR 的事实起点。
@@ -190,7 +191,7 @@
 | **Chatterbox** | 开源 | 克隆 + 情感控制 |
 
 <details>
-<summary><b>15 项资源</b></summary>
+<summary><b>16 项资源</b></summary>
 
 ### 商业 API
 
@@ -199,6 +200,7 @@
 - 🟢 [Deepgram Aura-2](https://developers.deepgram.com/docs/tts-models)：低延迟流式 TTS（Aura-2），与 Deepgram STT 衔接顺畅。
 - 🟢 [OpenAI TTS（gpt-4o-mini-tts）](https://developers.openai.com/api/docs/guides/text-to-speech)：OpenAI 栈里最容易接入的 TTS。
 - 🟢 [Soniox 文字转语音](https://soniox.com/docs/tts/get-started)：低延迟流式 TTS（WebSocket，另有 REST API），多语种音色；与 Soniox STT 及翻译搭配，构成单供应商实时语音到语音栈。
+- 🟢 [Gradium TTS](https://docs.gradium.ai/guides/text-to-speech)：基于 WebSocket 的流式 TTS，P50 首音频延迟 158 ms，支持五种语言的即时声音克隆。
 - 🟢 [Artificial Analysis：TTS 榜单](https://artificialanalysis.ai/text-to-speech/models)：ELO、价格与速度对比，含 Rime、PlayHT、Hume、Inworld 等。
 - 🟡 [Best Text-to-Speech Providers in 2026（Coval）](https://www.coval.ai/blog/best-text-to-speech-providers-in-2026-how-to-choose-%28and-why-vendor-benchmarks-lie%29/)：对 14 家 TTS 供应商在延迟、自然度与成本上的独立横评；注意作者为商业方。
 ### 开源
@@ -248,7 +250,7 @@
 **仅靠传统 VAD 已不够**——现代方案往往把**声学 VAD**与预测话末的**小型语义模型**（结合用词与韵律）结合起来。
 
 <details>
-<summary><b>14 项资源</b></summary>
+<summary><b>15 项资源</b></summary>
 
 - 🟢 [Silero VAD](https://github.com/snakers4/silero-vad)：MIT 许可的预训练 VAD；CPU 上每个音频处理块可低至 1 ms 以内。LiveKit 与 Pipecat 中的事实标准。
 - 🟢 [py-webrtcvad](https://github.com/wiseman/py-webrtcvad)：经典 Google WebRTC VAD 的 Python 绑定；轻量基线。
@@ -263,6 +265,7 @@
 - 🟡 [Tackling Turn Detection in Voice AI（Notch）](https://www.notch.cx/post/turn-detection-in-voice-ai)：面向工程师的分步导读：VAD 概率、音量与 TTS 标记的组合。
 - 🟡 [What Is Endpointing in Voice AI?（Cekura）](https://www.cekura.ai/blogs/endpointing-in-voice-ai-turn-detection)：讲解「三信号」话末检测栈，并带测试视角；注意作者为商业方。
 - 🟡 [Evaluating End-of-Turn Detection Models（Deepgram）](https://deepgram.com/learn/evaluating-end-of-turn-detection-models)：方法论，并对 Flux、Pipecat Smart Turn 与 LiveKit EOU 做正面对比；注意作者为商业方。
+- 🟡 [Semantic VAD（Gradium）](https://gradium.ai/blog/semantic-vad)：讲解多时域话末预测：每 80 ms 输出一次流式静默概率，并给出延迟与抢话之间的调参建议；注意作者为商业方。
 - 🟢 [ai-coustics VAD](https://developers.ai-coustics.com/)：与实时语音增强、降噪与人声分离打包在同一个音频预处理 SDK 中的 VAD；当你需要同一个组件同时给出清洁后的音频与话轮信号时尤其合适。
 
 </details>
