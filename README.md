@@ -413,7 +413,7 @@ These are the **landmark papers behind the models you'll actually use**. Read th
 You can't ship what you can't measure. **Voice-agent evaluation is fundamentally probabilistic**: a single transcript can pass and fail across runs, so simulation and statistics matter more than fixed test cases.
 
 <details>
-<summary><b>12 resources</b></summary>
+<summary><b>13 resources</b></summary>
 
 - 🟢 [Coval: Voice AI Testing Platform](https://www.coval.ai/): Defines the core voice-agent metrics: TTFB, WER, resolution rate, simulated accents, and interruptions.
 - 🟢 [Coval: How to Evaluate Voice Agents (Practical Guide)](https://www.coval.ai/blog/how-to-evaluate-voice-agents-a-practical-guide-to-testing-and-quality-assurance): One of the most cited 2025 guides on probabilistic vs deterministic evaluation.
@@ -427,6 +427,7 @@ You can't ship what you can't measure. **Voice-agent evaluation is fundamentally
 - 🟡 [Future AGI](https://github.com/future-agi/future-agi): Open-source platform to simulate, evaluate, trace, guardrail, and optimize voice and AI agent apps in one feedback loop, with persona-driven simulation and 50+ eval metrics.
 - 🟡 [Roark](https://roark.ai/): Voice-AI QA and observability (YC W25) that turns failed production calls into replayable regression tests.
 - 🟡 [Cekura for Agents (MCP server)](https://www.cekura.ai/blogs/cekura-for-agents): MCP server that lets coding agents (Claude Code, Cursor, Codex) trigger and schedule voice-agent test runs.
+- 🟢 [AI Voice Agent 30-Test Scorecard (Scaleify)](https://scaleify.co/guides/ai-voice-agent): Free downloadable checklist for testing interruptions, transfers, fallback behavior, consent, latency, and task completion; published by commercial vendor Scaleify.
 
 </details>
 

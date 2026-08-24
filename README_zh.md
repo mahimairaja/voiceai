@@ -413,7 +413,7 @@
 不能度量就无法交付。**语音智能体评测本质上带有随机性**——同一转写在不同次运行中可能过也可能不过，因此**仿真与统计**比固定用例更重要。
 
 <details>
-<summary><b>12 项资源</b></summary>
+<summary><b>13 项资源</b></summary>
 
 - 🟢 [Coval：Voice AI Testing Platform](https://www.coval.ai/)：定义核心指标：TTFB、WER、解决率、仿真口音与打断等。
 - 🟢 [Coval：How to Evaluate Voice Agents（实用指南）](https://www.coval.ai/blog/how-to-evaluate-voice-agents-a-practical-guide-to-testing-and-quality-assurance)：2025 年常被引用的概率 vs 确定性评测指南。
@@ -427,6 +427,7 @@
 - 🟡 [Future AGI](https://github.com/future-agi/future-agi)：开源平台，在同一反馈闭环中对语音与 AI 智能体应用进行仿真、评测、追踪、护栏与优化；支持基于人物画像的仿真与 50+ 评测指标。
 - 🟡 [Roark](https://roark.ai/)：语音 AI 的 QA 与可观测性平台（YC W25），把失败的生产通话转化为可重放的回归测试。
 - 🟡 [Cekura for Agents（MCP server）](https://www.cekura.ai/blogs/cekura-for-agents)：MCP server，让编码智能体（Claude Code、Cursor、Codex）触发并调度语音智能体测试运行。
+- 🟢 [AI Voice Agent 30-Test Scorecard（Scaleify）](https://scaleify.co/guides/ai-voice-agent)：免费可下载的检查清单，用于测试打断、转接、回退行为、同意机制、延迟与任务完成情况；由商业厂商 Scaleify 发布。
 
 </details>
 
