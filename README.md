@@ -126,7 +126,7 @@ The frameworks below all let you wire STT, an LLM, and TTS together. **For open-
 - 🟡 [OpenAI Realtime API: Guide](https://developers.openai.com/api/docs/guides/realtime): Official guide to `gpt-realtime-2` (GA; GPT-5-class with configurable reasoning) over WebRTC, WebSockets, or SIP.
 - 🟡 [Google Gemini Live API: Overview](https://ai.google.dev/gemini-api/docs/live-api): Low-latency, bidirectional voice + vision agents with barge-in and tool use, on Gemini native audio.
 - 🟡 [Twilio ConversationRelay](https://www.twilio.com/docs/voice/conversationrelay): WebSocket bridge that handles STT/TTS so you focus on LLM logic; works with any LLM.
-- 🟡 [ThunderPhone Realtime API](https://thunderphone.com/docs/api-reference/realtime): OpenAI-Realtime-compatible speech-to-speech WebSocket for phone agents (47 languages, telephony included), with official Pipecat and LiveKit Agents plugins.
+- 🟡 [ThunderPhone Realtime API](https://thunderphone.com/docs/api-reference/realtime): OpenAI-Realtime-compatible speech-to-speech WebSocket for phone agents (47 languages, telephony support), with official Pipecat and LiveKit Agents plugins.
 ### Vendor-neutral comparisons
 
 - 🟡 [Vapi vs Pipecat vs LiveKit (AssemblyAI)](https://www.assemblyai.com/blog/vapi-vs-pipecat-vs-livekit): Architecture-focused comparison of pipeline control and transport choices.
