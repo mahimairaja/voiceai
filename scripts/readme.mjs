@@ -74,13 +74,26 @@ export function parseReadme(text, { lang, file }) {
   data.howTo = { title: stripHeading(howTo?.heading), steps: orderedList(howTo) };
   data.handbook = parseHandbook(handbook);
   const tocCount = toc?.lines.map((l) => l.text.match(/(\d+)/)).find(Boolean);
-  const tocItems = toc?.lines.filter((l) => /^\d+\. \[/.test(l.text)).length ?? 0;
+  const tocEntries = (toc?.lines ?? [])
+    .map((l) => ({ n: l.n, m: l.text.match(/^(\d+)\. \[.+?\]\((#[^)]+)\)$/) }))
+    .filter((e) => e.m);
+  const tocItems = tocEntries.length;
   data.toc = { title: stripHeading(toc?.heading) };
 
   for (const b of sectionBlocks) data.sections.push(parseSection(b, lang, err));
 
+  if (!sectionBlocks.length) err(1, 'No numbered sections ("## 🧭 1. Title") found.');
+  if (!tocItems) err(toc?.start ?? 1, 'No table of contents entries found.');
   if (tocItems !== data.sections.length)
     err(toc?.start ?? 1, `Table of contents lists ${tocItems} sections; the README has ${data.sections.length}.`);
+  // Each entry must name its section's number and link to that heading's GitHub anchor.
+  tocEntries.forEach(({ n, m }, i) => {
+    const block = sectionBlocks[i];
+    if (!block) return;
+    const anchor = `#${githubSlug(stripHeading(block.heading))}`;
+    if (Number(m[1]) !== i + 1) err(n, `Table of contents entry ${i + 1} is numbered ${m[1]}.`);
+    if (m[2] !== anchor) err(n, `Table of contents entry ${i + 1} links to ${m[2]}; the heading's anchor is ${anchor}.`);
+  });
   if (tocCount && Number(tocCount[1]) !== data.sections.length)
     err(toc.start, `Table of contents says ${tocCount[1]} sections; the README has ${data.sections.length}.`);
   data.sections.forEach((s, i) => {
@@ -223,6 +236,14 @@ function parseResource(t, lang, num, n, err) {
 }
 
 // Helpers
+/** GitHub's heading anchor: lowercase, punctuation and emoji dropped, spaces to hyphens. */
+export const githubSlug = (heading) =>
+  heading
+    .trim()
+    .toLowerCase()
+    .replace(/\uFE0F/g, '')
+    .replace(/[^\p{L}\p{M}\p{N}\p{Pc}\- ]/gu, '')
+    .replace(/ /g, '-');
 const stripHeading = (h) => (h ?? '').replace(/^##\s*/, '').trim();
 function splitParagraphs(lines) {
   const out = [];
@@ -256,11 +277,15 @@ export function checkParity(en, zh) {
     const urls = (x) => x.groups.flatMap((g) => g.resources.map((r) => r.url));
     const eu = urls(s);
     const zu = urls(z);
-    const missing = eu.filter((u) => !zu.includes(u));
-    const extra = zu.filter((u) => !eu.includes(u));
+    // Compare occurrence counts, so a duplicated link on one side is caught too.
+    const tally = (list) => list.reduce((m, u) => m.set(u, (m.get(u) ?? 0) + 1), new Map());
+    const et = tally(eu);
+    const zt = tally(zu);
+    const missing = [...et].flatMap(([u, c]) => Array(Math.max(0, c - (zt.get(u) ?? 0))).fill(u));
+    const extra = [...zt].flatMap(([u, c]) => Array(Math.max(0, c - (et.get(u) ?? 0))).fill(u));
     missing.forEach((u) => errors.push({ file: 'README_zh.md', line: z.line, message: `Section ${s.num} is missing ${u} (it is in README.md).` }));
     extra.forEach((u) => errors.push({ file: 'README_zh.md', line: z.line, message: `Section ${s.num} has ${u}, which README.md does not.` }));
-    const levels = (x) => x.groups.flatMap((g) => g.resources.map((r) => `${r.url} ${r.level}`));
+    const levels = (x) => x.groups.flatMap((g) => g.resources.map((r) => `${r.url} ${r.level}→${r.levelTo}`));
     const el = new Set(levels(s));
     levels(z)
       .filter((l) => !el.has(l) && eu.includes(l.split(' ')[0]))
