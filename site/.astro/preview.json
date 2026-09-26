@@ -1,0 +1,14 @@
+{
+	"pid": 1239,
+	"port": 4410,
+	"url": "http://127.0.0.1:4410",
+	"urls": {
+		"local": [
+			"http://127.0.0.1:4410/"
+		],
+		"network": [],
+		"networkInterfaceNames": []
+	},
+	"background": true,
+	"startedAt": "2026-09-26T22:58:46.013Z"
+}
