@@ -33,10 +33,32 @@ jobs:
           output: ./lychee/out.md
           fail: true
 
-      - name: Open an issue on scheduled failure
-        if: failure() && github.event_name == 'schedule'
+      # One issue tracks broken links: a failing scheduled or manual run updates the open
+      # broken-links issue (or opens one), and a passing run on main closes it.
+      - name: Find the open broken-links issue
+        id: issue
+        if: always() && github.event_name != 'pull_request'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          number=$(gh issue list --repo "$GITHUB_REPOSITORY" --label broken-links --state open \
+            --limit 1 --json number --jq '.[0].number // empty')
+          echo "number=$number" >> "$GITHUB_OUTPUT"
+
+      - name: Open or update the issue on failure
+        if: failure() && (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch')
         uses: peter-evans/create-issue-from-file@v5
         with:
           title: Broken links detected
           content-filepath: ./lychee/out.md
           labels: broken-links
+          issue-number: ${{ steps.issue.outputs.number }}
+
+      - name: Close the issue once links pass
+        if: success() && github.event_name != 'pull_request' && steps.issue.outputs.number != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+          NUMBER: ${{ steps.issue.outputs.number }}
+        run: |
+          gh issue close "$NUMBER" --repo "$GITHUB_REPOSITORY" --reason completed \
+            --comment "All links pass again as of $GITHUB_SHA ($GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID)."
