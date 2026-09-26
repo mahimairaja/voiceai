@@ -107,7 +107,7 @@
 | **OpenAI Realtime / Gemini Live** | 实时 API | 语音到语音 |
 
 <details>
-<summary><b>14 项资源</b></summary>
+<summary><b>15 项资源</b></summary>
 
 ### 开源框架
 
@@ -126,6 +126,7 @@
 - 🟡 [OpenAI Realtime API：指南](https://developers.openai.com/api/docs/guides/realtime)：`gpt-realtime-2`（GA；GPT-5 级、可配置推理）通过 WebRTC、WebSocket 或 SIP 接入的官方说明。
 - 🟡 [Google Gemini Live API：概览](https://ai.google.dev/gemini-api/docs/live-api)：低延迟双向语音 + 视觉，支持插话（barge-in）与工具调用，基于 Gemini 原生音频。
 - 🟡 [Twilio ConversationRelay](https://www.twilio.com/docs/voice/conversationrelay)：WebSocket 桥接，托管 STT/TTS，你专注 LLM 逻辑；可与任意 LLM 配合。
+- 🟡 [ThunderPhone Realtime API](https://thunderphone.com/docs/api-reference/realtime)：兼容 OpenAI Realtime 协议的语音到语音 WebSocket，面向电话智能体（47 种语言、支持电话接入），提供 Pipecat 与 LiveKit Agents 官方插件。
 ### 厂商中立对比
 
 - 🟡 [Vapi vs Pipecat vs LiveKit（AssemblyAI）](https://www.assemblyai.com/blog/vapi-vs-pipecat-vs-livekit)：从架构视角对比流水线控制与传输选型。
