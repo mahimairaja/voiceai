@@ -464,7 +464,7 @@
 - 🟢 [FTC：拟议的 AI 个人冒充规则（2024 年 2 月）](https://www.ftc.gov/news-events/news/press-releases/2024/02/ftc-proposes-new-protections-combat-ai-impersonation-individuals)：美国冒充欺诈规则的一手来源，涵盖 AI 深度伪造。
 - 🟢 [Pindrop：Voice Intelligence & Security Report](https://www.pindrop.com/research/report/voice-intelligence-security-report/)：行业报告：深度伪造诈骗尝试急剧上升。
 - 🟢 [Voice Cloning Ethics（CAMB.AI）](https://www.camb.ai/blog-post/voice-cloning-ethics-consent-deepfakes-responsible-ai-voice-use)：同意框架、ELVIS 法案与欧盟 AI 法的实践概览。
-- 🟢 [Detecting AI Audio with SynthID（ElevenLabs）](https://elevenlabs.io/blog/synthid)：ElevenLabs 在其生成音频中全面采用 Google DeepMind 的不可听 SynthID 水印，并推出免费公开的 Audio Detector。
+- 🟢 [What Is SynthID, and Why Is ElevenLabs Using It?（ElevenLabs 文档）](https://elevenlabs.io/docs/help-center/legal/audio-detector/what-is-synth-id-and-why-is-eleven-labs-using-it)：ElevenLabs 在其生成音频中全面采用 Google DeepMind 的不可听 SynthID 水印，并推出免费公开的 Audio Detector。
 - 🟡 [NCLC：Top Six TCPA/Robocall Developments 2024/2025](https://library.nclc.org/article/top-six-tcparobocall-developments-20242025)：消费者保护视角看实际执法重点。
 
 </details>

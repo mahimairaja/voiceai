@@ -464,7 +464,7 @@ If you're shipping a voice agent in 2026, **disclosure and consent are no longer
 - 🟢 [FTC: Proposed Rule on AI Impersonation of Individuals (Feb 2024)](https://www.ftc.gov/news-events/news/press-releases/2024/02/ftc-proposes-new-protections-combat-ai-impersonation-individuals): Direct source on U.S. impersonation-fraud rules covering AI deepfakes.
 - 🟢 [Pindrop: Voice Intelligence & Security Report](https://www.pindrop.com/research/report/voice-intelligence-security-report/): Industry report documenting the sharp rise in deepfake fraud attempts.
 - 🟢 [Voice Cloning Ethics (CAMB.AI)](https://www.camb.ai/blog-post/voice-cloning-ethics-consent-deepfakes-responsible-ai-voice-use): Practical overview of consent frameworks, ELVIS Act, and EU AI Act.
-- 🟢 [Detecting AI Audio with SynthID (ElevenLabs)](https://elevenlabs.io/blog/synthid): ElevenLabs adopts Google DeepMind's inaudible SynthID watermark across generated audio and ships a free public Audio Detector.
+- 🟢 [What Is SynthID, and Why Is ElevenLabs Using It? (ElevenLabs Docs)](https://elevenlabs.io/docs/help-center/legal/audio-detector/what-is-synth-id-and-why-is-eleven-labs-using-it): ElevenLabs adopts Google DeepMind's inaudible SynthID watermark across generated audio and ships a free public Audio Detector.
 - 🟡 [NCLC: Top Six TCPA/Robocall Developments 2024/2025](https://library.nclc.org/article/top-six-tcparobocall-developments-20242025): Consumer-protection lens on what's actually being enforced.
 
 </details>
