@@ -22,7 +22,7 @@ If you authored or work on the resource, please disclose that in the pull reques
    - 🟢 [Title](https://link): One-line description of what it is and why it is useful.
    ```
 
-   - The level tag is a single emoji at the start of the bullet: 🟢 beginner, 🟡 intermediate, 🔴 advanced. Blogs, podcasts, and communities (sections 17-19) are left untagged.
+   - The level tag is a single emoji at the start of the bullet: 🟢 beginner, 🟡 intermediate, 🔴 advanced. Blogs, podcasts, communities, and conferences (sections 17-20) are left untagged.
    - The separator between the link and the description is a colon, and the description ends with a period.
 3. Bump the resource count in that section's `<summary>` line (both languages).
 4. **Keep both languages in parity.** Add the matching entry to **both** `README.md` and `README_zh.md`. If you cannot translate it, add the English entry and note in the PR that the Chinese line still needs a translation.
@@ -30,6 +30,14 @@ If you authored or work on the resource, please disclose that in the pull reques
    - `README_zh.md` uses full-width punctuation: `：` after the link, `、` between listed items, `（）` for parentheses, and `。` to end the line.
    - Translate "agent" as 智能体. Bare "Agent" is reserved for product names such as LiveKit Agents.
 5. Keep it concise and specific. No marketing language.
+
+## Check before you open a pull request
+
+```
+node scripts/check-readme.mjs
+```
+
+It needs only Node (18 or later) and checks both READMEs against this guide: the entry format, level tags, the resource count in each `<summary>` line, em dashes, and that both languages list the same resources at the same levels. CI runs the same check on every pull request.
 
 ## Reporting issues
 

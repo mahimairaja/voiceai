@@ -19,9 +19,9 @@
 
 </div>
 
-语音智能体在不到三年里已从研究演示走进真实产品。**现代技术栈正收敛为一种清晰范式**：实时传输层（WebRTC 或电话网）、语音转文字 → 大语言模型 → 文字转语音的流式流水线，以及决定语音智能体何时开口的话轮模型。本清单的结构刻意贴近这一学习顺序——先打基础，再选框架，然后深入各组件与上线相关议题。
+语音智能体在不到三年里已从研究演示走进真实产品。**现代技术栈正收敛为一种清晰范式**：实时传输层（WebRTC 或电话网）、语音转文字 → 大语言模型 → 文字转语音的流式流水线，以及决定语音智能体何时开口的话轮模型。本清单的结构刻意贴近这一学习顺序：先打基础，再选框架，然后深入各组件与上线相关议题。
 
-学习类资源标注为 **🟢 入门**、**🟡 进阶** 或 **🔴 高阶**（第 17-19 节的博客、播客与社区有意不作标注）。优先收录免费官方文档与厂商中立指南；**条目若存在商业背景会明确标注**。
+学习类资源标注为 **🟢 入门**、**🟡 进阶** 或 **🔴 高阶**（第 17-20 节的博客、播客、社区与会议有意不作标注）。优先收录免费官方文档与厂商中立指南；**条目若存在商业背景会明确标注**。
 
 ---
 
@@ -180,7 +180,7 @@
 
 ## 🗣️ 4. 文字转语音（TTS）
 
-**拖垮语音智能体的往往是延迟，而非单纯音质**——应优先选择真正的流式输出、首字节在 200 ms 以内的供应商。
+**拖垮语音智能体的往往是延迟，而非单纯音质**：应优先选择真正的流式输出、首字节在 200 ms 以内的供应商。
 
 | 推荐 | 类型 | 适合 |
 |------|------|------|
@@ -247,7 +247,7 @@
 
 ## 🔀 6. 语音活动检测与话轮转换
 
-**仅靠传统 VAD 已不够**——现代方案往往把**声学 VAD**与预测话末的**小型语义模型**（结合用词与韵律）结合起来。
+**仅靠传统 VAD 已不够**：现代方案往往把**声学 VAD**与预测话末的**小型语义模型**（结合用词与韵律）结合起来。
 
 <details>
 <summary><b>15 项资源</b></summary>
@@ -390,7 +390,7 @@
 
 ## 📄 13. 对初学者友好的研究论文
 
-这些是**你实际会用到的模型背后的里程碑论文**。建议先看 Whisper 与 Common Voice 两篇——文笔在机器学习论文里算格外友好。
+这些是**你实际会用到的模型背后的里程碑论文**。建议先看 Whisper 与 Common Voice 两篇：文笔在机器学习论文里算格外友好。
 
 <details>
 <summary><b>10 项资源</b></summary>
@@ -410,7 +410,7 @@
 
 ## ✅ 14. 评测与测试
 
-不能度量就无法交付。**语音智能体评测本质上带有随机性**——同一转写在不同次运行中可能过也可能不过，因此**仿真与统计**比固定用例更重要。
+不能度量就无法交付。**语音智能体评测本质上带有随机性**：同一转写在不同次运行中可能过也可能不过，因此**仿真与统计**比固定用例更重要。
 
 <details>
 <summary><b>12 项资源</b></summary>
@@ -442,7 +442,7 @@
 - 🟡 [Latent Space：OpenAI Realtime API: The Missing Manual](https://www.latent.space/p/realtime-api)：Pipecat 作者基于一线经验，揭开 Realtime API 在生产环境中的真实面貌。
 - 🟡 [TWIML：Building Voice AI Agents That Don't Suck（Kwindla Kramer）](https://twimlai.com/podcast/twimlai/building-voice-ai-agents-that-dont-suck)：约一小时，谈真实生产架构与话轮。
 - 🟡 [AWS：Voice Agents with Pipecat and Amazon Bedrock](https://aws.amazon.com/blogs/machine-learning/building-intelligent-ai-voice-agents-with-pipecat-and-amazon-bedrock-part-1/)：完整架构含延迟优化与 Nova Sonic。
-- 🟢 [Deepgram：STT API Pricing Breakdown](https://deepgram.com/learn/speech-to-text-api-pricing-breakdown-2025)：各家每分钟经济性——签合同前必读。
+- 🟢 [Deepgram：STT API Pricing Breakdown](https://deepgram.com/learn/speech-to-text-api-pricing-breakdown-2025)：各家每分钟经济性，签合同前必读。
 - 🟡 [Sierra：Shipping and Scaling AI Agents](https://sierra.ai/blog/shipping-and-scaling-ai-agents)：Sonos、SiriusXM、OluKai 等语音智能体部署案例。
 - 🟡 [Sierra：Constellation of Models](https://sierra.ai/blog/constellation-of-models)：领先客户体验（CX）公司如何在单个语音智能体里组合 15+ 模型。
 - 🟢 [LiveKit Agent Observability](https://livekit.com/products/agent-observability)：LiveKit Cloud 内置追踪、转写与各阶段延迟。
@@ -464,14 +464,14 @@
 - 🟢 [FTC：拟议的 AI 个人冒充规则（2024 年 2 月）](https://www.ftc.gov/news-events/news/press-releases/2024/02/ftc-proposes-new-protections-combat-ai-impersonation-individuals)：美国冒充欺诈规则的一手来源，涵盖 AI 深度伪造。
 - 🟢 [Pindrop：Voice Intelligence & Security Report](https://www.pindrop.com/research/report/voice-intelligence-security-report/)：行业报告：深度伪造诈骗尝试急剧上升。
 - 🟢 [Voice Cloning Ethics（CAMB.AI）](https://www.camb.ai/blog-post/voice-cloning-ethics-consent-deepfakes-responsible-ai-voice-use)：同意框架、ELVIS 法案与欧盟 AI 法的实践概览。
-- 🟢 [Detecting AI Audio with SynthID（ElevenLabs）](https://elevenlabs.io/blog/synthid)：ElevenLabs 在其生成音频中全面采用 Google DeepMind 的不可听 SynthID 水印，并推出免费公开的 Audio Detector。
+- 🟢 [What Is SynthID, and Why Is ElevenLabs Using It?（ElevenLabs 文档）](https://elevenlabs.io/docs/help-center/legal/audio-detector/what-is-synth-id-and-why-is-eleven-labs-using-it)：ElevenLabs 在其生成音频中全面采用 Google DeepMind 的不可听 SynthID 水印，并推出免费公开的 Audio Detector。
 - 🟡 [NCLC：Top Six TCPA/Robocall Developments 2024/2025](https://library.nclc.org/article/top-six-tcparobocall-developments-20242025)：消费者保护视角看实际执法重点。
 
 </details>
 
 ## 📰 17. 博客与通讯
 
-订阅两三份即可跟上节奏——领域变化很快。
+订阅两三份即可跟上节奏：领域变化很快。
 
 <details>
 <summary><b>9 项资源</b></summary>
@@ -547,11 +547,11 @@
 
 ## 建议学习路径
 
-1. **第 1 周——基础：** 阅读 LiveKit 流水线文章与《语音智能体图解入门》（第 1、8 节）。
-2. **第 2 周——首个语音智能体：** 完整跑通 LiveKit _或_ Pipecat 快速入门（第 2、10 节）。
-3. **第 3 周——组件：** 替换 STT、TTS、LLM 供应商；对延迟做基准测试（第 3、4、5 节）。
+1. **第 1 周，基础：** 阅读 LiveKit 流水线文章与《语音智能体图解入门》（第 1、8 节）。
+2. **第 2 周，首个语音智能体：** 完整跑通 LiveKit _或_ Pipecat 快速入门（第 2、10 节）。
+3. **第 3 周，组件：** 替换 STT、TTS、LLM 供应商；对延迟做基准测试（第 3、4、5 节）。
 4. **第 4 周，话轮、音频清洗与电话：** 接入 Silero VAD、话轮检测以及一道语音增强；配置并接通 SIP 中继（第 6、7、9 节）。
-5. **第 5 周——生产：** 加入评测与可观测性；阅读 FCC/欧盟 AI 法材料（第 14、15、16 节）。
+5. **第 5 周，生产：** 加入评测与可观测性；阅读 FCC/欧盟 AI 法材料（第 14、15、16 节）。
 6. **持续：** 订阅两封通讯、关注 Voice AI Space，并加入语音智能体相关社区，例如 [LinkedIn 群组](https://www.linkedin.com/groups/14269127/)（第 17、18、19 节）。
 
 ## 贡献

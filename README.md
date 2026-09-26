@@ -21,7 +21,7 @@
 
 Voice AI has moved from research demos into shipping product in under three years. **The modern stack is converging around a clear pattern**: a real-time transport layer (WebRTC or telephony), a streaming pipeline of speech-to-text → LLM → text-to-speech, and a turn-taking model that decides when the agent should speak. This list is structured to mirror that learning order: start with the foundations, pick a framework, then drill into individual components and production concerns.
 
-Learning resources are tagged **🟢 Beginner**, **🟡 Intermediate**, or **🔴 Advanced** (blogs, podcasts, and communities in sections 17-19 are intentionally left untagged). Prefer free official docs and vendor-neutral guides; flag where authors have commercial interests.
+Learning resources are tagged **🟢 Beginner**, **🟡 Intermediate**, or **🔴 Advanced** (blogs, podcasts, communities, and conferences in sections 17-20 are intentionally left untagged). Prefer free official docs and vendor-neutral guides; flag where authors have commercial interests.
 
 ---
 
@@ -464,7 +464,7 @@ If you're shipping a voice agent in 2026, **disclosure and consent are no longer
 - 🟢 [FTC: Proposed Rule on AI Impersonation of Individuals (Feb 2024)](https://www.ftc.gov/news-events/news/press-releases/2024/02/ftc-proposes-new-protections-combat-ai-impersonation-individuals): Direct source on U.S. impersonation-fraud rules covering AI deepfakes.
 - 🟢 [Pindrop: Voice Intelligence & Security Report](https://www.pindrop.com/research/report/voice-intelligence-security-report/): Industry report documenting the sharp rise in deepfake fraud attempts.
 - 🟢 [Voice Cloning Ethics (CAMB.AI)](https://www.camb.ai/blog-post/voice-cloning-ethics-consent-deepfakes-responsible-ai-voice-use): Practical overview of consent frameworks, ELVIS Act, and EU AI Act.
-- 🟢 [Detecting AI Audio with SynthID (ElevenLabs)](https://elevenlabs.io/blog/synthid): ElevenLabs adopts Google DeepMind's inaudible SynthID watermark across generated audio and ships a free public Audio Detector.
+- 🟢 [What Is SynthID, and Why Is ElevenLabs Using It? (ElevenLabs Docs)](https://elevenlabs.io/docs/help-center/legal/audio-detector/what-is-synth-id-and-why-is-eleven-labs-using-it): ElevenLabs adopts Google DeepMind's inaudible SynthID watermark across generated audio and ships a free public Audio Detector.
 - 🟡 [NCLC: Top Six TCPA/Robocall Developments 2024/2025](https://library.nclc.org/article/top-six-tcparobocall-developments-20242025): Consumer-protection lens on what's actually being enforced.
 
 </details>
