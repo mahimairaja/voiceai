@@ -1,0 +1,12 @@
+---
+// The same section from README_zh.md, at /zh/<English slug>/ so the language switch keeps your place.
+import SectionPage from '../../components/SectionPage.astro';
+import { data } from '../../lib/content';
+
+export function getStaticPaths() {
+  return data('zh').sections.map((section) => ({ params: { slug: section.slug }, props: { section } }));
+}
+const { section } = Astro.props;
+---
+
+<SectionPage lang="zh" section={section} />

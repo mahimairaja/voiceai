@@ -130,7 +130,9 @@ function parseHeader(block) {
   const afterDiv = text.slice(text.indexOf('</div>') + 1);
   const paras = splitParagraphs(afterDiv).filter((p) => p !== '---');
   const bannerAlt = text.join('\n').match(/<img [^>]*alt="([^"]+)"/)?.[1] ?? '';
-  return { tagline, lede: paras[0] ?? '', levels: paras[1] ?? '', title: bannerAlt.split(/[:：]/)[0] };
+  // The banner's alt text is the list's name and headline: "Voice AI: a curated learning path...".
+  const [title, ...headline] = bannerAlt.split(/[:：]\s*/);
+  return { tagline, lede: paras[0] ?? '', levels: paras[1] ?? '', title, headline: headline.join(': ') };
 }
 
 function parseHandbook(block) {
@@ -155,6 +157,8 @@ function parseSection(block, lang, err) {
     line: block.start,
     intro: '',
     picks: [],
+    picksHeader: null,
+    countLabel: '',
     count: 0,
     declared: null,
     groups: [],
@@ -165,7 +169,7 @@ function parseSection(block, lang, err) {
 
   for (const { n, text } of block.lines) {
     const t = text.trim();
-    if (!t) continue;
+    if (!t || t === '---') continue;
     if (t === '<details>') {
       inDetails = true;
       continue;
@@ -177,11 +181,14 @@ function parseSection(block, lang, err) {
     const summary = t.match(SUMMARY_RE);
     if (summary) {
       section.declared = { value: Number(summary[1]), line: n };
+      section.countLabel = t.replace(/<\/?(summary|b)>/g, '');
       continue;
     }
     if (!inDetails) {
       const pick = t.match(PICK_RE);
       if (pick) section.picks.push({ name: pick[1], type: pick[2], bestFor: pick[3] });
+      else if (/^\|[^-]/.test(t) && !section.picksHeader)
+        section.picksHeader = t.split('|').map((c) => c.trim()).filter(Boolean);
       else if (!t.startsWith('|')) introLines.push(t);
       continue;
     }

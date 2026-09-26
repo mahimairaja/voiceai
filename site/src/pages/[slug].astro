@@ -1,0 +1,12 @@
+---
+// One page per README section, at the section's English slug.
+import SectionPage from '../components/SectionPage.astro';
+import { data } from '../lib/content';
+
+export function getStaticPaths() {
+  return data('en').sections.map((section) => ({ params: { slug: section.slug }, props: { section } }));
+}
+const { section } = Astro.props;
+---
+
+<SectionPage lang="en" section={section} />

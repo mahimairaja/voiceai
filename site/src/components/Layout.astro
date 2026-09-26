@@ -1,0 +1,334 @@
+---
+import '../styles/global.css';
+import GitHubMark from './GitHubMark';
+import { LangToggle, ThemeToggle } from './Toggles';
+import { REPO, UI, data, href, htmlLang, stars, type Lang } from '../lib/content';
+
+interface Props {
+  lang: Lang;
+  title: string;
+  description: string;
+  /** The same page in each language, e.g. { en: '/speech-to-text/', zh: '/zh/speech-to-text/' }. */
+  alternates: { en: string; zh: string };
+}
+const { lang, title, description, alternates } = Astro.props;
+const t = UI[lang];
+const d = data(lang);
+const site = Astro.site!;
+const canonical = new URL(alternates[lang], site).href;
+const readmeFile = lang === 'zh' ? 'README_zh.md' : 'README.md';
+---
+
+<!doctype html>
+<html lang={htmlLang(lang)} data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="en" href={new URL(alternates.en, site).href} />
+    <link rel="alternate" hreflang="zh-CN" href={new URL(alternates.zh, site).href} />
+    <link rel="alternate" hreflang="x-default" href={new URL(alternates.en, site).href} />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <meta name="theme-color" content="#0a0a0a" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={d.hero.title} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={new URL('/og.png', site).href} />
+    <meta property="og:locale" content={lang === 'zh' ? 'zh_CN' : 'en_US'} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content={new URL('/og.png', site).href} />
+    <script is:inline>
+      // Theme before first paint: the stored choice, dark when nothing is stored.
+      (function () {
+        var root = document.documentElement;
+        function apply() {
+          var c = 'dark';
+          try {
+            c = localStorage.getItem('voiceai-theme') || 'dark';
+          } catch (e) {}
+          if (c === 'auto') c = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+          root.dataset.theme = c === 'light' ? 'light' : 'dark';
+          var m = document.querySelector('meta[name="theme-color"]');
+          if (m) m.setAttribute('content', root.dataset.theme === 'light' ? '#fcfcfc' : '#0a0a0a');
+        }
+        window.__applyTheme = apply;
+        apply();
+        document.addEventListener('DOMContentLoaded', apply, { once: true });
+      })();
+    </script>
+    <script is:inline>
+      // PostHog, the same project and proxy as mahimai.ca. Loads only on the production host.
+      // Every event carries site: 'voiceai' so the admin dashboard can keep it apart.
+      (function () {
+        if (location.hostname !== 'voiceai.mahimai.ca') return;
+        !(function (t, e) {
+          var o, n, p, r;
+          e.__SV ||
+            (window.posthog && window.posthog.__loaded) ||
+            ((window.posthog = e),
+            (e._i = []),
+            (e.init = function (i, s, a) {
+              function g(t, e) {
+                var o = e.split('.');
+                (2 == o.length && ((t = t[o[0]]), (e = o[1])),
+                  (t[e] = function () {
+                    t.push([e].concat(Array.prototype.slice.call(arguments, 0)));
+                  }));
+              }
+              p ||
+                (((p = t.createElement('script')).type = 'text/javascript'),
+                (p.crossOrigin = 'anonymous'),
+                (p.async = !0),
+                (p.src = s.api_host.replace('.i.posthog.com', '-assets.i.posthog.com') + '/static/array.js'),
+                (p.onerror = function () {
+                  p = null;
+                }),
+                (r = t.getElementsByTagName('script')[0]).parentNode.insertBefore(p, r));
+              var u = e;
+              for (
+                void 0 !== a ? (u = e[a] = []) : (a = 'posthog'),
+                  u.people = u.people || [],
+                  u.toString = function (t) {
+                    var e = 'posthog';
+                    return ('posthog' !== a && (e += '.' + a), t || (e += ' (stub)'), e);
+                  },
+                  u.people.toString = function () {
+                    return u.toString(1) + '.people (stub)';
+                  },
+                  o = 'init capture register register_once unregister identify reset get_distinct_id opt_in_capturing opt_out_capturing has_opted_out_capturing'.split(' '),
+                  n = 0;
+                n < o.length;
+                n++
+              )
+                g(u, o[n]);
+              e._i.push([i, s, a]);
+            }),
+            (e.__SV = 1));
+        })(document, window.posthog || []);
+        window.posthog.init('phc_s2dddKHsS4kEnJ925VzsKYQh8hYGdohzEadc8CUhkoxV', {
+          api_host: 'https://m.mahimai.ca',
+          ui_host: 'https://us.posthog.com',
+          defaults: '2026-05-30',
+          person_profiles: 'identified_only',
+          capture_pageview: false,
+        });
+        window.posthog.register({ site: 'voiceai', lang: document.documentElement.lang });
+        window.posthog.capture('$pageview');
+        document.addEventListener('click', function (e) {
+          var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+          if (!a || !window.posthog) return;
+          var url = new URL(a.href, location.href);
+          if (url.hostname === location.hostname) return;
+          var resource = a.closest('[data-resource]');
+          var event = resource
+            ? 'resource_click'
+            : url.hostname === 'github.com'
+              ? 'github_click'
+              : /(^|\.)mahimai\.ca$/.test(url.hostname)
+                ? 'mahimai_click'
+                : 'outbound_click';
+          window.posthog.capture(event, {
+            destination: url.origin + url.pathname,
+            section: resource ? resource.getAttribute('data-section') : null,
+            level: resource ? resource.getAttribute('data-level') : null,
+            path: location.pathname,
+            placement: a.closest('header') ? 'navigation' : a.closest('footer') ? 'footer' : 'page',
+          });
+        });
+      })();
+    </script>
+  </head>
+  <body>
+    <a class="skip" href="#main">{lang === 'zh' ? '跳到正文' : 'Skip to content'}</a>
+    <header class="top">
+      <div class="shell top__row">
+        <a class="brand" href={href(lang)}>
+          <span class="brand__mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+          <span>{d.hero.title}</span>
+        </a>
+        <nav class="top__nav" aria-label={lang === 'zh' ? '主导航' : 'Main'}>
+          <a href={`${href(lang)}#sections`}>{t.sections}</a>
+          <a href={`${href(lang)}#path`}>{t.path}</a>
+          <a href={`${href(lang)}#find`}>{t.search}</a>
+        </nav>
+        <div class="top__tools">
+          <a class="gh" href={REPO} rel="noopener">
+            <GitHubMark size={15} />
+            <span class="gh__label">{t.github}</span>
+            {stars !== null && <span class="gh__stars mono">{stars.toLocaleString('en-US')}</span>}
+          </a>
+          <LangToggle client:load lang={lang} en={alternates.en} zh={alternates.zh} label={t.language} />
+          <ThemeToggle client:load label={t.theme} />
+        </div>
+      </div>
+    </header>
+    <main id="main">
+      <slot />
+    </main>
+    <footer class="foot">
+      <div class="shell foot__row">
+        <p class="foot__brand">
+          <span class="brand__mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+          {d.hero.title}
+        </p>
+        <p class="foot__note">{t.footer}</p>
+        <ul class="foot__links">
+          <li><a href={`${REPO}/blob/main/${readmeFile}`} rel="noopener">{readmeFile}</a></li>
+          <li><a href={`${REPO}/blob/main/CONTRIBUTING.md`} rel="noopener">CONTRIBUTING.md</a></li>
+          <li><a href={`${REPO}/blob/main/LICENSE`} rel="noopener">MIT</a></li>
+          <li>{t.madeBy} <a href="https://mahimai.ca" rel="noopener">Mahimai</a></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style>
+  .skip {
+    position: absolute;
+    left: 1rem;
+    top: -3rem;
+    z-index: 100;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    background: var(--accent);
+    color: var(--on-accent);
+  }
+  .skip:focus {
+    top: 0.75rem;
+  }
+  .top {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    border-bottom: 1px solid var(--line);
+    background: color-mix(in srgb, var(--bg) 86%, transparent);
+    backdrop-filter: blur(12px);
+  }
+  .top__row {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    height: 3.75rem;
+  }
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    text-decoration: none;
+  }
+  .top__nav {
+    display: none;
+    gap: 1.5rem;
+    font-size: 0.875rem;
+  }
+  .top__nav a {
+    color: var(--muted);
+    text-decoration: none;
+  }
+  .top__nav a:hover {
+    color: var(--ink);
+  }
+  .top__tools {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: auto;
+  }
+  .gh {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    height: 2.1rem;
+    padding: 0 0.7rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    font-size: 0.8125rem;
+    text-decoration: none;
+    color: var(--ink-soft);
+  }
+  .gh:hover {
+    border-color: var(--line-strong);
+    color: var(--ink);
+  }
+  .gh__label {
+    display: none;
+  }
+  .gh__stars {
+    font-size: 0.75rem;
+    color: var(--muted);
+  }
+  @media (min-width: 48rem) {
+    .top__nav {
+      display: flex;
+    }
+    .gh__label {
+      display: inline;
+    }
+  }
+  @media (max-width: 30rem) {
+    .top__row {
+      gap: 0.75rem;
+    }
+    .top__tools {
+      gap: 0.35rem;
+    }
+    .gh {
+      width: 2.1rem;
+      padding: 0;
+      justify-content: center;
+    }
+    .gh__stars {
+      display: none;
+    }
+    .top__tools :global(.seg__item) {
+      min-width: 1.7rem;
+      height: 1.7rem;
+    }
+  }
+
+  .foot {
+    margin-top: 6rem;
+    border-top: 1px solid var(--line);
+    padding-block: 2.5rem 3rem;
+    font-size: 0.875rem;
+    color: var(--muted);
+  }
+  .foot__row {
+    display: grid;
+    gap: 1rem;
+  }
+  .foot__brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: var(--ink);
+    font-weight: 600;
+  }
+  .foot__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .foot__links a {
+    color: var(--ink-soft);
+    text-underline-offset: 0.2em;
+  }
+  @media (min-width: 48rem) {
+    .foot__row {
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 2rem;
+    }
+  }
+</style>
