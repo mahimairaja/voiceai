@@ -1,0 +1,13 @@
+---
+import Layout from '../components/Layout.astro';
+import { data, href } from '../lib/content';
+const d = data('en');
+---
+
+<Layout lang="en" title={`Not found · ${d.hero.title}`} description={d.hero.tagline} alternates={{ en: '/', zh: '/zh/' }}>
+  <section class="shell" style="padding-block: 6rem; display: grid; gap: 1rem;">
+    <h1 style="font-size: 2.5rem;">This page is not in the README.</h1>
+    <p style="color: var(--muted);">页面不存在。</p>
+    <p><a class="link" href={href('en')}>{d.hero.title}</a> · <a class="link" href={href('zh')}>中文</a></p>
+  </section>
+</Layout>

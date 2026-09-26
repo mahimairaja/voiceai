@@ -1,0 +1,184 @@
+---
+// One README section: its intro, its top-picks table, and every entry, filterable by level and
+// by the README's own ### groups. Previous and next follow the README's order.
+import { ArrowLeft, ArrowRight } from 'lucide-react';
+import Layout from './Layout.astro';
+import ResourceFinder from './ResourceFinder';
+import { UI, data, finderItems, finderLabels, href, md, resourcesOf, sectionHref, type Lang, type Section } from '../lib/content';
+
+interface Props {
+  lang: Lang;
+  section: Section;
+}
+const { lang, section: s } = Astro.props;
+const t = UI[lang];
+const d = data(lang);
+const prev = d.sections[s.num - 2];
+const next = d.sections[s.num];
+const weeks = d.learningPath.steps.filter((w) => w.sections.includes(s.num));
+const groups = s.groups.map((g) => g.title).filter((g): g is string => Boolean(g));
+const plainIntro = s.intro.replace(/\*\*/g, '').replace(/\[([^\]]+)\]\([^)]+\)/g, '$1');
+---
+
+<Layout
+  lang={lang}
+  title={`${s.title} · ${d.hero.title}`}
+  description={plainIntro}
+  alternates={{ en: `/${s.slug}/`, zh: `/zh/${s.slug}/` }}
+>
+  <article class="shell sec">
+    <nav class="crumbs" aria-label={lang === 'zh' ? '路径' : 'Breadcrumb'}>
+      <a href={href(lang)}>{d.hero.title}</a>
+      <span aria-hidden="true">/</span>
+      <a href={`${href(lang)}#sections`}>{t.sections}</a>
+    </nav>
+    <header class="sec__head">
+      <p class="sec__num mono">{String(s.num).padStart(2, '0')} · {s.countLabel}</p>
+      <h1>{s.title}</h1>
+      {s.intro && <p class="sec__intro prose" set:html={md(s.intro, lang)} />}
+      {
+        weeks.length > 0 && (
+          <p class="sec__weeks">
+            {d.learningPath.title}:{' '}
+            {weeks.map((w, i) => (
+              <>
+                {i > 0 && ', '}
+                <a class="link" href={`${href(lang)}#path`}>{w.label}</a>
+              </>
+            ))}
+          </p>
+        )
+      }
+    </header>
+
+    {
+      s.picks.length > 0 && s.picksHeader && (
+        <div class="sec__picks">
+          <table class="picks">
+            <thead>
+              <tr>{s.picksHeader.map((h) => <th>{h}</th>)}</tr>
+            </thead>
+            <tbody>
+              {s.picks.map((p) => (
+                <tr>
+                  <td>{p.name}</td>
+                  <td>{p.type}</td>
+                  <td>{p.bestFor}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )
+    }
+
+    <ResourceFinder
+      client:load
+      items={finderItems(lang, [s])}
+      labels={finderLabels(lang, resourcesOf(s).length)}
+      showSection={false}
+      groups={groups}
+    />
+
+    <nav class="pager" aria-label={lang === 'zh' ? '章节导航' : 'Sections'}>
+      {
+        prev ? (
+          <a class="pager__link" href={sectionHref(lang, prev)}>
+            <span class="pager__dir"><ArrowLeft size={14} strokeWidth={1.75} aria-hidden="true" /> {t.prev}</span>
+            <span><span class="mono">{String(prev.num).padStart(2, '0')}</span> {prev.title}</span>
+          </a>
+        ) : <span />
+      }
+      {
+        next && (
+          <a class="pager__link pager__link--next" href={sectionHref(lang, next)}>
+            <span class="pager__dir">{t.next} <ArrowRight size={14} strokeWidth={1.75} aria-hidden="true" /></span>
+            <span><span class="mono">{String(next.num).padStart(2, '0')}</span> {next.title}</span>
+          </a>
+        )
+      }
+    </nav>
+  </article>
+</Layout>
+
+<style>
+  .sec {
+    padding-top: 2rem;
+  }
+  .crumbs {
+    display: flex;
+    gap: 0.5rem;
+    color: var(--muted);
+    font-size: 0.875rem;
+  }
+  .crumbs a {
+    color: var(--muted);
+    text-decoration: none;
+  }
+  .crumbs a:hover {
+    color: var(--ink);
+  }
+  .sec__head {
+    display: grid;
+    gap: 1rem;
+    max-width: 46rem;
+    padding-block: 2.5rem 2rem;
+  }
+  .sec__num {
+    color: var(--accent);
+    font-size: 0.8125rem;
+  }
+  h1 {
+    font-size: clamp(2.1rem, 4.6vw, 3.4rem);
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+  }
+  .sec__intro {
+    color: var(--ink-soft);
+    font-size: 1.0625rem;
+    line-height: 1.65;
+  }
+  .sec__weeks {
+    color: var(--muted);
+    font-size: 0.875rem;
+  }
+  .sec__picks {
+    overflow-x: auto;
+    margin-bottom: 2.5rem;
+  }
+  .pager {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin-top: 3.5rem;
+  }
+  .pager__link {
+    display: grid;
+    gap: 0.35rem;
+    padding: 1rem 1.25rem;
+    border: 1px solid var(--line);
+    border-radius: 0.75rem;
+    text-decoration: none;
+    font-size: 0.9375rem;
+    transition: border-color 0.15s ease;
+  }
+  .pager__link:hover {
+    border-color: var(--line-strong);
+  }
+  .pager__link--next {
+    text-align: right;
+  }
+  .pager__dir {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: var(--muted);
+    font-size: 0.8125rem;
+  }
+  .pager__link--next .pager__dir {
+    justify-content: flex-end;
+  }
+  .pager .mono {
+    color: var(--muted);
+  }
+</style>

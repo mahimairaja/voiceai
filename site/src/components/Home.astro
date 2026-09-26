@@ -1,0 +1,618 @@
+---
+// The home page, in either language. Every heading, paragraph, and link below comes from the
+// README (via src/data/readme.json); UI[lang] only supplies navigation and control labels.
+import { ArrowRight, ArrowUpRight, BookOpen, GitPullRequest, Repeat } from 'lucide-react';
+import Layout from './Layout.astro';
+import PipelineMap from './PipelineMap';
+import ResourceFinder from './ResourceFinder';
+import {
+  REPO,
+  UI,
+  data,
+  finderItems,
+  finderLabels,
+  href,
+  levelSplit,
+  md,
+  pipelineStops,
+  resourcesOf,
+  sectionHref,
+  type Lang,
+} from '../lib/content';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = UI[lang];
+const d = data(lang);
+const names = d.levelNames as Record<string, string>;
+const all = d.sections.flatMap(resourcesOf);
+const split = levelSplit(all);
+const tagged = split.beginner + split.intermediate + split.advanced;
+const readmeFile = lang === 'zh' ? 'README_zh.md' : 'README.md';
+
+// "a curated learning path ..." from the banner alt text, capitalised for a headline.
+const headline = d.hero.headline.charAt(0).toUpperCase() + d.hero.headline.slice(1);
+// The lede's bolded claim heads the pipeline chapter; the rest of the sentence introduces it.
+// The lede's first sentence opens the page; the tagline is the page description.
+const lede = d.hero.lede.split(/(?<=[.。])\s*/)[0] ?? d.hero.tagline;
+const stackClaim = d.hero.lede.match(/\*\*(.+?)\*\*/)?.[1] ?? t.stack;
+const stackRest = d.hero.lede.split(/\*\*.+?\*\*[:：]?\s*/)[1]?.split(/(?<=[.。])\s*/)[0] ?? '';
+const stackBody = stackRest.charAt(0).toUpperCase() + stackRest.slice(1);
+const { stops, band } = pipelineStops(lang);
+const dropSections = (s: string) => s.replace(/\s*[（(](?:sections?|第)[^）)]*[）)]/, '');
+const title = `${d.hero.title}: ${headline}`;
+---
+
+<Layout lang={lang} title={title} description={d.hero.tagline} alternates={{ en: '/', zh: '/zh/' }}>
+  <section class="hero shell">
+    <div class="hero__copy">
+      <p class="hero__name">
+        <span class="brand__mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>{d.hero.title}
+      </p>
+      <h1>{headline}</h1>
+      <p class="hero__lede prose" set:html={md(lede, lang)} />
+      <dl class="hero__stats">
+        <div><dt class="sr-only">{t.stats.resources}</dt><dd><strong class="mono" data-count={d.count}>{d.count}</strong> {t.stats.resources}</dd></div>
+        <div><dt class="sr-only">{t.stats.sections}</dt><dd><strong class="mono">{d.sections.length}</strong> {t.stats.sections}</dd></div>
+        <div><dt class="sr-only">{t.language}</dt><dd>{t.stats.languages}</dd></div>
+      </dl>
+      <div class="levelbar" role="img" aria-label={(['beginner', 'intermediate', 'advanced'] as const).map((l) => `${names[l]} ${split[l]}`).join(', ')}>
+        {(['beginner', 'intermediate', 'advanced'] as const).map((l) => (
+          <span data-level={l} style={`flex:${split[l]}`} data-grow />
+        ))}
+      </div>
+      <ul class="levelkey">
+        {(['beginner', 'intermediate', 'advanced'] as const).map((l) => (
+          <li><span class="level" data-level={l}>{names[l]}</span> <span class="mono">{split[l]}</span></li>
+        ))}
+      </ul>
+      <div class="hero__ctas">
+        <a class="btn btn--primary" href="#path">{d.learningPath.title} <ArrowRight size={16} strokeWidth={1.75} aria-hidden="true" /></a>
+        <a class="btn" href={`${REPO}/blob/main/${readmeFile}`} rel="noopener">{t.readme} <ArrowUpRight size={16} strokeWidth={1.75} aria-hidden="true" /></a>
+      </div>
+    </div>
+    <aside class="route" aria-labelledby="route-title">
+      <h2 id="route-title">{d.howTo.title}</h2>
+      <ol>
+        {d.howTo.steps.map((step, i) => (
+          <li data-step>
+            <span class="route__n mono">{i + 1}</span>
+            <span class="prose" set:html={md(step, lang)} />
+          </li>
+        ))}
+      </ol>
+    </aside>
+  </section>
+
+  <section class="chapter" id="stack" aria-labelledby="stack-title">
+    <div class="shell">
+      <div class="head">
+        <h2 id="stack-title">{stackClaim}</h2>
+        <p class="prose" set:html={md(stackBody, lang)} />
+      </div>
+      <PipelineMap client:visible stops={stops as any} band={band as any} openLabel={t.open} />
+    </div>
+  </section>
+
+  <section class="chapter" id="path" aria-labelledby="path-title">
+    <div class="shell split">
+      <div class="head">
+        <h2 id="path-title">{d.learningPath.title}</h2>
+      </div>
+      <ol class="path">
+        {d.learningPath.steps.map((step, i) => (
+          <li class="path__step" data-step>
+            <span class="path__dot" aria-hidden="true">{i < d.learningPath.steps.length - 1 ? i + 1 : <Repeat size={15} strokeWidth={1.75} />}</span>
+            <div>
+              <h3>{step.label}</h3>
+              <p class="prose" set:html={md(dropSections(step.text), lang)} />
+              <ul class="path__chips" aria-label={t.weekSections}>
+                {step.sections.map((n) => {
+                  const s = d.sections[n - 1];
+                  return s && (
+                    <li><a class="chip" href={sectionHref(lang, s)}><span class="mono">{String(n).padStart(2, '0')}</span> {s.title}</a></li>
+                  );
+                })}
+              </ul>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <section class="chapter" id="sections" aria-labelledby="sections-title">
+    <div class="shell">
+      <div class="head">
+        <h2 id="sections-title">{t.sections}</h2>
+        <p>{t.sectionsHint}</p>
+      </div>
+      <ul class="cards">
+        {d.sections.map((s) => {
+          const r = resourcesOf(s);
+          const sp = levelSplit(r);
+          const n = sp.beginner + sp.intermediate + sp.advanced;
+          return (
+            <li data-card>
+              <a class="card" href={sectionHref(lang, s)}>
+                <span class="card__top">
+                  <span class="card__num mono">{String(s.num).padStart(2, '0')}</span>
+                  <span class="card__count mono">{s.countLabel}</span>
+                </span>
+                <span class="card__title">{s.title}</span>
+                <span class="card__intro" set:html={md(s.intro, lang, { links: false })} />
+                {n > 0 && (
+                  <span class="card__bar" aria-hidden="true">
+                    {(['beginner', 'intermediate', 'advanced'] as const).map((l) => sp[l] > 0 && <i data-level={l} style={`flex:${sp[l]}`} />)}
+                  </span>
+                )}
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  </section>
+
+  <section class="chapter" id="find" aria-labelledby="find-title">
+    <div class="shell">
+      <div class="head">
+        <h2 id="find-title">{t.findTitle}</h2>
+        <p>{t.findHint}</p>
+      </div>
+      <ResourceFinder client:visible items={finderItems(lang, d.sections)} labels={finderLabels(lang, d.count)} />
+    </div>
+  </section>
+
+  {d.handbook && (
+    <section class="chapter" aria-labelledby="book-title">
+      <div class="shell book">
+        <BookOpen size={28} strokeWidth={1.25} aria-hidden="true" class="book__icon" />
+        <div>
+          <h2 id="book-title">{d.handbook.title}</h2>
+          {d.handbook.body.map((p) => <p class="prose" set:html={md(p, lang)} />)}
+          <p class="book__disclosure prose" set:html={md(d.handbook.disclosure, lang)} />
+        </div>
+        <a class="btn btn--primary" href={d.handbook.url} rel="noopener">handbook.mahimai.ca <ArrowUpRight size={16} strokeWidth={1.75} aria-hidden="true" /></a>
+      </div>
+    </section>
+  )}
+
+  <section class="chapter" aria-labelledby="contrib-title">
+    <div class="shell contrib">
+      <div>
+        <h2 id="contrib-title">{d.contributing.title}</h2>
+        <p class="prose" set:html={md(d.contributing.text, lang)} />
+      </div>
+      <a class="btn" href={`${REPO}/blob/main/CONTRIBUTING.md`} rel="noopener"><GitPullRequest size={16} strokeWidth={1.75} aria-hidden="true" /> {t.edit}</a>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  import { animate, stagger } from 'animejs';
+  // Entrances, once, on scroll: the level bar grows, route and path steps and cards rise in.
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const reveal = (selector: string, opts: Record<string, unknown>) => {
+      const els = [...document.querySelectorAll<HTMLElement>(selector)];
+      if (!els.length) return;
+      els.forEach((el) => (el.style.opacity = '0'));
+      const io = new IntersectionObserver(
+        (entries) => {
+          const shown = entries.filter((e) => e.isIntersecting).map((e) => e.target as HTMLElement);
+          if (!shown.length) return;
+          shown.forEach((el) => io.unobserve(el));
+          animate(shown, { opacity: [0, 1], translateY: [14, 0], duration: 600, ease: 'outExpo', delay: stagger(60), ...opts });
+        },
+        { threshold: 0.15 },
+      );
+      els.forEach((el) => io.observe(el));
+    };
+    reveal('[data-step]', {});
+    reveal('[data-card]', { delay: stagger(35) });
+    const bars = document.querySelectorAll<HTMLElement>('.levelbar [data-grow]');
+    animate(bars, { scaleX: [0, 1], duration: 1100, delay: stagger(140, { start: 250 }), ease: 'outExpo' });
+  }
+</script>
+
+<style>
+  .hero {
+    display: grid;
+    gap: 3rem;
+    padding-block: 3.5rem 4rem;
+  }
+  @media (min-width: 64rem) {
+    .hero {
+      grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.9fr);
+      align-items: center;
+      gap: 4.5rem;
+      padding-block: 5.5rem 6rem;
+    }
+  }
+  .hero__name {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 1.5rem;
+    color: var(--muted);
+    font-weight: 500;
+  }
+  h1 {
+    max-width: 16ch;
+    font-size: clamp(2.5rem, 5.4vw, 4.6rem);
+    line-height: 1;
+    letter-spacing: -0.045em;
+  }
+  :global(:root[lang='zh-CN']) h1 {
+    max-width: 13em;
+    line-height: 1.15;
+    letter-spacing: 0;
+    font-size: clamp(2.1rem, 4.4vw, 3.6rem);
+  }
+  .hero__lede {
+    max-width: 36rem;
+    margin-top: 1.5rem;
+    color: var(--muted);
+    font-size: clamp(1.05rem, 1.6vw, 1.2rem);
+    line-height: 1.6;
+  }
+  .hero__stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.75rem;
+    margin: 2rem 0 0;
+    color: var(--muted);
+    font-size: 0.9375rem;
+  }
+  .hero__stats dd {
+    margin: 0;
+  }
+  .hero__stats strong {
+    color: var(--ink);
+    font-size: 1.125rem;
+    font-weight: 500;
+  }
+  .levelbar {
+    display: flex;
+    gap: 3px;
+    max-width: 30rem;
+    height: 0.5rem;
+    margin-top: 1rem;
+  }
+  .levelbar span {
+    border-radius: 2px;
+    background: var(--lvl);
+    transform-origin: left center;
+  }
+  .levelkey {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.25rem;
+    margin: 0.75rem 0 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0.75rem;
+    color: var(--muted);
+  }
+  .hero__ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 2.25rem;
+  }
+  :global(.btn) {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    min-height: 2.75rem;
+    padding: 0 1.1rem;
+    border: 1px solid var(--line-strong);
+    border-radius: 0.5rem;
+    color: var(--ink);
+    font-weight: 500;
+    font-size: 0.9375rem;
+    text-decoration: none;
+    transition:
+      border-color 0.15s ease,
+      background-color 0.15s ease,
+      transform 0.2s var(--ease);
+  }
+  :global(.btn:hover) {
+    border-color: var(--muted);
+  }
+  :global(.btn--primary) {
+    border-color: transparent;
+    background: var(--accent);
+    color: var(--on-accent);
+  }
+  :global(.btn--primary:hover) {
+    border-color: transparent;
+    background: var(--accent-deep);
+  }
+
+  .route {
+    padding: 1.5rem;
+    border: 1px solid var(--line);
+    border-radius: 1rem;
+    background: var(--surface);
+  }
+  .route h2 {
+    font-size: 1rem;
+    color: var(--muted);
+    letter-spacing: 0;
+  }
+  .route ol {
+    display: grid;
+    gap: 0;
+    margin: 1rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+  .route li {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1.75rem 1fr;
+    gap: 0.9rem;
+    padding: 0.8rem 0;
+    color: var(--muted);
+    font-size: 0.9375rem;
+    line-height: 1.5;
+  }
+  .route li + li {
+    border-top: 1px solid var(--line);
+  }
+  .route__n {
+    display: grid;
+    place-items: center;
+    width: 1.75rem;
+    height: 1.75rem;
+    border: 1px solid var(--line-strong);
+    border-radius: 999px;
+    color: var(--ink);
+    font-size: 0.75rem;
+  }
+
+  .chapter {
+    border-top: 1px solid var(--line);
+    padding-block: 4.5rem;
+  }
+  .head {
+    display: grid;
+    gap: 0.75rem;
+    max-width: 44rem;
+    margin-bottom: 2.25rem;
+  }
+  .head h2 {
+    font-size: clamp(1.75rem, 3.4vw, 2.6rem);
+    line-height: 1.08;
+  }
+  .head p {
+    color: var(--muted);
+    line-height: 1.6;
+  }
+  @media (min-width: 64rem) {
+    .split {
+      display: grid;
+      grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr);
+      gap: 4rem;
+      align-items: start;
+    }
+    .split .head {
+      position: sticky;
+      top: 6rem;
+    }
+  }
+
+  .path {
+    position: relative;
+    display: grid;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .path__step {
+    position: relative;
+    display: grid;
+    grid-template-columns: 2.25rem minmax(0, 1fr);
+    gap: 1.25rem;
+    padding-bottom: 2rem;
+  }
+  .path__step:not(:last-child)::before {
+    content: '';
+    position: absolute;
+    left: calc(1.125rem - 0.5px);
+    top: 2.5rem;
+    bottom: 0.25rem;
+    width: 1px;
+    background: linear-gradient(var(--accent), var(--line));
+  }
+  .path__dot {
+    display: grid;
+    place-items: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border: 1px solid color-mix(in srgb, var(--accent) 55%, var(--line));
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--accent) 10%, var(--bg));
+    color: var(--accent);
+    font: 500 0.875rem/1 var(--mono);
+  }
+  .path__step h3 {
+    font-size: 1.125rem;
+    line-height: 2.25rem;
+  }
+  .path__step p {
+    color: var(--ink-soft);
+    line-height: 1.6;
+  }
+  .path__chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin: 0.85rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+  :global(.chip) {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.3rem 0.65rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--surface);
+    color: var(--ink-soft);
+    font: 500 0.8125rem/1.3 var(--font);
+    text-decoration: none;
+    cursor: pointer;
+    transition: border-color 0.15s ease;
+  }
+  :global(.chip:hover) {
+    border-color: var(--line-strong);
+    color: var(--ink);
+  }
+  :global(.chip .mono) {
+    color: var(--muted);
+    font-size: 0.75rem;
+  }
+
+  .cards {
+    display: grid;
+    gap: 0.75rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  @media (min-width: 40rem) {
+    .cards {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  @media (min-width: 64rem) {
+    .cards {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+  .card {
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    gap: 0.6rem;
+    height: 100%;
+    padding: 1.25rem;
+    border: 1px solid var(--line);
+    border-radius: 0.875rem;
+    background: var(--surface);
+    text-decoration: none;
+    transition:
+      border-color 0.2s ease,
+      transform 0.3s var(--ease);
+  }
+  .card:hover {
+    border-color: var(--line-strong);
+    transform: translateY(-2px);
+  }
+  .card__top {
+    display: flex;
+    justify-content: space-between;
+    color: var(--muted);
+    font-size: 0.75rem;
+  }
+  .card__num {
+    color: var(--accent);
+  }
+  .card__title {
+    font-weight: 500;
+    font-size: 1.0625rem;
+    line-height: 1.3;
+    letter-spacing: -0.015em;
+  }
+  .card__intro {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    color: var(--muted);
+    font-size: 0.875rem;
+    line-height: 1.55;
+  }
+  .card__intro :global(strong) {
+    color: var(--ink-soft);
+    font-weight: 500;
+  }
+  .card__bar {
+    display: flex;
+    gap: 2px;
+    height: 4px;
+    margin-top: 0.25rem;
+  }
+  .card__bar i {
+    border-radius: 2px;
+    background: var(--lvl);
+    opacity: 0.85;
+  }
+
+  .book {
+    display: grid;
+    gap: 1.5rem;
+    padding: 2rem;
+    border: 1px solid var(--line);
+    border-radius: 1rem;
+    background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 8%, var(--surface)), var(--surface));
+  }
+  .book h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+  .book p {
+    max-width: 44rem;
+    color: var(--ink-soft);
+    line-height: 1.65;
+  }
+  .book p + p {
+    margin-top: 0.75rem;
+  }
+  .book__disclosure {
+    color: var(--muted) !important;
+    font-size: 0.875rem;
+    font-style: italic;
+  }
+  .book__icon {
+    color: var(--accent);
+  }
+  .book .btn {
+    justify-self: start;
+  }
+  @media (min-width: 64rem) {
+    .book {
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      padding: 2.5rem;
+      gap: 2rem;
+    }
+  }
+  .contrib {
+    display: grid;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  .contrib h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+  .contrib p {
+    max-width: 48rem;
+    color: var(--muted);
+    line-height: 1.65;
+  }
+  .contrib .btn {
+    justify-self: start;
+  }
+  @media (min-width: 64rem) {
+    .contrib {
+      grid-template-columns: 1fr auto;
+    }
+  }
+</style>

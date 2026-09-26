@@ -39,6 +39,8 @@ node scripts/check-readme.mjs
 
 It needs only Node (18 or later) and checks both READMEs against this guide: the entry format, level tags, the resource count in each `<summary>` line, em dashes, and that both languages list the same resources at the same levels. CI runs the same check on every pull request.
 
+The website at voiceai.mahimai.ca is rendered from the two READMEs with the same parser, so a README that passes this check is also what the site shows.
+
 ## Reporting issues
 
 Open an issue to suggest additions or removals, or to report a dead or moved link. A scheduled CI job checks every link weekly, but human reports are faster and welcome.
