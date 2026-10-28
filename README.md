@@ -106,7 +106,7 @@ The frameworks below all let you wire STT, an LLM, and TTS together. **For open-
 | **OpenAI Realtime / GPT-Live / Gemini Live** | Realtime API | Speech-to-speech |
 
 <details>
-<summary><b>17 resources</b></summary>
+<summary><b>20 resources</b></summary>
 
 ### Open-source frameworks
 
@@ -128,6 +128,9 @@ The frameworks below all let you wire STT, an LLM, and TTS together. **For open-
 - 🟡 [Google Gemini Live API: Overview](https://ai.google.dev/gemini-api/docs/live-api): Low-latency, bidirectional voice + vision agents with barge-in and tool use, on `gemini-3.8-live` (plus an Extended Thinking variant).
 - 🟡 [Twilio ConversationRelay](https://www.twilio.com/docs/voice/conversationrelay): WebSocket bridge that handles STT/TTS so you focus on LLM logic; works with any LLM.
 - 🟡 [ThunderPhone Realtime API](https://thunderphone.com/docs/api-reference/realtime): OpenAI-Realtime-compatible speech-to-speech WebSocket for phone agents (47 languages, telephony support), with official Pipecat and LiveKit Agents plugins.
+- 🟡 [Eleven Realtime (ElevenLabs)](https://elevenlabs.io/docs/eleven-agents/guides/openai-realtime-compatibility): OpenAI-Realtime-compatible API (October 2026) with `eleven_realtime_v1_mini` and `eleven_realtime_v1_max`, a cascade of distinct models behind one WebSocket; switch an OpenAI client by changing the endpoint and key.
+- 🟡 [xAI Grok Voice 3.0](https://docs.x.ai/developers/model-capabilities/audio/speech-to-speech): Speech-to-speech model (`grok-voice-3.0`, October 2026) over WebSocket or SIP with server VAD or manual turns, uninterruptible forced messages, and 8 kHz G.711; `grok-voice-2.0` is deprecated.
+- 🟡 [PolyAI Dialog-RSN-1](https://docs.poly.ai/dialog-rsn-1/quickstart): Audio-native reasoning model for calls behind an OpenAI-Realtime-compatible WebSocket; it returns speech, or text only so you keep your own TTS voice.
 ### Vendor-neutral comparisons
 
 - 🟡 [Vapi vs Pipecat vs LiveKit (AssemblyAI)](https://www.assemblyai.com/blog/vapi-vs-pipecat-vs-livekit): Architecture-focused comparison of pipeline control and transport choices.
@@ -150,7 +153,7 @@ Pick **one streaming STT** and learn it deeply before shopping around. Deepgram,
 | **NVIDIA Parakeet (NeMo)** | Open source | Top-of-leaderboard accuracy |
 
 <details>
-<summary><b>25 resources</b></summary>
+<summary><b>26 resources</b></summary>
 
 ### Commercial APIs
 
@@ -165,6 +168,7 @@ Pick **one streaming STT** and learn it deeply before shopping around. Deepgram,
 - 🟢 [Gradium STT](https://docs.gradium.ai/guides/speech-to-text): Streaming STT with built-in semantic VAD; step messages every 80 ms carry end-of-turn probabilities so agents can decide when a speaker has finished.
 - 🟡 [Meta Muse Voice Transcribe](https://developer.meta.com/ai/models/muse-voice-transcribe/): One streaming model for ASR, diarization (20+ speakers), and endpointing across 25 languages with code-switching (September 2026); the most accurate model in the Pipecat streaming benchmark, though with slower P95 finalization.
 - 🟢 [Gemini 3.5 Transcribe](https://ai.google.dev/gemini-api/docs/models/gemini-3.5-transcribe): Google's dedicated STT (August 2026) with a batch model and a streaming Live API model (`gemini-3.5-transcribe-live`, preview) across 85+ languages.
+- 🟢 [Mistral Voxtral Transcribe 3](https://docs.mistral.ai/studio/audio/speech-to-text/overview): Batch Small and Mini models across 50+ languages from $0.0035/min, plus the streaming `voxtral-mini-transcribe-realtime-3-0` with sub-500 ms latency (vendor figure) at $0.008/min (October 2026).
 ### Open source
 
 - 🟢 [openai/whisper](https://github.com/openai/whisper): The original repo and the de facto starting point for any DIY ASR project.
@@ -199,23 +203,25 @@ Pick **one streaming STT** and learn it deeply before shopping around. Deepgram,
 | **Chatterbox** | Open source | Cloning + emotion control |
 
 <details>
-<summary><b>19 resources</b></summary>
+<summary><b>21 resources</b></summary>
 
 ### Commercial APIs
 
 - 🟢 [ElevenLabs Docs](https://elevenlabs.io/docs): Industry-leading quality, voice cloning, and Agents platform in one SDK.
 - 🟢 [Cartesia Sonic Quickstart](https://docs.cartesia.ai/build-with-cartesia/tts-models/latest): Sonic 3.6 (44 languages, dated snapshots, native turn detection), sub-90 ms first-byte latency, designed specifically for voice agents.
 - 🟢 [Deepgram Aura-2](https://developers.deepgram.com/docs/tts-models): Low-latency streaming TTS (Aura-2) that pairs cleanly with Deepgram STT.
-- 🟢 [OpenAI TTS (gpt-4o-mini-tts)](https://developers.openai.com/api/docs/guides/text-to-speech): Easiest plug-in TTS for the OpenAI stack.
+- 🟢 [OpenAI TTS (gpt-4o-mini-tts)](https://developers.openai.com/api/docs/guides/text-to-speech): Easiest plug-in TTS for the OpenAI stack, but `gpt-4o-mini-tts`, `tts-1`, and `tts-1-hd` shut down on January 6, 2027; OpenAI points new voice work to `gpt-realtime-2.1-mini`.
 - 🟢 [Soniox Text-to-Speech](https://soniox.com/docs/tts/get-started): Low-latency streaming TTS over WebSocket with multilingual voices; pairs with Soniox STT and translation.
 - 🟢 [Gradium TTS](https://docs.gradium.ai/guides/text-to-speech): Streaming WebSocket TTS with 158 ms P50 time to first audio and instant voice cloning in five languages.
 - 🟢 [Gandr TTS](https://gandr.ai/docs): Streaming TTS over SSE or WebSocket with 116 ms p50 time to first audio (vendor figure), six multilingual voices across 23 languages, and watermarked output; ships LiveKit Agents and Pipecat integrations.
-- 🟢 [Speechify Text-to-Speech API (Simba 3.2)](https://docs.speechify.ai/build/guides/get-started/quickstart): Streaming TTS over HTTP with SSML and emotion control; Simba 3.2 for English and Simba 3.0 for six languages, with a 106 ms median time to first audio on Coval's independent benchmark (September 2026).
+- 🟢 [Speechify Text-to-Speech API (Simba 3.5)](https://docs.speechify.ai/build/guides/get-started/quickstart): Streaming TTS over HTTP; `simba-3.5` covers 48 languages under one model ID, Simba 3.2 and 3.0 add SSML and emotion control, and Simba 3.2 had a 106 ms median time to first audio on Coval's independent benchmark (September 2026).
+- 🟢 [Mistral Voxtral TTS 3](https://docs.mistral.ai/studio/audio/text-to-speech/overview): Voxtral Mini TTS 3 (October 2026) with voice cloning across 35+ languages at $13 per 1M characters; Mistral's voice agent SDK, built on LiveKit, pairs it with Voxtral realtime STT.
 - 🟢 [Artificial Analysis: TTS leaderboard](https://artificialanalysis.ai/text-to-speech/models): ELO, price, and speed comparison covering Cartesia, ElevenLabs, Google, Inworld, Rime, Hume, and open-weights models.
 - 🟡 [Best Text-to-Speech Providers in 2026 (Coval)](https://www.coval.ai/blog/best-text-to-speech-providers-in-2026-how-to-choose-%28and-why-vendor-benchmarks-lie%29/): Independent head-to-head of 14 TTS providers on latency, naturalness, and cost; note the commercial author.
 ### Open source
 
 - 🟡 [Chatterbox (resemble-ai/chatterbox)](https://github.com/resemble-ai/chatterbox): Resemble AI's MIT-licensed TTS (vendor-reported to beat ElevenLabs in blind preference tests); ~5 s zero-shot voice cloning, emotion-exaggeration control, and a built-in PerTh watermark. Turbo (350M) hits sub-150 ms first audio, Nano (110M) runs 3× real time on CPU, and Multilingual (V3, 0.5B) covers 23+ languages.
+- 🔴 [Fish Audio Drama 3](https://huggingface.co/fishaudio/drama-3): Open-weight 35B MoE TTS (about 3B active) across 83 languages (October 2026), with 88.9 ms median first audio on one H200 (vendor figure); its community license requires a paid license above $500K annual revenue.
 - 🟢 [Kokoro 82M (kokoro-onnx)](https://github.com/thewh1teagle/kokoro-onnx): Maintained ONNX runtime for the tiny Apache-licensed Kokoro model that tops community ELO arenas; runs on CPU (the upstream weights have not changed since 2025).
 - 🟢 [Piper (OHF-Voice/piper1-gpl)](https://github.com/OHF-Voice/piper1-gpl): Fast local neural TTS optimized for Raspberry Pi; perfect for offline projects.
 - 🟡 [Coqui TTS (idiap fork)](https://github.com/idiap/coqui-ai-TTS): Maintained fork of Coqui-TTS / XTTS v2; still battle-tested, though Chatterbox now leads on zero-shot cloning quality.
@@ -234,7 +240,7 @@ Pick **one streaming STT** and learn it deeply before shopping around. Deepgram,
 A voice agent's perceived intelligence is bounded by **how fast the LLM streams its first token**. Sub-300 ms TTFT changes the conversation feel entirely.
 
 <details>
-<summary><b>14 resources</b></summary>
+<summary><b>15 resources</b></summary>
 
 ### Low-latency inference
 
@@ -247,6 +253,7 @@ A voice agent's perceived intelligence is bounded by **how fast the LLM streams 
 - 🟡 [OpenAI Realtime API guide](https://developers.openai.com/api/docs/guides/realtime): Flagship S2S product with WebRTC/WebSocket transport (`gpt-realtime-2.1`, GA).
 - 🟡 [Google Gemini Live](https://ai.google.dev/gemini-api/docs/live-api): Real-time multimodal voice/video with barge-in and broad language support, on `gemini-3.8-live`.
 - 🔴 [Moshi (kyutai-labs)](https://github.com/kyutai-labs/moshi): Open full-duplex speech-text foundation model (~200 ms, Mimi codec). Kyutai's broader stack now includes Unmute (cascaded STT+LLM+TTS with tool use), Kyutai STT/TTS, and Hibiki (streaming translation).
+- 🔴 [NVIDIA NemotronLabs VoiceChat 11B](https://huggingface.co/nvidia/NVIDIA-NemotronLabs-VoiceChat-11B): Open-weight English full-duplex speech model (August 2026) with tool calling and about 450 ms turn-taking (vendor figure); weights under the OpenMDW 1.1 license, inference code in NeMo Speech.
 - 🟡 [Speech-to-Speech Models in 2026: Three Architectural Bets (Krzysztof Sopyla)](https://ai.ksopyla.com/posts/voice-to-voice-models-2026-review/): Vendor-neutral comparison of full-duplex (Moshi), near-duplex multimodal (Qwen-Omni), and cascade approaches, with FullDuplexBench numbers and tradeoffs.
 - 🟢 [Artificial Analysis: Speech-to-Speech](https://artificialanalysis.ai/speech-to-speech): Independent leaderboard for speech-to-speech models on reasoning (Big Bench Audio), conversational dynamics (Full-Duplex-Bench), latency, and price, plus a blind arena.
 ### Voice-specific prompting and tools
