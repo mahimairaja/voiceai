@@ -133,6 +133,7 @@
 - 🟡 [Vapi vs Pipecat vs LiveKit（AssemblyAI）](https://www.assemblyai.com/blog/vapi-vs-pipecat-vs-livekit)：从架构视角对比流水线控制与传输选型。
 - 🟢 [12 Voice Agent Platforms Compared（Softcery）](https://softcery.com/lab/choosing-the-right-voice-agent-platform-in-2026)：覆盖面广的 2026 年市场地图与场景建议；注意作者为商业机构（开发服务商）。
 - 🟡 [Best Voice Agent Stack（Hamming AI）](https://hamming.ai/resources/best-voice-agent-stack)：自研 vs 采购框架，含具体成本、延迟与上线周期数字。
+- 🟡 [Cozzo: Voice AI Benchmarks](https://cozzo.io/benchmarks)：独立的语音智能体平台与 AI 接待员对比网站，公开发布多轮脚本化电话测试基准，并提供免费成本计算器。
 
 </details>
 

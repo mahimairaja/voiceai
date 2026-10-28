@@ -133,6 +133,7 @@ The frameworks below all let you wire STT, an LLM, and TTS together. **For open-
 - 🟡 [Vapi vs Pipecat vs LiveKit (AssemblyAI)](https://www.assemblyai.com/blog/vapi-vs-pipecat-vs-livekit): Architecture-focused comparison of pipeline control and transport choices.
 - 🟢 [12 Voice Agent Platforms Compared (Softcery)](https://softcery.com/lab/choosing-the-right-voice-agent-platform-in-2026): Broad 2026 market map with use-case recommendations; note the commercial author (a development agency).
 - 🟡 [Best Voice Agent Stack (Hamming AI)](https://hamming.ai/resources/best-voice-agent-stack): Buy-vs-build framework with concrete cost, latency, and time-to-launch numbers.
+- 🟡 [Cozzo: Voice AI Benchmarks](https://cozzo.io/benchmarks): Independent comparison of voice-agent platforms and AI receptionists, with public benchmark rounds of scripted test phone calls and a free cost calculator.
 
 </details>
 
