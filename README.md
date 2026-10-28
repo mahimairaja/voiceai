@@ -198,7 +198,7 @@ Pick **one streaming STT** and learn it deeply before shopping around. Deepgram,
 | **Chatterbox** | Open source | Cloning + emotion control |
 
 <details>
-<summary><b>17 resources</b></summary>
+<summary><b>18 resources</b></summary>
 
 ### Commercial APIs
 
@@ -208,6 +208,7 @@ Pick **one streaming STT** and learn it deeply before shopping around. Deepgram,
 - 🟢 [OpenAI TTS (gpt-4o-mini-tts)](https://developers.openai.com/api/docs/guides/text-to-speech): Easiest plug-in TTS for the OpenAI stack.
 - 🟢 [Soniox Text-to-Speech](https://soniox.com/docs/tts/get-started): Low-latency streaming TTS over WebSocket with multilingual voices; pairs with Soniox STT and translation.
 - 🟢 [Gradium TTS](https://docs.gradium.ai/guides/text-to-speech): Streaming WebSocket TTS with 158 ms P50 time to first audio and instant voice cloning in five languages.
+- 🟢 [Gandr TTS](https://gandr.ai/docs): Streaming TTS over SSE or WebSocket with 116 ms p50 time to first audio (vendor figure), six multilingual voices across 23 languages, and watermarked output; ships LiveKit Agents and Pipecat integrations.
 - 🟢 [Artificial Analysis: TTS leaderboard](https://artificialanalysis.ai/text-to-speech/models): ELO, price, and speed comparison covering Cartesia, ElevenLabs, Google, Inworld, Rime, Hume, and open-weights models.
 - 🟡 [Best Text-to-Speech Providers in 2026 (Coval)](https://www.coval.ai/blog/best-text-to-speech-providers-in-2026-how-to-choose-%28and-why-vendor-benchmarks-lie%29/): Independent head-to-head of 14 TTS providers on latency, naturalness, and cost; note the commercial author.
 ### Open source

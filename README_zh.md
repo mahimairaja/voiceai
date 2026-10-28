@@ -198,7 +198,7 @@
 | **Chatterbox** | 开源 | 克隆 + 情感控制 |
 
 <details>
-<summary><b>17 项资源</b></summary>
+<summary><b>18 项资源</b></summary>
 
 ### 商业 API
 
@@ -208,6 +208,7 @@
 - 🟢 [OpenAI TTS（gpt-4o-mini-tts）](https://developers.openai.com/api/docs/guides/text-to-speech)：OpenAI 栈里最容易接入的 TTS。
 - 🟢 [Soniox 文字转语音](https://soniox.com/docs/tts/get-started)：低延迟流式 TTS（WebSocket，另有 REST API），多语种音色；与 Soniox STT 及翻译搭配，构成单供应商实时语音到语音栈。
 - 🟢 [Gradium TTS](https://docs.gradium.ai/guides/text-to-speech)：基于 WebSocket 的流式 TTS，P50 首音频延迟 158 ms，支持五种语言的即时声音克隆。
+- 🟢 [Gandr TTS](https://gandr.ai/docs)：通过 SSE 或 WebSocket 提供流式 TTS，P50 首音频延迟 116 ms（厂商数据），六种多语种音色覆盖 23 种语言，输出带水印；提供 LiveKit Agents 与 Pipecat 集成。
 - 🟢 [Artificial Analysis：TTS 榜单](https://artificialanalysis.ai/text-to-speech/models)：ELO、价格与速度对比，含 Cartesia、ElevenLabs、Google、Inworld、Rime、Hume 与开放权重模型。
 - 🟡 [Best Text-to-Speech Providers in 2026（Coval）](https://www.coval.ai/blog/best-text-to-speech-providers-in-2026-how-to-choose-%28and-why-vendor-benchmarks-lie%29/)：对 14 家 TTS 供应商在延迟、自然度与成本上的独立横评；注意作者为商业方。
 ### 开源
