@@ -338,7 +338,7 @@
 - 🟡 [SignalWire Voice 文档](https://signalwire.com/docs/platform/voice)：基于 FreeSWITCH；SWML、类 TwiML API 与语音智能体 SDK（AI Agents SDK）。
 - 🟢 [LiveKit SIP Primer](https://docs.livekit.io/reference/telephony/sip-primer/)：PSTN → 中继 → SIP 服务 → 语音智能体 的最佳示意图说明。
 - 🟡 [LiveKit SIP Trunk Setup](https://docs.livekit.io/telephony/start/sip-trunk-setup/)：将 Twilio/Telnyx/Plivo/Wavix/Sinch 中继接入 LiveKit 的实操。
-- 🟡 [OpenAI Realtime API with SIP](https://developers.openai.com/api/docs/guides/realtime-sip)：把 SIP 中继直接指向 OpenAI 的 SIP 端点，通过 webhook 接听每通来电并按通话配置会话，无需媒体桥接服务器；提供欧盟端点。
+- 🟡 [OpenAI Realtime API with SIP](https://developers.openai.com/api/docs/guides/voice-sip)：把 SIP 中继直接指向 OpenAI 的 SIP 端点，通过 webhook 接听每通来电并按通话配置会话，无需媒体桥接服务器；提供欧盟端点。
 - 🟡 [Pipecat Telephony Overview](https://docs.pipecat.ai/pipecat/telephony/overview)：基于 WebSocket 的电话与基于 SIP 的呼叫控制之差异。
 
 </details>

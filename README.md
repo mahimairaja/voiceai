@@ -338,7 +338,7 @@ The phone network has its own physics. Once you know which **SIP trunk provider*
 - 🟡 [SignalWire Voice Docs](https://signalwire.com/docs/platform/voice): Built on FreeSWITCH; SWML, TwiML-compatible API, and an AI Agents SDK.
 - 🟢 [LiveKit SIP Primer](https://docs.livekit.io/reference/telephony/sip-primer/): Best diagram of how a call flows from PSTN → trunk → SIP service → agent.
 - 🟡 [LiveKit SIP Trunk Setup](https://docs.livekit.io/telephony/start/sip-trunk-setup/): Practical guide for wiring Twilio/Telnyx/Plivo/Wavix/Sinch trunks into LiveKit.
-- 🟡 [OpenAI Realtime API with SIP](https://developers.openai.com/api/docs/guides/realtime-sip): Point a SIP trunk at OpenAI's SIP endpoint and accept each call from a webhook, configuring the session per call with no media bridge server; an EU endpoint is available.
+- 🟡 [OpenAI Realtime API with SIP](https://developers.openai.com/api/docs/guides/voice-sip): Point a SIP trunk at OpenAI's SIP endpoint and accept each call from a webhook, configuring the session per call with no media bridge server; an EU endpoint is available.
 - 🟡 [Pipecat Telephony Overview](https://docs.pipecat.ai/pipecat/telephony/overview): Differences between WebSocket-based telephony and SIP-based call control.
 
 </details>
