@@ -106,7 +106,7 @@
 | **OpenAI Realtime / GPT-Live / Gemini Live** | 实时 API | 语音到语音 |
 
 <details>
-<summary><b>17 项资源</b></summary>
+<summary><b>20 项资源</b></summary>
 
 ### 开源框架
 
@@ -128,6 +128,9 @@
 - 🟡 [Google Gemini Live API：概览](https://ai.google.dev/gemini-api/docs/live-api)：低延迟双向语音 + 视觉，支持插话（barge-in）与工具调用，基于 `gemini-3.8-live`（另有 Extended Thinking 版本）。
 - 🟡 [Twilio ConversationRelay](https://www.twilio.com/docs/voice/conversationrelay)：WebSocket 桥接，托管 STT/TTS，你专注 LLM 逻辑；可与任意 LLM 配合。
 - 🟡 [ThunderPhone Realtime API](https://thunderphone.com/docs/api-reference/realtime)：兼容 OpenAI Realtime 协议的语音到语音 WebSocket，面向电话智能体（47 种语言、支持电话接入），提供 Pipecat 与 LiveKit Agents 官方插件。
+- 🟡 [Eleven Realtime（ElevenLabs）](https://elevenlabs.io/docs/eleven-agents/guides/openai-realtime-compatibility)：兼容 OpenAI Realtime 协议的 API（2026 年 10 月），提供 `eleven_realtime_v1_mini` 与 `eleven_realtime_v1_max`，在同一个 WebSocket 后面串联多个独立模型；OpenAI 客户端只需更换端点与密钥即可切换。
+- 🟡 [xAI Grok Voice 3.0](https://docs.x.ai/developers/model-capabilities/audio/speech-to-speech)：语音到语音模型（`grok-voice-3.0`，2026 年 10 月），支持 WebSocket 或 SIP、服务端 VAD 或手动轮次、不可打断的强制消息以及 8 kHz G.711；`grok-voice-2.0` 已弃用。
+- 🟡 [PolyAI Dialog-RSN-1](https://docs.poly.ai/dialog-rsn-1/quickstart)：直接基于通话音频推理的对话模型，提供兼容 OpenAI Realtime 协议的 WebSocket；可返回语音，也可只返回文本，以便沿用你自己的 TTS 音色。
 ### 厂商中立对比
 
 - 🟡 [Vapi vs Pipecat vs LiveKit（AssemblyAI）](https://www.assemblyai.com/blog/vapi-vs-pipecat-vs-livekit)：从架构视角对比流水线控制与传输选型。
@@ -150,7 +153,7 @@
 | **NVIDIA Parakeet（NeMo）** | 开源 | 榜单前列准确率 |
 
 <details>
-<summary><b>25 项资源</b></summary>
+<summary><b>26 项资源</b></summary>
 
 ### 商业 API
 
@@ -165,6 +168,7 @@
 - 🟢 [Gradium STT](https://docs.gradium.ai/guides/speech-to-text)：内置语义 VAD 的流式 STT：每 80 ms 的 step 消息携带话末概率，便于智能体判断说话人是否讲完。
 - 🟡 [Meta Muse Voice Transcribe](https://developer.meta.com/ai/models/muse-voice-transcribe/)：单个流式模型同时完成 ASR、说话人分离（20+ 人）与端点检测，覆盖 25 种语言并支持混说（2026 年 9 月）；在 Pipecat 流式基准中准确率最高，但 P95 最终化时延较慢。
 - 🟢 [Gemini 3.5 Transcribe](https://ai.google.dev/gemini-api/docs/models/gemini-3.5-transcribe)：Google 专用 STT（2026 年 8 月），提供批处理模型与流式 Live API 模型（`gemini-3.5-transcribe-live`，预览版），覆盖 85+ 种语言。
+- 🟢 [Mistral Voxtral Transcribe 3](https://docs.mistral.ai/studio/audio/speech-to-text/overview)：批处理 Small 与 Mini 模型覆盖 50+ 种语言，最低 $0.0035/分钟；另有流式模型 `voxtral-mini-transcribe-realtime-3-0`，延迟低于 500 ms（厂商数据），价格 $0.008/分钟（2026 年 10 月）。
 ### 开源
 
 - 🟢 [openai/whisper](https://github.com/openai/whisper)：原仓库与 DIY ASR 的事实起点。
@@ -199,23 +203,25 @@
 | **Chatterbox** | 开源 | 克隆 + 情感控制 |
 
 <details>
-<summary><b>19 项资源</b></summary>
+<summary><b>21 项资源</b></summary>
 
 ### 商业 API
 
 - 🟢 [ElevenLabs 文档](https://elevenlabs.io/docs)：业界领先音质、声音克隆与 Agents 平台同属一套 SDK。
 - 🟢 [Cartesia Sonic Quickstart](https://docs.cartesia.ai/build-with-cartesia/tts-models/latest)：Sonic 3.6（44 种语言，带日期快照，原生话末检测），首字节低于 90 ms，面向语音智能体设计。
 - 🟢 [Deepgram Aura-2](https://developers.deepgram.com/docs/tts-models)：低延迟流式 TTS（Aura-2），与 Deepgram STT 衔接顺畅。
-- 🟢 [OpenAI TTS（gpt-4o-mini-tts）](https://developers.openai.com/api/docs/guides/text-to-speech)：OpenAI 栈里最容易接入的 TTS。
+- 🟢 [OpenAI TTS（gpt-4o-mini-tts）](https://developers.openai.com/api/docs/guides/text-to-speech)：OpenAI 栈里最容易接入的 TTS；但 `gpt-4o-mini-tts`、`tts-1` 与 `tts-1-hd` 将于 2027 年 1 月 6 日停用，OpenAI 建议新的语音项目改用 `gpt-realtime-2.1-mini`。
 - 🟢 [Soniox 文字转语音](https://soniox.com/docs/tts/get-started)：低延迟流式 TTS（WebSocket，另有 REST API），多语种音色；与 Soniox STT 及翻译搭配，构成单供应商实时语音到语音栈。
 - 🟢 [Gradium TTS](https://docs.gradium.ai/guides/text-to-speech)：基于 WebSocket 的流式 TTS，P50 首音频延迟 158 ms，支持五种语言的即时声音克隆。
 - 🟢 [Gandr TTS](https://gandr.ai/docs)：通过 SSE 或 WebSocket 提供流式 TTS，P50 首音频延迟 116 ms（厂商数据），六种多语种音色覆盖 23 种语言，输出带水印；提供 LiveKit Agents 与 Pipecat 集成。
-- 🟢 [Speechify Text-to-Speech API（Simba 3.2）](https://docs.speechify.ai/build/guides/get-started/quickstart)：基于 HTTP 的流式 TTS，支持 SSML 与情感控制；Simba 3.2 面向英语，Simba 3.0 覆盖六种语言，在 Coval 独立基准中首音频中位延迟为 106 ms（2026 年 9 月）。
+- 🟢 [Speechify Text-to-Speech API（Simba 3.5）](https://docs.speechify.ai/build/guides/get-started/quickstart)：基于 HTTP 的流式 TTS；`simba-3.5` 以一个模型 ID 覆盖 48 种语言，Simba 3.2 与 3.0 支持 SSML 与情感控制，Simba 3.2 在 Coval 独立基准中首音频中位延迟为 106 ms（2026 年 9 月）。
+- 🟢 [Mistral Voxtral TTS 3](https://docs.mistral.ai/studio/audio/text-to-speech/overview)：Voxtral Mini TTS 3（2026 年 10 月）支持声音克隆，覆盖 35+ 种语言，价格为每 100 万字符 $13；Mistral 基于 LiveKit 的语音智能体 SDK 将其与 Voxtral 实时 STT 组合使用。
 - 🟢 [Artificial Analysis：TTS 榜单](https://artificialanalysis.ai/text-to-speech/models)：ELO、价格与速度对比，含 Cartesia、ElevenLabs、Google、Inworld、Rime、Hume 与开放权重模型。
 - 🟡 [Best Text-to-Speech Providers in 2026（Coval）](https://www.coval.ai/blog/best-text-to-speech-providers-in-2026-how-to-choose-%28and-why-vendor-benchmarks-lie%29/)：对 14 家 TTS 供应商在延迟、自然度与成本上的独立横评；注意作者为商业方。
 ### 开源
 
 - 🟡 [Chatterbox（resemble-ai/chatterbox）](https://github.com/resemble-ai/chatterbox)：Resemble AI 的 MIT 许可 TTS（厂商称在盲测偏好中胜过 ElevenLabs）；约 5 秒零样本声音克隆、情感夸张度控制，并内置 PerTh 水印。Turbo 版（350M）首音频低于 150 ms；Nano 版（110M）在 CPU 上达 3 倍实时；多语种版（V3，0.5B）覆盖 23+ 种语言。
+- 🔴 [Fish Audio Drama 3](https://huggingface.co/fishaudio/drama-3)：开放权重的 35B MoE TTS（每个 token 约激活 3B），覆盖 83 种语言（2026 年 10 月），单张 H200 上首音频中位延迟 88.9 ms（厂商数据）；其社区许可要求年收入超过 50 万美元时购买商业许可。
 - 🟢 [Kokoro 82M（kokoro-onnx）](https://github.com/thewh1teagle/kokoro-onnx)：体积小、Apache 许可、在社区 ELO 对战中表现突出的 Kokoro 模型的 ONNX 运行时，仍在维护；可跑 CPU（上游权重自 2025 年起未再更新）。
 - 🟢 [Piper（OHF-Voice/piper1-gpl）](https://github.com/OHF-Voice/piper1-gpl)：面向树莓派等设备的快速本地神经 TTS，适合离线项目。
 - 🟡 [Coqui TTS（idiap fork）](https://github.com/idiap/coqui-ai-TTS)：Coqui-TTS / XTTS v2 的持续维护分支；依旧实战可靠，但在零样本克隆质量上现已被 Chatterbox 超越。
@@ -234,7 +240,7 @@
 用户感知的「是否聪明」很大程度上取决于 **LLM 能多快开始输出第一个 token**。首 token 时延（TTFT）低于约 300 ms 会显著改变对话体感。
 
 <details>
-<summary><b>14 项资源</b></summary>
+<summary><b>15 项资源</b></summary>
 
 ### 低延迟推理
 
@@ -247,6 +253,7 @@
 - 🟡 [OpenAI Realtime API 指南](https://developers.openai.com/api/docs/guides/realtime)：旗舰级 S2S，传输为 WebRTC/WebSocket（`gpt-realtime-2.1`，GA）。
 - 🟡 [Google Gemini Live](https://ai.google.dev/gemini-api/docs/live-api)：实时多模态语音/视频，支持插话与广泛语言，基于 `gemini-3.8-live`。
 - 🔴 [Moshi（kyutai-labs）](https://github.com/kyutai-labs/moshi)：开源全双工语音–文本基础模型（约 200 ms，Mimi 编解码）。Kyutai 更完整的技术栈现已包含 Unmute（级联 STT+LLM+TTS，支持工具调用）、Kyutai STT/TTS 与 Hibiki（流式翻译）。
+- 🔴 [NVIDIA NemotronLabs VoiceChat 11B](https://huggingface.co/nvidia/NVIDIA-NemotronLabs-VoiceChat-11B)：开放权重的英语全双工语音模型（2026 年 8 月），支持工具调用，轮次切换约 450 ms（厂商数据）；权重采用 OpenMDW 1.1 许可，推理代码位于 NeMo Speech。
 - 🟡 [Speech-to-Speech Models in 2026: Three Architectural Bets（Krzysztof Sopyla）](https://ai.ksopyla.com/posts/voice-to-voice-models-2026-review/)：厂商中立对比全双工（Moshi）、近双工多模态（Qwen-Omni）与级联三种路线，附 FullDuplexBench 数据与取舍。
 - 🟢 [Artificial Analysis：Speech-to-Speech](https://artificialanalysis.ai/speech-to-speech)：语音到语音模型的独立榜单，覆盖推理（Big Bench Audio）、对话动态（Full-Duplex-Bench）、延迟与价格，并提供盲测对战。
 ### 面向语音智能体的提示与工具
