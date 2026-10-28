@@ -106,7 +106,7 @@ The frameworks below all let you wire STT, an LLM, and TTS together. **For open-
 | **OpenAI Realtime / GPT-Live / Gemini Live** | Realtime API | Speech-to-speech |
 
 <details>
-<summary><b> 20 resources</b></summary>
+<summary><b>20 resources</b></summary>
 
 ### Open-source frameworks
 

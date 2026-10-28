@@ -106,7 +106,7 @@
 | **OpenAI Realtime / GPT-Live / Gemini Live** | 实时 API | 语音到语音 |
 
 <details>
-<summary><b> 20 项资源</b></summary>
+<summary><b>20 项资源</b></summary>
 
 ### 开源框架
 
