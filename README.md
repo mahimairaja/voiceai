@@ -106,7 +106,7 @@ The frameworks below all let you wire STT, an LLM, and TTS together. **For open-
 | **OpenAI Realtime / GPT-Live / Gemini Live** | Realtime API | Speech-to-speech |
 
 <details>
-<summary><b>16 resources</b></summary>
+<summary><b>17 resources</b></summary>
 
 ### Open-source frameworks
 
@@ -127,6 +127,7 @@ The frameworks below all let you wire STT, an LLM, and TTS together. **For open-
 - 🟡 [OpenAI GPT-Live: Guide](https://developers.openai.com/api/docs/guides/live): Full-duplex voice model (`gpt-live-1`) that listens and speaks at once, decides when to yield or interrupt, and hands reasoning and tool calls to a backend text model; over WebRTC, WebSockets, or SIP.
 - 🟡 [Google Gemini Live API: Overview](https://ai.google.dev/gemini-api/docs/live-api): Low-latency, bidirectional voice + vision agents with barge-in and tool use, on `gemini-3.8-live` (plus an Extended Thinking variant).
 - 🟡 [Twilio ConversationRelay](https://www.twilio.com/docs/voice/conversationrelay): WebSocket bridge that handles STT/TTS so you focus on LLM logic; works with any LLM.
+- 🟡 [ThunderPhone Realtime API](https://thunderphone.com/docs/api-reference/realtime): OpenAI-Realtime-compatible speech-to-speech WebSocket for phone agents (47 languages, telephony support), with official Pipecat and LiveKit Agents plugins.
 ### Vendor-neutral comparisons
 
 - 🟡 [Vapi vs Pipecat vs LiveKit (AssemblyAI)](https://www.assemblyai.com/blog/vapi-vs-pipecat-vs-livekit): Architecture-focused comparison of pipeline control and transport choices.
