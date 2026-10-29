@@ -203,7 +203,7 @@
 | **Chatterbox** | 开源 | 克隆 + 情感控制 |
 
 <details>
-<summary><b>21 项资源</b></summary>
+<summary><b>22 项资源</b></summary>
 
 ### 商业 API
 
@@ -216,6 +216,7 @@
 - 🟢 [Gandr TTS](https://gandr.ai/docs)：通过 SSE 或 WebSocket 提供流式 TTS，P50 首音频延迟 116 ms（厂商数据），六种多语种音色覆盖 23 种语言，输出带水印；提供 LiveKit Agents 与 Pipecat 集成。
 - 🟢 [Speechify Text-to-Speech API（Simba 3.5）](https://docs.speechify.ai/build/guides/get-started/quickstart)：基于 HTTP 的流式 TTS；`simba-3.5` 以一个模型 ID 覆盖 48 种语言，Simba 3.2 与 3.0 支持 SSML 与情感控制，Simba 3.2 在 Coval 独立基准中首音频中位延迟为 106 ms（2026 年 9 月）。
 - 🟢 [Mistral Voxtral TTS 3](https://docs.mistral.ai/studio/audio/text-to-speech/overview)：Voxtral Mini TTS 3（2026 年 10 月）支持声音克隆，覆盖 35+ 种语言，价格为每 100 万字符 $13；Mistral 基于 LiveKit 的语音智能体 SDK 将其与 Voxtral 实时 STT 组合使用。
+- 🟢 [SuperClonica Speech API](https://superclonica.com/en/speech-api)：按音频时长而非字符计费的 TTS（免费密钥每天 3 分钟、无需绑卡，套餐每月 5 美元起），31 种语言、190 多个声音，流式输出约 300 毫秒出首个音频（厂商数据）；同样的声音文件也能用 Apache-2.0 的 `superclonica-cpu` 引擎离线运行。
 - 🟢 [Artificial Analysis：TTS 榜单](https://artificialanalysis.ai/text-to-speech/models)：ELO、价格与速度对比，含 Cartesia、ElevenLabs、Google、Inworld、Rime、Hume 与开放权重模型。
 - 🟡 [Best Text-to-Speech Providers in 2026（Coval）](https://www.coval.ai/blog/best-text-to-speech-providers-in-2026-how-to-choose-%28and-why-vendor-benchmarks-lie%29/)：对 14 家 TTS 供应商在延迟、自然度与成本上的独立横评；注意作者为商业方。
 ### 开源
