@@ -153,7 +153,7 @@
 | **NVIDIA Parakeet（NeMo）** | 开源 | 榜单前列准确率 |
 
 <details>
-<summary><b>26 项资源</b></summary>
+<summary><b>27 项资源</b></summary>
 
 ### 商业 API
 
@@ -169,6 +169,7 @@
 - 🟡 [Meta Muse Voice Transcribe](https://developer.meta.com/ai/models/muse-voice-transcribe/)：单个流式模型同时完成 ASR、说话人分离（20+ 人）与端点检测，覆盖 25 种语言并支持混说（2026 年 9 月）；在 Pipecat 流式基准中准确率最高，但 P95 最终化时延较慢。
 - 🟢 [Gemini 3.5 Transcribe](https://ai.google.dev/gemini-api/docs/models/gemini-3.5-transcribe)：Google 专用 STT（2026 年 8 月），提供批处理模型与流式 Live API 模型（`gemini-3.5-transcribe-live`，预览版），覆盖 85+ 种语言。
 - 🟢 [Mistral Voxtral Transcribe 3](https://docs.mistral.ai/studio/audio/speech-to-text/overview)：批处理 Small 与 Mini 模型覆盖 50+ 种语言，最低 $0.0035/分钟；另有流式模型 `voxtral-mini-transcribe-realtime-3-0`，延迟低于 500 ms（厂商数据），价格 $0.008/分钟（2026 年 10 月）。
+- 🟢 [Velma Transcribe（Modulate）](https://docs.modulate.ai/quickstart)：支持批量与流式的语音转文字 API，内置说话人分离、情绪与口音检测，提供免费试用额度；2026 年 7 月在 Hugging Face Open ASR 榜单位列第一。
 ### 开源
 
 - 🟢 [openai/whisper](https://github.com/openai/whisper)：原仓库与 DIY ASR 的事实起点。
