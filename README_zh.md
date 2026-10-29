@@ -474,7 +474,7 @@
 若在 2026 年对外发布语音智能体，**披露与同意已不再是可选项**。欧盟《人工智能法》Article 50 自 2026 年 8 月 2 日起适用，FCC 也已将 AI 语音认定为 TCPA 下的人工语音。
 
 <details>
-<summary><b>11 项资源</b></summary>
+<summary><b>12 项资源</b></summary>
 
 - 🟢 [FCC：AI-Generated Voices in Robocalls Illegal（2024 年 2 月）](https://www.fcc.gov/document/fcc-makes-ai-generated-voices-robocalls-illegal)：TCPA 里程碑裁定，美国语音智能体开发者应读。
 - 🟡 [EU AI Act：Article 50（深度伪造与 AI 交互的透明度）](https://artificialintelligenceact.eu/article/50/)：欧盟披露规则权威条文；相关义务自 2026 年 8 月 2 日起适用（在此之前已上市的生成式系统，其 Article 50(2) 机器可读标识义务可延至 2026 年 12 月 2 日）。
@@ -487,6 +487,7 @@
 - 🟢 [Voice Cloning Ethics（CAMB.AI）](https://www.camb.ai/blog-post/voice-cloning-ethics-consent-deepfakes-responsible-ai-voice-use)：同意框架、ELVIS 法案与欧盟 AI 法的实践概览。
 - 🟢 [What Is SynthID, and Why Is ElevenLabs Using It?（ElevenLabs 文档）](https://elevenlabs.io/docs/help-center/legal/audio-detector/what-is-synth-id-and-why-is-eleven-labs-using-it)：ElevenLabs 在其生成音频中全面采用 Google DeepMind 的不可听 SynthID 水印，并推出免费公开的 Audio Detector。
 - 🟡 [NCLC：Top Six TCPA/Robocall Developments 2024/2025](https://library.nclc.org/article/top-six-tcparobocall-developments-20242025)：消费者保护视角看实际执法重点。
+- 🟡 [Velma Deepfake Detect（Modulate）](https://www.modulate.ai/api/deepfake-detection-model)：面向批量与流式音频的合成语音检测 API，在 Hugging Face Speech Deepfake Arena 排名第一。
 
 </details>
 

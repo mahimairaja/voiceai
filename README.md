@@ -474,7 +474,7 @@ Real production voice infrastructure is **the hardest unsolved problem in this s
 If you're shipping a voice agent in 2026, **disclosure and consent are no longer optional**. EU AI Act Article 50 has applied since 2 August 2026, and the FCC treats AI voices as artificial under the TCPA.
 
 <details>
-<summary><b>11 resources</b></summary>
+<summary><b>12 resources</b></summary>
 
 - 🟢 [FCC: AI-Generated Voices in Robocalls Illegal (Feb 2024)](https://www.fcc.gov/document/fcc-makes-ai-generated-voices-robocalls-illegal): The landmark TCPA ruling every U.S. voice-agent dev must read.
 - 🟡 [EU AI Act: Article 50 (Transparency for Deepfakes & AI Interactions)](https://artificialintelligenceact.eu/article/50/): Authoritative text of EU disclosure rules; the obligations have applied since 2 August 2026 (generative systems already on the market before then have until 2 December 2026 for the Article 50(2) machine-readable marking duty).
@@ -487,6 +487,7 @@ If you're shipping a voice agent in 2026, **disclosure and consent are no longer
 - 🟢 [Voice Cloning Ethics (CAMB.AI)](https://www.camb.ai/blog-post/voice-cloning-ethics-consent-deepfakes-responsible-ai-voice-use): Practical overview of consent frameworks, ELVIS Act, and EU AI Act.
 - 🟢 [What Is SynthID, and Why Is ElevenLabs Using It? (ElevenLabs Docs)](https://elevenlabs.io/docs/help-center/legal/audio-detector/what-is-synth-id-and-why-is-eleven-labs-using-it): ElevenLabs adopts Google DeepMind's inaudible SynthID watermark across generated audio and ships a free public Audio Detector.
 - 🟡 [NCLC: Top Six TCPA/Robocall Developments 2024/2025](https://library.nclc.org/article/top-six-tcparobocall-developments-20242025): Consumer-protection lens on what's actually being enforced.
+- 🟡 [Velma Deepfake Detect (Modulate)](https://www.modulate.ai/api/deepfake-detection-model): Synthetic voice detection API for batch and streaming audio; ranked first on Hugging Face’s Speech Deepfake Arena.
 
 </details>
 
