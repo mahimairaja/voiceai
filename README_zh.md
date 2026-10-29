@@ -271,7 +271,7 @@
 **仅靠传统 VAD 已不够**：现代方案往往把**声学 VAD**与预测话末的**小型语义模型**（结合用词与韵律）结合起来。
 
 <details>
-<summary><b>13 项资源</b></summary>
+<summary><b>14 项资源</b></summary>
 
 - 🟢 [Silero VAD](https://github.com/snakers4/silero-vad)：MIT 许可的预训练 VAD；CPU 上每个音频处理块可低至 1 ms 以内。LiveKit 与 Pipecat 中的事实标准。
 - 🟡 [LiveKit Turn Detector v1.0](https://livekit.com/blog/solving-end-of-turn-detection)：音频原生的话末检测模型（语义 + 声学融合，无需转写），覆盖 14 种语言；现为 LiveKit 默认。
@@ -284,6 +284,7 @@
 - 🟡 [What Is Endpointing in Voice AI?（Cekura）](https://www.cekura.ai/blogs/endpointing-in-voice-ai-turn-detection)：讲解「三信号」话末检测栈，并带测试视角；注意作者为商业方。
 - 🟡 [Evaluating End-of-Turn Detection Models（Deepgram）](https://deepgram.com/learn/evaluating-end-of-turn-detection-models)：方法论，并对 Flux、Pipecat Smart Turn 与 LiveKit EOU 做正面对比；注意作者为商业方。
 - 🟡 [eot-bench（LiveKit）](https://github.com/livekit/eot-bench)：开放、可复现的话末检测基准，在真实停顿处按延迟与误截断预算为模型打分，并附 14 种语言真实人机对话轮次的 Apache-2.0 数据集；注意作者为商业机构。
+- 🟡 [DuplexJev](https://github.com/adventists-ai/duplexjev)：开放权重的语音大模型决策模型，一次前向直接从音频读出话轮状态（说完了 / 还在说 / 附和 / 稍等）、插话、情绪和非语言声音，无需转写；提供 LiveKit 与 Pipecat 插件（`livekit-plugins-duplexjev`、`pipecat-duplexjev`）；模型权重为 CC BY-NC 4.0（仅限非商业用途，以各检查点模型卡为准）；注意作者为商业机构。
 - 🟡 [Semantic VAD（Gradium）](https://gradium.ai/blog/semantic-vad)：讲解多时域话末预测：每 80 ms 输出一次流式静默概率，并给出延迟与抢话之间的调参建议；注意作者为商业方。
 - 🟢 [ai-coustics VAD](https://developers.ai-coustics.com/)：与实时语音增强、降噪与人声分离打包在同一个音频预处理 SDK 中的 VAD；当你需要同一个组件同时给出清洁后的音频与话轮信号时尤其合适。
 

@@ -271,7 +271,7 @@ A voice agent's perceived intelligence is bounded by **how fast the LLM streams 
 Pure VAD is no longer enough: modern agents combine **acoustic VAD with a small semantic model** that predicts end-of-utterance from words and prosody.
 
 <details>
-<summary><b>13 resources</b></summary>
+<summary><b>14 resources</b></summary>
 
 - 🟢 [Silero VAD](https://github.com/snakers4/silero-vad): MIT-licensed pre-trained VAD; <1 ms per chunk on CPU. The de facto VAD inside LiveKit and Pipecat.
 - 🟡 [LiveKit Turn Detector v1.0](https://livekit.com/blog/solving-end-of-turn-detection): Audio-native end-of-turn model (fused semantic + acoustic, no transcript) across 14 languages; now the LiveKit default.
@@ -284,6 +284,7 @@ Pure VAD is no longer enough: modern agents combine **acoustic VAD with a small 
 - 🟡 [What Is Endpointing in Voice AI? (Cekura)](https://www.cekura.ai/blogs/endpointing-in-voice-ai-turn-detection): Explainer on the three-signal endpointing stack with a testing angle; note the commercial author.
 - 🟡 [Evaluating End-of-Turn Detection Models (Deepgram)](https://deepgram.com/learn/evaluating-end-of-turn-detection-models): Methodology plus a head-to-head of Flux, Pipecat Smart Turn, and LiveKit EOU; note the commercial author.
 - 🟡 [eot-bench (LiveKit)](https://github.com/livekit/eot-bench): Open, reproducible end-of-turn benchmark that scores models at real pauses under latency and false-cutoff budgets, with an Apache-2.0 dataset of real human-to-agent turns in 14 languages; note the commercial author.
+- 🟡 [DuplexJev](https://github.com/adventists-ai/duplexjev): Open-weights speech-LLM decision model that reads turn state (finished / still talking / backchannel / "hold on"), barge-in, emotion and non-verbal sounds straight from the audio in one forward pass, with no transcript; ships LiveKit and Pipecat plugins (`livekit-plugins-duplexjev`, `pipecat-duplexjev`); model weights are CC BY-NC 4.0 (non-commercial; check each checkpoint's model card); note the commercial author.
 - 🟡 [Semantic VAD (Gradium)](https://gradium.ai/blog/semantic-vad): Explainer on multi-horizon end-of-utterance prediction, with streaming inactivity probabilities every 80 ms and guidance on tuning the latency vs interruption tradeoff; note the commercial author.
 - 🟢 [ai-coustics VAD](https://developers.ai-coustics.com/): VAD bundled with real-time speech enhancement, noise suppression, and voice isolation in a single audio preprocessing SDK; useful when you want cleanup and turn-taking signals from the same component.
 
