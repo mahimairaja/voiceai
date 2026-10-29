@@ -153,7 +153,7 @@ Pick **one streaming STT** and learn it deeply before shopping around. Deepgram,
 | **NVIDIA Parakeet (NeMo)** | Open source | Top-of-leaderboard accuracy |
 
 <details>
-<summary><b>26 resources</b></summary>
+<summary><b>27 resources</b></summary>
 
 ### Commercial APIs
 
@@ -169,6 +169,7 @@ Pick **one streaming STT** and learn it deeply before shopping around. Deepgram,
 - 🟡 [Meta Muse Voice Transcribe](https://developer.meta.com/ai/models/muse-voice-transcribe/): One streaming model for ASR, diarization (20+ speakers), and endpointing across 25 languages with code-switching (September 2026); the most accurate model in the Pipecat streaming benchmark, though with slower P95 finalization.
 - 🟢 [Gemini 3.5 Transcribe](https://ai.google.dev/gemini-api/docs/models/gemini-3.5-transcribe): Google's dedicated STT (August 2026) with a batch model and a streaming Live API model (`gemini-3.5-transcribe-live`, preview) across 85+ languages.
 - 🟢 [Mistral Voxtral Transcribe 3](https://docs.mistral.ai/studio/audio/speech-to-text/overview): Batch Small and Mini models across 50+ languages from $0.0035/min, plus the streaming `voxtral-mini-transcribe-realtime-3-0` with sub-500 ms latency (vendor figure) at $0.008/min (October 2026).
+- 🟢 [Velma Transcribe (Modulate)](https://docs.modulate.ai/quickstart): Batch and streaming speech-to-text API with diarization, emotion and accent detection, and free starting credits; ranked first on the Hugging Face Open ASR Leaderboard in July 2026.
 ### Open source
 
 - 🟢 [openai/whisper](https://github.com/openai/whisper): The original repo and the de facto starting point for any DIY ASR project.
