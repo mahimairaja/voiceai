@@ -203,7 +203,7 @@
 | **Chatterbox** | 开源 | 克隆 + 情感控制 |
 
 <details>
-<summary><b>21 项资源</b></summary>
+<summary><b>22 项资源</b></summary>
 
 ### 商业 API
 
@@ -216,6 +216,7 @@
 - 🟢 [Gandr TTS](https://gandr.ai/docs)：通过 SSE 或 WebSocket 提供流式 TTS，P50 首音频延迟 116 ms（厂商数据），六种多语种音色覆盖 23 种语言，输出带水印；提供 LiveKit Agents 与 Pipecat 集成。
 - 🟢 [Speechify Text-to-Speech API（Simba 3.5）](https://docs.speechify.ai/build/guides/get-started/quickstart)：基于 HTTP 的流式 TTS；`simba-3.5` 以一个模型 ID 覆盖 48 种语言，Simba 3.2 与 3.0 支持 SSML 与情感控制，Simba 3.2 在 Coval 独立基准中首音频中位延迟为 106 ms（2026 年 9 月）。
 - 🟢 [Mistral Voxtral TTS 3](https://docs.mistral.ai/studio/audio/text-to-speech/overview)：Voxtral Mini TTS 3（2026 年 10 月）支持声音克隆，覆盖 35+ 种语言，价格为每 100 万字符 $13；Mistral 基于 LiveKit 的语音智能体 SDK 将其与 Voxtral 实时 STT 组合使用。
+- 🟢 [Mira TTS（Voice Infra by miraiminds）](https://docs.miraiminds.co/v2/tts-quickstart)：支持印地语、古吉拉特语、泰米尔语、泰卢固语、英语与 Hinglish 的 TTS，兼容 OpenAI `POST /v1/audio/speech` 协议，另有流式 WebSocket；可输出适用于电话线路的 8 kHz μ-law 与 A-law 音频，并提供 Pipecat 集成（`pipecat-mirai`）；价格为每 1,000 字符 ₹1.80（不含 GST），运行在印度的 GPU 上。同一个 API key 也可调用其语音 AI 智能体：大批量 ₹1/分钟起（每月 ₹1,00,000 承诺），按需付费 ₹5/分钟。
 - 🟢 [Artificial Analysis：TTS 榜单](https://artificialanalysis.ai/text-to-speech/models)：ELO、价格与速度对比，含 Cartesia、ElevenLabs、Google、Inworld、Rime、Hume 与开放权重模型。
 - 🟡 [Best Text-to-Speech Providers in 2026（Coval）](https://www.coval.ai/blog/best-text-to-speech-providers-in-2026-how-to-choose-%28and-why-vendor-benchmarks-lie%29/)：对 14 家 TTS 供应商在延迟、自然度与成本上的独立横评；注意作者为商业方。
 ### 开源

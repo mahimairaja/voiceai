@@ -203,7 +203,7 @@ Pick **one streaming STT** and learn it deeply before shopping around. Deepgram,
 | **Chatterbox** | Open source | Cloning + emotion control |
 
 <details>
-<summary><b>21 resources</b></summary>
+<summary><b>22 resources</b></summary>
 
 ### Commercial APIs
 
@@ -216,6 +216,7 @@ Pick **one streaming STT** and learn it deeply before shopping around. Deepgram,
 - 🟢 [Gandr TTS](https://gandr.ai/docs): Streaming TTS over SSE or WebSocket with 116 ms p50 time to first audio (vendor figure), six multilingual voices across 23 languages, and watermarked output; ships LiveKit Agents and Pipecat integrations.
 - 🟢 [Speechify Text-to-Speech API (Simba 3.5)](https://docs.speechify.ai/build/guides/get-started/quickstart): Streaming TTS over HTTP; `simba-3.5` covers 48 languages under one model ID, Simba 3.2 and 3.0 add SSML and emotion control, and Simba 3.2 had a 106 ms median time to first audio on Coval's independent benchmark (September 2026).
 - 🟢 [Mistral Voxtral TTS 3](https://docs.mistral.ai/studio/audio/text-to-speech/overview): Voxtral Mini TTS 3 (October 2026) with voice cloning across 35+ languages at $13 per 1M characters; Mistral's voice agent SDK, built on LiveKit, pairs it with Voxtral realtime STT.
+- 🟢 [Mira TTS (Voice Infra by miraiminds)](https://docs.miraiminds.co/v2/tts-quickstart): TTS for Hindi, Gujarati, Tamil, Telugu, English, and Hinglish on OpenAI's `POST /v1/audio/speech` protocol plus a streaming WebSocket, with 8 kHz μ-law and A-law output for phone lines and a Pipecat integration (`pipecat-mirai`); ₹1.80 per 1,000 characters before GST, served from GPUs in India. The same API key runs its voice AI agents, from ₹1/min at volume (₹1,00,000/month commitment); ₹5/min pay as you go.
 - 🟢 [Artificial Analysis: TTS leaderboard](https://artificialanalysis.ai/text-to-speech/models): ELO, price, and speed comparison covering Cartesia, ElevenLabs, Google, Inworld, Rime, Hume, and open-weights models.
 - 🟡 [Best Text-to-Speech Providers in 2026 (Coval)](https://www.coval.ai/blog/best-text-to-speech-providers-in-2026-how-to-choose-%28and-why-vendor-benchmarks-lie%29/): Independent head-to-head of 14 TTS providers on latency, naturalness, and cost; note the commercial author.
 ### Open source
