@@ -203,7 +203,7 @@ Pick **one streaming STT** and learn it deeply before shopping around. Deepgram,
 | **Chatterbox** | Open source | Cloning + emotion control |
 
 <details>
-<summary><b>21 resources</b></summary>
+<summary><b>22 resources</b></summary>
 
 ### Commercial APIs
 
@@ -216,6 +216,7 @@ Pick **one streaming STT** and learn it deeply before shopping around. Deepgram,
 - 🟢 [Gandr TTS](https://gandr.ai/docs): Streaming TTS over SSE or WebSocket with 116 ms p50 time to first audio (vendor figure), six multilingual voices across 23 languages, and watermarked output; ships LiveKit Agents and Pipecat integrations.
 - 🟢 [Speechify Text-to-Speech API (Simba 3.5)](https://docs.speechify.ai/build/guides/get-started/quickstart): Streaming TTS over HTTP; `simba-3.5` covers 48 languages under one model ID, Simba 3.2 and 3.0 add SSML and emotion control, and Simba 3.2 had a 106 ms median time to first audio on Coval's independent benchmark (September 2026).
 - 🟢 [Mistral Voxtral TTS 3](https://docs.mistral.ai/studio/audio/text-to-speech/overview): Voxtral Mini TTS 3 (October 2026) with voice cloning across 35+ languages at $13 per 1M characters; Mistral's voice agent SDK, built on LiveKit, pairs it with Voxtral realtime STT.
+- 🟢 [SuperClonica Speech API](https://superclonica.com/en/speech-api): TTS billed by audio time instead of characters (free key with 3 minutes a day and no card, plans from $5 a month), 190+ voices in 31 languages, and streaming with first audio from about 300 ms (vendor figure); the same voice files also run offline with the Apache-2.0 `superclonica-cpu` engine.
 - 🟢 [Artificial Analysis: TTS leaderboard](https://artificialanalysis.ai/text-to-speech/models): ELO, price, and speed comparison covering Cartesia, ElevenLabs, Google, Inworld, Rime, Hume, and open-weights models.
 - 🟡 [Best Text-to-Speech Providers in 2026 (Coval)](https://www.coval.ai/blog/best-text-to-speech-providers-in-2026-how-to-choose-%28and-why-vendor-benchmarks-lie%29/): Independent head-to-head of 14 TTS providers on latency, naturalness, and cost; note the commercial author.
 ### Open source
