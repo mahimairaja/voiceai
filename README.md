@@ -337,7 +337,7 @@ The phone network has its own physics. Once you know which **SIP trunk provider*
 | **LiveKit SIP / Pipecat** | Framework | Wire trunks into your agent |
 
 <details>
-<summary><b>11 resources</b></summary>
+<summary><b>12 resources</b></summary>
 
 - 🟢 [Twilio Programmable Voice](https://www.twilio.com/en-us/voice): TwiML, Voice API, and PSTN connectivity in one hub; the default starting point.
 - 🟢 [Twilio: Voice AI Assistant with OpenAI Realtime + Python](https://www.twilio.com/en-us/blog/voice-ai-assistant-openai-realtime-api-python): Step-by-step junior-friendly tutorial wiring Twilio Media Streams to an LLM.
@@ -350,6 +350,7 @@ The phone network has its own physics. Once you know which **SIP trunk provider*
 - 🟡 [LiveKit SIP Trunk Setup](https://docs.livekit.io/telephony/start/sip-trunk-setup/): Practical guide for wiring Twilio/Telnyx/Plivo/Wavix/Sinch trunks into LiveKit.
 - 🟡 [OpenAI Realtime API with SIP](https://developers.openai.com/api/docs/guides/voice-sip): Point a SIP trunk at OpenAI's SIP endpoint and accept each call from a webhook, configuring the session per call with no media bridge server; an EU endpoint is available.
 - 🟡 [Pipecat Telephony Overview](https://docs.pipecat.ai/pipecat/telephony/overview): Differences between WebSocket-based telephony and SIP-based call control.
+- 🟡 [MeiSIM USA: A real US phone number for voice AI, over SIP](https://www.meisimusa.com/guides/voice-ai-real-us-number.html): Commercial guide from a line provider. Shows register mode and trunk mode for connecting a real US mobile number to a voice agent, with the API calls.
 
 </details>
 
