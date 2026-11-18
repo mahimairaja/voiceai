@@ -454,7 +454,7 @@ You can't ship what you can't measure. **Voice-agent evaluation is fundamentally
 Real production voice infrastructure is **the hardest unsolved problem in this space**. Read these before quoting anyone a per-minute price.
 
 <details>
-<summary><b>10 resources</b></summary>
+<summary><b>11 resources</b></summary>
 
 - 🟡 [LiveKit: Deploy and scale agents on LiveKit Cloud](https://livekit.com/blog/deploy-and-scale-agents-on-livekit-cloud/): Real-world write-up on stateful load balancing, autoscaling, and warm pools.
 - 🟡 [LiveKit: Why You Shouldn't Build Voice Agents Directly on Model APIs](https://livekit.com/blog/real-time-voice-agents-vs-model-apis): Honest breakdown of what raw model APIs don't give you.
@@ -466,6 +466,7 @@ Real production voice infrastructure is **the hardest unsolved problem in this s
 - 🟡 [Sierra: Constellation of Models](https://sierra.ai/blog/constellation-of-models): How a leading CX company composes 15+ models per agent.
 - 🟢 [LiveKit Agent Observability](https://livekit.com/products/agent-observability): Built-in tracing, transcripts, and per-stage latency for LiveKit Cloud.
 - 🟡 [LiveKit: OpenTelemetry Traces](https://docs.livekit.io/testing/observability/tracing/): Exports each agent session's spans (turns, STT/LLM/TTS stages, tool calls) to any OTLP backend, with a Langfuse walkthrough; note the commercial author.
+- 🟡 [Agnost AI](https://agnost.ai/): Production monitoring for voice and chat agents that takes OpenTelemetry traces from LiveKit Agents (plus Vapi, Retell, and Telnyx integrations), judges whole calls for failures, frustrated callers, and broken tool calls, alerts in Slack, and opens pull requests with fixes; note the commercial author.
 
 </details>
 

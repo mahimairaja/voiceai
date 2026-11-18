@@ -454,7 +454,7 @@
 语音智能体的生产级基础设施**仍是本领域最难且未完全标准化的问题**。在给人报「每分钟多少钱」之前，建议先读这些。
 
 <details>
-<summary><b>10 项资源</b></summary>
+<summary><b>11 项资源</b></summary>
 
 - 🟡 [LiveKit：Deploy and scale agents on LiveKit Cloud](https://livekit.com/blog/deploy-and-scale-agents-on-livekit-cloud/)：有状态负载均衡、自动扩缩与预热池等实战经验。
 - 🟡 [LiveKit：Why You Shouldn't Build Voice Agents Directly on Model APIs](https://livekit.com/blog/real-time-voice-agents-vs-model-apis)：坦率说明「裸调模型 API」缺什么。
@@ -466,6 +466,7 @@
 - 🟡 [Sierra：Constellation of Models](https://sierra.ai/blog/constellation-of-models)：领先客户体验（CX）公司如何在单个语音智能体里组合 15+ 模型。
 - 🟢 [LiveKit Agent Observability](https://livekit.com/products/agent-observability)：LiveKit Cloud 内置追踪、转写与各阶段延迟。
 - 🟡 [LiveKit：OpenTelemetry Traces](https://docs.livekit.io/testing/observability/tracing/)：把每个智能体会话的 span（话轮、STT/LLM/TTS 各阶段、工具调用）导出到任意 OTLP 后端，附 Langfuse 示例；注意作者为商业机构。
+- 🟡 [Agnost AI](https://agnost.ai/)：面向语音与聊天智能体的生产环境监控，接收 LiveKit Agents 的 OpenTelemetry 追踪（另有 Vapi、Retell、Telnyx 集成），按整通对话判断失败、用户不满与工具调用出错，在 Slack 中告警，并提交修复的 pull request；注意作者为商业机构。
 
 </details>
 
