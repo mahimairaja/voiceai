@@ -337,7 +337,7 @@
 | **LiveKit SIP / Pipecat** | 框架 | 把中继接入你的智能体 |
 
 <details>
-<summary><b>11 项资源</b></summary>
+<summary><b>12 项资源</b></summary>
 
 - 🟢 [Twilio Programmable Voice](https://www.twilio.com/en-us/voice)：TwiML、Voice API 与 PSTN 一站式；常见起点。
 - 🟢 [Twilio：Voice AI Assistant with OpenAI Realtime + Python](https://www.twilio.com/en-us/blog/voice-ai-assistant-openai-realtime-api-python)：分步教程，把 Twilio Media Streams 接到 LLM，对新手友好。
@@ -350,6 +350,7 @@
 - 🟡 [LiveKit SIP Trunk Setup](https://docs.livekit.io/telephony/start/sip-trunk-setup/)：将 Twilio/Telnyx/Plivo/Wavix/Sinch 中继接入 LiveKit 的实操。
 - 🟡 [OpenAI Realtime API with SIP](https://developers.openai.com/api/docs/guides/voice-sip)：把 SIP 中继直接指向 OpenAI 的 SIP 端点，通过 webhook 接听每通来电并按通话配置会话，无需媒体桥接服务器；提供欧盟端点。
 - 🟡 [Pipecat Telephony Overview](https://docs.pipecat.ai/pipecat/telephony/overview)：基于 WebSocket 的电话与基于 SIP 的呼叫控制之差异。
+- 🟡 [MeiSIM USA：A real US phone number for voice AI, over SIP](https://www.meisimusa.com/guides/voice-ai-real-us-number.html)：线路供应商的商业指南。介绍用注册模式与中继模式把真实美国手机号接入语音智能体，并附 API 调用。
 
 </details>
 
