@@ -106,7 +106,7 @@ The frameworks below all let you wire STT, an LLM, and TTS together. **For open-
 | **OpenAI Realtime / GPT-Live / Gemini Live** | Realtime API | Speech-to-speech |
 
 <details>
-<summary><b>20 resources</b></summary>
+<summary><b>21 resources</b></summary>
 
 ### Open-source frameworks
 
@@ -115,6 +115,7 @@ The frameworks below all let you wire STT, an LLM, and TTS together. **For open-
 - 🔴 [Ultravox (fixie-ai/ultravox)](https://github.com/fixie-ai/ultravox): Open-weight speech LLM (a Whisper encoder feeding an LLM backbone; v0.7 runs on GLM-4.6, earlier releases on Llama, Gemma, and Qwen) that skips the separate ASR stage.
 - 🟡 [qwen-audio-agent](https://github.com/QwenAudio/qwen-audio-agent): Full-duplex voice runtime that drives coding agents (OpenCode, Claude Code, Codex, and other ACP backends) with barge-in, parallel background tasks, and a local wake word.
 - 🟡 [TEN Framework](https://github.com/TEN-framework/ten-framework): Open-source framework for real-time multimodal (voice, video, text) agents with pluggable ASR, LLM, and TTS extensions; licensed Apache 2.0 with additional restrictions and backed by Agora.
+- 🟡 [Max](https://github.com/HenryCooper86/Max): Open-source relay, web SDK, and widget for realtime voice agents across OpenAI Realtime, Gemini Live, Grok, Doubao, or local models, with tool calling and short-lived session tokens.
 ### Managed platforms
 
 - 🟢 [Vapi: Quickstart](https://docs.vapi.ai/quickstart/introduction): Dashboard-first; ship an agent on a free US phone number in under 5 minutes.

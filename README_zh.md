@@ -106,7 +106,7 @@
 | **OpenAI Realtime / GPT-Live / Gemini Live** | 实时 API | 语音到语音 |
 
 <details>
-<summary><b>20 项资源</b></summary>
+<summary><b>21 项资源</b></summary>
 
 ### 开源框架
 
@@ -115,6 +115,7 @@
 - 🔴 [Ultravox（fixie-ai/ultravox）](https://github.com/fixie-ai/ultravox)：开放权重的语音 LLM（Whisper 编码器接入 LLM 骨干；v0.7 基于 GLM-4.6，早期版本基于 Llama、Gemma、Qwen），省去独立 ASR 环节。
 - 🟡 [qwen-audio-agent](https://github.com/QwenAudio/qwen-audio-agent)：全双工语音运行时，通过 ACP 驱动编码智能体（OpenCode、Claude Code、Codex 等），支持自然打断、后台任务并行与本地唤醒词。
 - 🟡 [TEN Framework](https://github.com/TEN-framework/ten-framework)：面向实时多模态（语音、视频、文本）智能体的开源框架，ASR、LLM 与 TTS 以扩展形式可插拔；许可为 Apache 2.0 附加限制条款，由 Agora 支持。
+- 🟡 [Max](https://github.com/HenryCooper86/Max)：开源的实时语音智能体中继、网页 SDK 与组件，支持 OpenAI Realtime、Gemini Live、Grok、豆包或本地模型，提供工具调用与短期会话令牌。
 ### 托管平台
 
 - 🟢 [Vapi：Quickstart](https://docs.vapi.ai/quickstart/introduction)：以控制台为先；约 5 分钟内可在免费美国号码上发布语音智能体。
