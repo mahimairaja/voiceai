@@ -106,7 +106,7 @@ The frameworks below all let you wire STT, an LLM, and TTS together. **For open-
 | **OpenAI Realtime / GPT-Live / Gemini Live** | Realtime API | Speech-to-speech |
 
 <details>
-<summary><b>20 resources</b></summary>
+<summary><b>21 resources</b></summary>
 
 ### Open-source frameworks
 
@@ -121,6 +121,7 @@ The frameworks below all let you wire STT, an LLM, and TTS together. **For open-
 - 🟢 [Retell AI: Introduction & Quickstart](https://docs.retellai.com/general/introduction): Phone-agent platform with $10 free credit on signup.
 - 🟢 [Bland AI: Send Your First Phone Call](https://www.bland.ai/blog/the-bland-ai-voice-call-api): Minimal API tutorial for placing your first AI phone call.
 - 🟢 [ElevenLabs Agents: Quickstart](https://elevenlabs.io/docs/eleven-agents/quickstart): Build and embed a voice agent widget on any website in 5 minutes (formerly branded "Conversational AI," now ElevenAgents).
+- 🟢 [Benerra: Example calls](https://benerra.ai/examples.html): Commercial managed service (Benerra Innovation Ltd, Dubai) that builds and runs phone voice agents for inbound booking, lead qualification, and sales calls; not a self-serve builder, with recorded example calls in English, French, and Spanish and public per-minute prices.
 ### Realtime / speech-to-speech APIs
 
 - 🟡 [OpenAI Realtime API: Guide](https://developers.openai.com/api/docs/guides/realtime): Official guide to `gpt-realtime-2.1` and `gpt-realtime-2.1-mini` (GA; configurable reasoning) over WebRTC, WebSockets, or SIP.

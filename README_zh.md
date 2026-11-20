@@ -106,7 +106,7 @@
 | **OpenAI Realtime / GPT-Live / Gemini Live** | 实时 API | 语音到语音 |
 
 <details>
-<summary><b>20 项资源</b></summary>
+<summary><b>21 项资源</b></summary>
 
 ### 开源框架
 
@@ -121,6 +121,7 @@
 - 🟢 [Retell AI：Introduction & Quickstart](https://docs.retellai.com/general/introduction)：电话语音智能体平台，注册送 $10 额度。
 - 🟢 [Bland AI：Send Your First Phone Call](https://www.bland.ai/blog/the-bland-ai-voice-call-api)：极简 API 教程，打出第一通 AI 电话。
 - 🟢 [ElevenLabs Agents：Quickstart](https://elevenlabs.io/docs/eleven-agents/quickstart)：约 5 分钟内在任意网站嵌入语音智能体组件（原名「Conversational AI」，现更名为 ElevenAgents）。
+- 🟢 [Benerra：Example calls](https://benerra.ai/examples.html)：商业托管服务（Benerra Innovation Ltd，迪拜），代客户搭建并运营电话语音智能体，用于呼入预约、线索回访与资格筛选以及电话销售；非自助式构建平台，提供英语、法语、西班牙语通话录音示例，按分钟计价且价格公开。
 ### 实时 / 语音到语音 API
 
 - 🟡 [OpenAI Realtime API：指南](https://developers.openai.com/api/docs/guides/realtime)：`gpt-realtime-2.1` 与 `gpt-realtime-2.1-mini`（GA；可配置推理）通过 WebRTC、WebSocket 或 SIP 接入的官方说明。
