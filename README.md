@@ -106,7 +106,7 @@ The frameworks below all let you wire STT, an LLM, and TTS together. **For open-
 | **OpenAI Realtime / GPT-Live / Gemini Live** | Realtime API | Speech-to-speech |
 
 <details>
-<summary><b>20 resources</b></summary>
+<summary><b>21 resources</b></summary>
 
 ### Open-source frameworks
 
@@ -123,6 +123,7 @@ The frameworks below all let you wire STT, an LLM, and TTS together. **For open-
 - 🟢 [ElevenLabs Agents: Quickstart](https://elevenlabs.io/docs/eleven-agents/quickstart): Build and embed a voice agent widget on any website in 5 minutes (formerly branded "Conversational AI," now ElevenAgents).
 ### Realtime / speech-to-speech APIs
 
+- 🟡 [Agora Conversational AI Engine](https://docs.agora.io/en): Official Agora documentation for connecting conversational voice agents to real-time audio channels.
 - 🟡 [OpenAI Realtime API: Guide](https://developers.openai.com/api/docs/guides/realtime): Official guide to `gpt-realtime-2.1` and `gpt-realtime-2.1-mini` (GA; configurable reasoning) over WebRTC, WebSockets, or SIP.
 - 🟡 [OpenAI GPT-Live: Guide](https://developers.openai.com/api/docs/guides/live): Full-duplex voice model (`gpt-live-1`) that listens and speaks at once, decides when to yield or interrupt, and hands reasoning and tool calls to a backend text model; over WebRTC, WebSockets, or SIP.
 - 🟡 [Google Gemini Live API: Overview](https://ai.google.dev/gemini-api/docs/live-api): Low-latency, bidirectional voice + vision agents with barge-in and tool use, on `gemini-3.8-live` (plus an Extended Thinking variant).
@@ -271,8 +272,10 @@ A voice agent's perceived intelligence is bounded by **how fast the LLM streams 
 Pure VAD is no longer enough: modern agents combine **acoustic VAD with a small semantic model** that predicts end-of-utterance from words and prosody.
 
 <details>
-<summary><b>13 resources</b></summary>
+<summary><b>15 resources</b></summary>
 
+- 🟡 [TEN VAD](https://github.com/ten-framework/ten-vad): **TEN VAD** is a real-time voice activity detection system designed for enterprise use, providing accurate frame-level speech activity detection.
+- 🟡 [TEN Turn Detection](https://github.com/ten-framework/ten-turn-detection): **TEN Turn Detection** is an advanced intelligent turn detection model designed specifically for natural and dynamic communication between humans and AI agents.
 - 🟢 [Silero VAD](https://github.com/snakers4/silero-vad): MIT-licensed pre-trained VAD; <1 ms per chunk on CPU. The de facto VAD inside LiveKit and Pipecat.
 - 🟡 [LiveKit Turn Detector v1.0](https://livekit.com/blog/solving-end-of-turn-detection): Audio-native end-of-turn model (fused semantic + acoustic, no transcript) across 14 languages; now the LiveKit default.
 - 🟡 [Deepgram Flux](https://deepgram.com/learn/fluxing-conversational-state-and-speech-to-text): All-in-one conversational STT with built-in end-of-turn detection (English median EOT <300 ms; Flux Multilingual adds 10 languages with mid-call switching), integrated with Deepgram's Voice Agent API; collapses STT and turn detection into a single model.

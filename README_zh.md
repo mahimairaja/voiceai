@@ -106,7 +106,7 @@
 | **OpenAI Realtime / GPT-Live / Gemini Live** | 实时 API | 语音到语音 |
 
 <details>
-<summary><b>20 项资源</b></summary>
+<summary><b>21 项资源</b></summary>
 
 ### 开源框架
 
@@ -123,6 +123,7 @@
 - 🟢 [ElevenLabs Agents：Quickstart](https://elevenlabs.io/docs/eleven-agents/quickstart)：约 5 分钟内在任意网站嵌入语音智能体组件（原名「Conversational AI」，现更名为 ElevenAgents）。
 ### 实时 / 语音到语音 API
 
+- 🟡 [Agora Conversational AI Engine](https://docs.agora.io/en)：声网官方文档，介绍如何通过实时音频频道连接对话式语音智能体。
 - 🟡 [OpenAI Realtime API：指南](https://developers.openai.com/api/docs/guides/realtime)：`gpt-realtime-2.1` 与 `gpt-realtime-2.1-mini`（GA；可配置推理）通过 WebRTC、WebSocket 或 SIP 接入的官方说明。
 - 🟡 [OpenAI GPT-Live：指南](https://developers.openai.com/api/docs/guides/live)：全双工语音模型（`gpt-live-1`），可同时听与说、自行决定何时让出或打断，并把推理与工具调用交给后端文本模型；支持 WebRTC、WebSocket 或 SIP 接入。
 - 🟡 [Google Gemini Live API：概览](https://ai.google.dev/gemini-api/docs/live-api)：低延迟双向语音 + 视觉，支持插话（barge-in）与工具调用，基于 `gemini-3.8-live`（另有 Extended Thinking 版本）。
@@ -271,8 +272,10 @@
 **仅靠传统 VAD 已不够**：现代方案往往把**声学 VAD**与预测话末的**小型语义模型**（结合用词与韵律）结合起来。
 
 <details>
-<summary><b>13 项资源</b></summary>
+<summary><b>15 项资源</b></summary>
 
+- 🟡 [TEN VAD](https://github.com/ten-framework/ten-vad)：TEN VAD 是面向企业应用的实时语音活动检测系统，提供精确的逐帧语音活动检测。
+- 🟡 [TEN Turn Detection](https://github.com/ten-framework/ten-turn-detection)：TEN Turn Detection 是先进的智能话轮检测模型，专为人与 AI 智能体之间自然、动态的交流而设计。
 - 🟢 [Silero VAD](https://github.com/snakers4/silero-vad)：MIT 许可的预训练 VAD；CPU 上每个音频处理块可低至 1 ms 以内。LiveKit 与 Pipecat 中的事实标准。
 - 🟡 [LiveKit Turn Detector v1.0](https://livekit.com/blog/solving-end-of-turn-detection)：音频原生的话末检测模型（语义 + 声学融合，无需转写），覆盖 14 种语言；现为 LiveKit 默认。
 - 🟡 [Deepgram Flux](https://deepgram.com/learn/fluxing-conversational-state-and-speech-to-text)：内置话末检测的一体化对话式 STT（英文话末检测中位数 <300 ms；Flux Multilingual 新增 10 种语言并支持通话中切换），与 Deepgram 的 Voice Agent API 集成；把 STT 与话轮检测合并到单个模型中。
