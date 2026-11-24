@@ -106,7 +106,7 @@ The frameworks below all let you wire STT, an LLM, and TTS together. **For open-
 | **OpenAI Realtime / GPT-Live / Gemini Live** | Realtime API | Speech-to-speech |
 
 <details>
-<summary><b>20 resources</b></summary>
+<summary><b>21 resources</b></summary>
 
 ### Open-source frameworks
 
@@ -136,6 +136,7 @@ The frameworks below all let you wire STT, an LLM, and TTS together. **For open-
 - 🟡 [Vapi vs Pipecat vs LiveKit (AssemblyAI)](https://www.assemblyai.com/blog/vapi-vs-pipecat-vs-livekit): Architecture-focused comparison of pipeline control and transport choices.
 - 🟢 [12 Voice Agent Platforms Compared (Softcery)](https://softcery.com/lab/choosing-the-right-voice-agent-platform-in-2026): Broad 2026 market map with use-case recommendations; note the commercial author (a development agency).
 - 🟡 [Best Voice Agent Stack (Hamming AI)](https://hamming.ai/resources/best-voice-agent-stack): Buy-vs-build framework with concrete cost, latency, and time-to-launch numbers.
+- 🟢 [voiceaiagents.io](https://www.voiceaiagents.io/): Directory of voice AI agents and platforms, with pricing, features, and alternatives checked on each vendor's site.
 
 </details>
 

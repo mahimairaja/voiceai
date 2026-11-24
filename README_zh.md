@@ -106,7 +106,7 @@
 | **OpenAI Realtime / GPT-Live / Gemini Live** | 实时 API | 语音到语音 |
 
 <details>
-<summary><b>20 项资源</b></summary>
+<summary><b>21 项资源</b></summary>
 
 ### 开源框架
 
@@ -136,6 +136,7 @@
 - 🟡 [Vapi vs Pipecat vs LiveKit（AssemblyAI）](https://www.assemblyai.com/blog/vapi-vs-pipecat-vs-livekit)：从架构视角对比流水线控制与传输选型。
 - 🟢 [12 Voice Agent Platforms Compared（Softcery）](https://softcery.com/lab/choosing-the-right-voice-agent-platform-in-2026)：覆盖面广的 2026 年市场地图与场景建议；注意作者为商业机构（开发服务商）。
 - 🟡 [Best Voice Agent Stack（Hamming AI）](https://hamming.ai/resources/best-voice-agent-stack)：自研 vs 采购框架，含具体成本、延迟与上线周期数字。
+- 🟢 [voiceaiagents.io](https://www.voiceaiagents.io/)：语音 AI 智能体与平台目录，价格、功能与替代方案均核对自各厂商官网。
 
 </details>
 
