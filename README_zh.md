@@ -203,7 +203,7 @@
 | **Chatterbox** | 开源 | 克隆 + 情感控制 |
 
 <details>
-<summary><b>21 项资源</b></summary>
+<summary><b>22 项资源</b></summary>
 
 ### 商业 API
 
@@ -228,6 +228,7 @@
 - 🟡 [Orpheus-TTS](https://github.com/canopyai/Orpheus-TTS)：基于 Llama-3B 的带情感 TTS，流式时延约 200 ms，支持情感标签。
 - 🔴 [Sesame CSM（sesame/csm-1b）](https://huggingface.co/sesame/csm-1b)：对话向、上下文感知的多说话人 TTS，Llama 骨干 + Mimi 编解码；可在 HF Transformers 中原生运行。
 - 🟡 [Qwen3-TTS](https://github.com/QwenLM/Qwen3-TTS)：Qwen 团队的 Apache-2.0 开放权重 TTS，支持 10 种语言的流式输出。
+- 🟢 [LinnetTTS](https://github.com/VoxRT/LinnetTTS)：支持语音克隆的流式端侧神经 TTS；41M 参数、83 MB fp16 权重、80 ms 流式分块。在 Raspberry Pi Zero 2 W 上 RTF 为 75%，在 iPhone 13 Pro Max 上 RTF 低于 10%。Rust 运行时，提供 Android、iOS、Linux 和 Python 绑定。代码采用 Apache-2.0；权重单独授权，内置音色可免费商用，语音克隆或训练需付费授权。
 ### 流式与伦理
 
 - 🟡 [Streaming TTS for Low-Latency Agents（Picovoice）](https://picovoice.ai/blog/streaming-text-to-speech-for-ai-agents/)：清晰区分单流、输出流式与双流 TTS。
