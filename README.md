@@ -203,7 +203,7 @@ Pick **one streaming STT** and learn it deeply before shopping around. Deepgram,
 | **Chatterbox** | Open source | Cloning + emotion control |
 
 <details>
-<summary><b>21 resources</b></summary>
+<summary><b>22 resources</b></summary>
 
 ### Commercial APIs
 
@@ -228,6 +228,8 @@ Pick **one streaming STT** and learn it deeply before shopping around. Deepgram,
 - 🟡 [Orpheus-TTS](https://github.com/canopyai/Orpheus-TTS): Llama-3B-based emotive TTS with ~200 ms streaming and emotion tags.
 - 🔴 [Sesame CSM (sesame/csm-1b)](https://huggingface.co/sesame/csm-1b): Conversational, context-aware multi-speaker TTS using a Llama backbone with the Mimi codec; runs natively in HF Transformers.
 - 🟡 [Qwen3-TTS](https://github.com/QwenLM/Qwen3-TTS): Apache-2.0 open-weight TTS from the Qwen team with streaming output across 10 languages.
+- 🟢 [LinnetTTS](https://github.com/VoxRT/LinnetTTS): Streaming on-device neural TTS with voice cloning; 41M params, 83 MB fp16 weights, 80 ms streaming chunks. Runs at 75% RTF on Raspberry Pi Zero 2 W and under 10% RTF on iPhone 13 Pro Max. Rust runtime with Android, iOS, Linux, and Python bindings. Apache-2.0 code; separate weights license permits free commercial use for built-in voices, paid license for voice cloning or training.
+  
 ### Streaming and ethics
 
 - 🟡 [Streaming TTS for Low-Latency Agents (Picovoice)](https://picovoice.ai/blog/streaming-text-to-speech-for-ai-agents/): Clear taxonomy of single, output-streaming, and dual-streaming TTS.
