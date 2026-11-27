@@ -495,7 +495,7 @@ If you're shipping a voice agent in 2026, **disclosure and consent are no longer
 Subscribe to two or three to stay current: the field moves quickly.
 
 <details>
-<summary><b>9 resources</b></summary>
+<summary><b>10 resources</b></summary>
 
 - [LiveKit Blog](https://livekit.com/blog/): Engineering deep-dives on WebRTC, agents framework releases, and production patterns.
 - [Deepgram Learn](https://deepgram.com/learn): Tutorials on STT/TTS, voice agent design, evals, and pipeline architecture.
@@ -506,6 +506,7 @@ Subscribe to two or three to stay current: the field moves quickly.
 - [Voice AI Space](https://www.voiceaispace.com/): Vendor-neutral hub for the voice AI ecosystem: a curated product and tool directory, the Voice AI Newsroom, tutorials and repos, a jobs board, and community meetups.
 - [Voice AI Newsletter (Krisp)](https://voice-ai-newsletter.krisp.ai/): "Future of Voice AI" interview series with founders.
 - [Voice AI Weekly (Vapi)](https://vapivoice.substack.com/): Weekly Substack rounding up news, products, and tools.
+- [AudioTech News](https://audiotech.news/): Weekly newsletter on audio technology that covers voice and speech AI releases (real-time voice agents, speech models) alongside recording, podcast and broadcast tools.
 
 </details>
 

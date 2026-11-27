@@ -495,7 +495,7 @@
 订阅两三份即可跟上节奏：领域变化很快。
 
 <details>
-<summary><b>9 项资源</b></summary>
+<summary><b>10 项资源</b></summary>
 
 - [LiveKit Blog](https://livekit.com/blog/)：WebRTC、语音智能体框架发布与生产实践方面的深度技术文章。
 - [Deepgram Learn](https://deepgram.com/learn)：STT/TTS、语音智能体设计、评测与流水线架构教程。
@@ -506,6 +506,7 @@
 - [Voice AI Space](https://www.voiceaispace.com/)：厂商中立的语音 AI 生态枢纽：精选产品与工具目录、Voice AI Newsroom、教程与仓库、招聘版块以及社区聚会。
 - [Voice AI Newsletter（Krisp）](https://voice-ai-newsletter.krisp.ai/)：「Future of Voice AI」创始人访谈系列。
 - [Voice AI Weekly（Vapi）](https://vapivoice.substack.com/)：周报：新闻、产品与工具汇总。
+- [AudioTech News](https://audiotech.news/)：每周一期的音频技术通讯，涵盖语音与语音 AI 发布（实时语音智能体、语音模型），同时关注录音、播客与广播工具。
 
 </details>
 
